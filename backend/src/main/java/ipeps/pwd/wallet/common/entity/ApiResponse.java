@@ -1,5 +1,6 @@
 package ipeps.pwd.wallet.common.entity;
 
+
 import java.util.StringJoiner;
 
 public class ApiResponse {

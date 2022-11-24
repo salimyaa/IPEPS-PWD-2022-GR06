@@ -14,7 +14,7 @@ import java.util.UUID;
 public class EmployeeUpdatePayload {
     UUID Employee_id;
     String Lastname;
-    String FirstName;
+    String Firstname;
     String Address;
     String Gender;
     String Birthday;

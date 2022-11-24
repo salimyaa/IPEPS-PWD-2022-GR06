@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class EmployeeCreatePayload {
      String Lastname;
-     String FirstName;
+     String Firstname;
      String Address;
      String Gender;
      String Birthday;

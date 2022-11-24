@@ -47,18 +47,18 @@ public class EmployeeController {
         }
 
     }
-    @GetMapping("create}")
+    @PostMapping("create")
     public ApiResponse create(@RequestBody() EmployeeCreatePayload payload){
 
         try{
-            return new ApiResponse(true, this.employeeService.create(payload) ,ApiCode.EMPLOYEE_CREATE_SUCCESS);
+            return new ApiResponse(true, this.employeeService.create(payload),ApiCode.EMPLOYEE_CREATE_SUCCESS);
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage() ,ApiCode.EMPLOYEE_CREATE_ERROR);
+            return new ApiResponse(false, e.getMessage(),ApiCode.EMPLOYEE_CREATE_ERROR);
         }
 
     }
-    @GetMapping("update}")
+    @PutMapping("update")
     public ApiResponse update(@RequestBody() EmployeeUpdatePayload payload){
         try{
             Employee employeeUpdated = this.employeeService.update(payload);
@@ -72,7 +72,7 @@ public class EmployeeController {
         }
 
     }
-    @GetMapping("delete/{id}")
+    @DeleteMapping("delete/{id}")
     public ApiResponse delete(@PathVariable("id")UUID Employee_id){
     if (this.employeeService.delete(Employee_id)){
             return new ApiResponse(true, "" ,ApiCode.EMPLOYEE_DELETE_SUCCESS);

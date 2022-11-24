@@ -1,6 +1,5 @@
 package ipeps.pwd.wallet.entity.builder;
 
-
 import ipeps.pwd.wallet.entity.Employee;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,8 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public  class EmployeeBuilder implements Createbuilder<Employee> {
+
     String Lastname;
-    String FirstName;
+    String Firstname;
     String Address;
     String Gender;
     String Birthday;
@@ -23,8 +23,8 @@ public  class EmployeeBuilder implements Createbuilder<Employee> {
         this.Lastname = Lastname;
         return this;
     }
-    public EmployeeBuilder setFirstName(String FirstName){
-        this.FirstName = FirstName;
+    public EmployeeBuilder setFirstname(String Firstname) {
+        this.Firstname = Firstname;
         return this;
     }
     public EmployeeBuilder setAddress(String Address){
@@ -46,10 +46,12 @@ public  class EmployeeBuilder implements Createbuilder<Employee> {
     @Override
     public Employee Build(){
         return new Employee(this.Lastname,
-                            this.FirstName,
+                            this.Firstname,
                             this.Address,
                             this.Gender,
                             this.Birthday,
                             this.Ssin);
     }
+
+
 }

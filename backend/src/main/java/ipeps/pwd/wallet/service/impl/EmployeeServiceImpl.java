@@ -28,7 +28,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         try{
             Employee employee =new EmployeeBuilder()
                     .setLastname(payload.getLastname())
-                    .setFirstName(payload.getFirstName())
+                    .setFirstname(payload.getFirstname())
                     .setAddress(payload.getAddress())
                     .setGender(payload.getGender())
                     .setSsin(payload.getSsin())
@@ -36,7 +36,8 @@ public class EmployeeServiceImpl implements EmployeeService {
                     .Build();
                       return this.employeeRepository.save(employee);
 
-        }catch (Exception e) { e.printStackTrace();
+        }catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
@@ -45,7 +46,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             Employee detail = this.detail(payload.getEmployee_id());
             if (detail != null) {
                 detail.setLastname(payload.getLastname());
-                detail.setFirstName(payload.getFirstName());
+                detail.setFirstname(payload.getFirstname());
                 detail.setAddress(payload.getAddress());
                 detail.setGender(payload.getGender());
                 detail.setSsin(payload.getSsin());
