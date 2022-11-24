@@ -32,15 +32,15 @@ public class Employee implements Serializable {
     @NotNull
     @Column ( length= 12)
     private String Ssin;
-    /* @NotNull
+   @NotNull
     private EmployeeStatus status;
     @ManyToOne
     @JoinColumn(name = "target", referencedColumnName = "company_id")
     private Company company;
-*/
 
 
-    /*@Override
+
+   @Override
     public String toString(){
         return  "Employee{"+
                 "Employee_id=" + Employee_id +
@@ -51,7 +51,7 @@ public class Employee implements Serializable {
                 ", Birthday='"+ Birthday + '\'' +
                 ", Ssin='"+ Ssin + '\'' +
                 '}';
-    }*/
+    }
 
     public Employee(String Lastname, String Firstname, String Address, String Gender, String Birthday, String Ssin) {
         this.Lastname = Lastname;
