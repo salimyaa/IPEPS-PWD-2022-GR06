@@ -16,7 +16,7 @@ import java.util.UUID;
 @CrossOrigin(origins="*", maxAge = 3600)
 
 @RestController
-@RequestMapping("Employees")
+@RequestMapping ("Employees")
 public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
