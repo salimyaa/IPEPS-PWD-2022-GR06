@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
+
 
 @Data
 @NoArgsConstructor
@@ -30,7 +31,7 @@ public class Contract implements Serializable {
     @NotNull
     private ContractHours nb_hours_by_week;
     @ManyToOne
-    @JoinColumn(name = "target", referencedColumnName = "Employee_id")
+    @JoinColumn(name = "Contract_Employee", referencedColumnName = "Employee_id")
     private Employee employee;
 
 

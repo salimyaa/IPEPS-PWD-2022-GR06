@@ -7,6 +7,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -24,6 +25,10 @@ public class Employee implements Serializable {
     @NotNull
     private String Firstname;
     @NotNull
+    private Boolean Active;
+    @NotNull
+    private Boolean Deleted_by;
+    @NotNull
     private String Address;
     @NotNull
     private String Gender;
@@ -32,13 +37,15 @@ public class Employee implements Serializable {
     @NotNull
     @Column ( length= 12)
     private String Ssin;
-   @NotNull
+    @NotNull
     private EmployeeStatus status;
     @ManyToOne
-    @JoinColumn(name = "target", referencedColumnName = "company_id")
+    @JoinColumn(name = "Employee_Company", referencedColumnName = "Company_id")
     private Company company;
-
-
+    @NotNull
+    private Boolean Deleted;
+    @OneToMany()
+    List<Timesheet> timesheetList;
 
    @Override
     public String toString(){
