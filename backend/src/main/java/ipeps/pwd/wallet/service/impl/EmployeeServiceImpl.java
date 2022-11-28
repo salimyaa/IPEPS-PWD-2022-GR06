@@ -33,6 +33,9 @@ public class EmployeeServiceImpl implements EmployeeService {
                     .setGender(payload.getGender())
                     .setSsin(payload.getSsin())
                     .setBirthday(payload.getBirthday())
+                    .setActive(payload.getActive())
+                    .setStatus(payload.getStatus())
+                    .setCompany(payload.getCompany())
                     .Build();
                       return this.employeeRepository.save(employee);
 
@@ -51,6 +54,9 @@ public class EmployeeServiceImpl implements EmployeeService {
                 detail.setGender(payload.getGender());
                 detail.setSsin(payload.getSsin());
                 detail.setBirthday(payload.getBirthday());
+                detail.setActive(payload.getActive());
+                detail.setStatus(payload.getStatus());
+                detail.setCompany(payload.getCompany());
                 return this.employeeRepository.save(detail);
             }
             return detail;

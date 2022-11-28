@@ -1,7 +1,9 @@
 package ipeps.pwd.wallet.common;
 
 public class ApiCode {
-
+    public static String getSuccessCode(String entity){
+        return "api."+entity+".list.success";
+    }
     public static String EMPLOYEE_LIST_SUCCESS="api.employee.list.success";
     public static String EMPLOYEE_LIST_ERROR="api.employee.list.error";
     public static String EMPLOYEE_DETAIL_SUCCESS="api.employee.detail.success";

@@ -1,6 +1,8 @@
 package ipeps.pwd.wallet.entity.payload;
 
 
+import ipeps.pwd.wallet.entity.Company;
+import ipeps.pwd.wallet.entity.enums.EmployeeStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,6 +19,9 @@ public class EmployeeCreatePayload {
      String Gender;
      String Birthday;
      String Ssin;
+     EmployeeStatus status;
+     Company company;
+     Boolean active;
 
 
 
