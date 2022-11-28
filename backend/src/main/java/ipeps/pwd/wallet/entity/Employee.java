@@ -59,7 +59,7 @@ public class Employee implements Serializable {
 
     public Employee(String Lastname, String Firstname, String Address, String Gender,
                     String Birthday, String Ssin,EmployeeStatus status,Company company,
-                    Boolean Deleted, Boolean Delete_by,Boolean Active) {
+                    Boolean Active) {
         this.Lastname = Lastname;
         this.Firstname = Firstname;
         this.Address = Address;
@@ -68,20 +68,10 @@ public class Employee implements Serializable {
         this.Ssin = Ssin;
         this.status = status;
         this.company = company;
-        this.Deleted = Deleted;
-        this.Deleted_by =Delete_by;
+
         this.Active =Active;
     }
 
-    public void getDeleted_by(Boolean deleted_by) {
-    }
 
-    public void getDeleted(Boolean deleted) {
-    }
 
-    public void getStatus(EmployeeStatus status) {
-    }
-
-    public void getCompany(Company company) {
-    }
 }

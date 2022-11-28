@@ -11,8 +11,7 @@ public class CompanyBuilder implements Createbuilder<Company> {
     String Address;
     String is_managed;
     Boolean Active;
-    Boolean deleted;
-    Boolean deleted_by;
+
 
     public CompanyBuilder setName(String name) {
         this.Name = name;
@@ -40,15 +39,7 @@ public class CompanyBuilder implements Createbuilder<Company> {
         return this;
     }
 
-    public CompanyBuilder setDeleted(Boolean deleted) {
-        this.deleted = deleted;
-        return this;
-    }
 
-    public CompanyBuilder setDeleted_by(Boolean deleted_by) {
-        this.deleted_by = deleted_by;
-        return this;
-    }
 
     
     @Override
@@ -57,9 +48,7 @@ public class CompanyBuilder implements Createbuilder<Company> {
                            this.Description,
                            this.Address,
                            this.is_managed,
-                           this.Active,
-                           this.deleted,
-                           this.deleted_by);
+                           this.Active);
     }
 
 

@@ -33,8 +33,6 @@ public class CompanyServiceImpl implements CompanyService {
                     .setAddress(payload.getAddress())
                     .setIs_managed(payload.getIs_managed())
                     .setActive(payload.getActive())
-                    .setDeleted(payload.getDeleted())
-                    .setDeleted_by(payload.getDeleted_by())
                     .Build();
             return this.companyRepository.save(company);
 
@@ -52,8 +50,7 @@ public class CompanyServiceImpl implements CompanyService {
             detail.setAddress(payload.getAddress());
             detail.setIs_managed(payload.getIs_managed());
             detail.setActive(payload.getActive());
-            detail.setDeleted(payload.getDeleted());
-            detail.setDeleted_by(payload.getDeleted_by());
+
             return this.companyRepository.save(detail);
         }
         return detail;

@@ -32,17 +32,15 @@ public class Company implements Serializable {
     @OneToMany()
     List<Organization> organizationList;
     private Boolean Active;
-    private Boolean Deleted;
-    private Boolean Deleted_by;
 
-    public Company(String Name, String Description, String Address, String Is_managed, Boolean Active, Boolean Deleted, Boolean Deleted_by) {
+
+    public Company(String Name, String Description, String Address, String Is_managed, Boolean Active) {
         this.Name = Name;
         this.Description = Description;
         this.Address = Address;
         this.Is_managed = Is_managed;
         this.Active = Active;
-        this.Deleted = Deleted;
-        this.Deleted_by = Deleted_by;
+
     }
 
 

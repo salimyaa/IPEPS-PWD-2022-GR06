@@ -22,8 +22,7 @@ public  class EmployeeBuilder implements Createbuilder<Employee> {
     EmployeeStatus status;
     Company company;
     Boolean active;
-    Boolean deleted;
-    Boolean deleted_by;
+
 
     public EmployeeBuilder setLastname(String Lastname){
         this.Lastname = Lastname;
@@ -63,15 +62,6 @@ public  class EmployeeBuilder implements Createbuilder<Employee> {
         return this;
     }
 
-    public EmployeeBuilder setDeleted(Boolean deleted) {
-        this.deleted = deleted;
-        return this;
-    }
-
-    public EmployeeBuilder setDeleted_by(Boolean deleted_by) {
-        this.deleted_by = deleted_by;
-        return this;
-    }
 
     @Override
     public Employee Build(){
@@ -83,12 +73,9 @@ public  class EmployeeBuilder implements Createbuilder<Employee> {
                             this.Ssin,
                             this.status,
                             this.company,
-                            this.deleted,
-                            this.deleted_by,
                             this.active
                             );
     }
 
 
-    public void getDeleted_by(Boolean deleted_by) { };
 }
