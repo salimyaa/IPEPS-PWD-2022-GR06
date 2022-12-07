@@ -3,11 +3,13 @@ package ipeps.pwd.wallet.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 
 
 @Data
@@ -16,9 +18,9 @@ import java.util.Date;
 @Entity
 public class Timesheet implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @NotNull
-    private Long timesheet_id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name="UUID",strategy ="org.hibernate.id.UUIDGenerator")
+    UUID timesheet_id;
     @NotNull
     @Temporal(TemporalType.DATE)
     private Date start_date;

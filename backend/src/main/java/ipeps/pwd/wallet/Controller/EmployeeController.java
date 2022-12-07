@@ -24,10 +24,10 @@ public class EmployeeController {
     public ApiResponse list(){
 
         try{
-            return new ApiResponse(true, this.employeeService.list() , ApiCode.EMPLOYEE_LIST_SUCCESS);
+            return new ApiResponse(true, this.employeeService.list() , ApiCode.getSuccessListCode("employee"));
            }
             catch (Exception e){
-            return new ApiResponse(false, e.getMessage() ,ApiCode.EMPLOYEE_LIST_ERROR);
+            return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorListCode("employee"));
         }
 
     }
@@ -37,13 +37,13 @@ public class EmployeeController {
         try{
             Employee detail = this.employeeService.detail(Employee_id);
             if (detail != null){
-                return new ApiResponse(true, detail ,ApiCode.EMPLOYEE_DETAIL_SUCCESS);
+                return new ApiResponse(true, detail ,ApiCode.getSuccessDetailCode("employee"));
             }else {
-                return new ApiResponse(false, detail,ApiCode.EMPLOYEE_DETAIL_NOT_FOUND);
+                return new ApiResponse(false, detail,ApiCode.getErrorDetailNotFoundCode("employee"));
             }
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage() ,ApiCode.EMPLOYEE_DETAIL_ERROR);
+            return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorDetailCode("employee"));
         }
 
     }
@@ -51,10 +51,10 @@ public class EmployeeController {
     public ApiResponse create(@RequestBody() EmployeeCreatePayload payload){
 
         try{
-            return new ApiResponse(true, this.employeeService.create(payload),ApiCode.EMPLOYEE_CREATE_SUCCESS);
+            return new ApiResponse(true, this.employeeService.create(payload),ApiCode.getSuccessCreateCode("employee"));
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage(),ApiCode.EMPLOYEE_CREATE_ERROR);
+            return new ApiResponse(false, e.getMessage(),ApiCode.getErrorCreateCode("employee"));
         }
 
     }
@@ -63,22 +63,22 @@ public class EmployeeController {
         try{
             Employee employeeUpdated = this.employeeService.update(payload);
             if (employeeUpdated != null){
-                return new ApiResponse(true, employeeUpdated ,ApiCode.EMPLOYEE_UPDATE_SUCCESS);
+                return new ApiResponse(true, employeeUpdated ,ApiCode.getSuccessUpdateCode("employee"));
             }
-                return new ApiResponse(false, this.employeeService.update(payload),ApiCode.EMPLOYEE_UPDATE_NOT_FOUND);
+                return new ApiResponse(false, this.employeeService.update(payload),ApiCode.getErrorUpdateNotFoundCode("employee"));
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage() ,ApiCode.EMPLOYEE_UPDATE_ERROR);
+            return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorUpdateCode("employee"));
         }
 
     }
     @DeleteMapping("delete/{id}")
     public ApiResponse delete(@PathVariable("id")UUID Employee_id){
     if (this.employeeService.delete(Employee_id)){
-            return new ApiResponse(true, "" ,ApiCode.EMPLOYEE_DELETE_SUCCESS);
+            return new ApiResponse(true, "" ,ApiCode.getSuccessDeleteCode("employee"));
         }
 
-            return new ApiResponse(false, "" ,ApiCode.EMPLOYEE_DELETE_ERROR);
+            return new ApiResponse(false, "" ,ApiCode.getErrorDeleteCode("employee"));
     }
 
 }

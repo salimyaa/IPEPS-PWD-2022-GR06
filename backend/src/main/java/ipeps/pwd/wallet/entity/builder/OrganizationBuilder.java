@@ -1,6 +1,6 @@
 package ipeps.pwd.wallet.entity.builder;
 
-import ipeps.pwd.wallet.entity.Employee;
+
 import ipeps.pwd.wallet.entity.Organization;
 import ipeps.pwd.wallet.entity.enums.OrganizationName;
 

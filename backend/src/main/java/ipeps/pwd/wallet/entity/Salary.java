@@ -4,11 +4,13 @@ import ipeps.pwd.wallet.entity.enums.SalaryAmount;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 
 
 @Data
@@ -17,9 +19,11 @@ import java.util.Date;
 @Entity
 public class Salary implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Salary_id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name="UUID",strategy ="org.hibernate.id.UUIDGenerator")
+    UUID Salary_id;
     @NotNull
+    @Temporal(TemporalType.DATE)
     private Date create_date;
     @NotNull
     private String Title;
@@ -28,6 +32,14 @@ public class Salary implements Serializable {
     @NotNull
     private SalaryAmount Amount;
     @ManyToOne
-    @JoinColumn(name = "target", referencedColumnName = "Employee_id")
+    @JoinColumn(name = "Salary_Employee", referencedColumnName = "Employee_id")
     private Employee employee;
+
+    public Salary(Date create_date, String title, String comment, SalaryAmount amount, Employee employee) {
+        this.create_date = create_date;
+        this.Title = title;
+        this.Comment = comment;
+        this.Amount = amount;
+        this.employee = employee;
+    }
 }

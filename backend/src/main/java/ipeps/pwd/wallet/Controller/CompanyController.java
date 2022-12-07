@@ -23,10 +23,10 @@ public class CompanyController {
     public ApiResponse list(){
 
         try{
-            return new ApiResponse(true, this.companyService.list() , ApiCode.EMPLOYEE_LIST_SUCCESS);
+            return new ApiResponse(true, this.companyService.list() , ApiCode.getSuccessListCode("company"));
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage() ,ApiCode.EMPLOYEE_LIST_ERROR);
+            return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorListCode("company"));
         }
 
     }
@@ -36,13 +36,13 @@ public class CompanyController {
         try{
             Company detail = this.companyService.detail(Company_id);
             if (detail != null){
-                return new ApiResponse(true, detail ,ApiCode.EMPLOYEE_DETAIL_SUCCESS);
+                return new ApiResponse(true, detail ,ApiCode.getSuccessDetailCode("company"));
             }else {
-                return new ApiResponse(false, detail,ApiCode.EMPLOYEE_DETAIL_NOT_FOUND);
+                return new ApiResponse(false, detail,ApiCode.getErrorDetailNotFoundCode("company"));
             }
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage() ,ApiCode.EMPLOYEE_DETAIL_ERROR);
+            return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorDetailCode("company"));
         }
 
     }
@@ -50,10 +50,10 @@ public class CompanyController {
     public ApiResponse create(@RequestBody() CompanyCreatePayload payload){
 
         try{
-            return new ApiResponse(true, this.companyService.create(payload),ApiCode.EMPLOYEE_CREATE_SUCCESS);
+            return new ApiResponse(true, this.companyService.create(payload),ApiCode.getSuccessCreateCode("company"));
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage(),ApiCode.EMPLOYEE_CREATE_ERROR);
+            return new ApiResponse(false, e.getMessage(),ApiCode.getErrorCreateCode("company"));
         }
 
     }
@@ -62,22 +62,22 @@ public class CompanyController {
         try{
             Company companyUpdated = this.companyService.update(payload);
             if (companyUpdated != null){
-                return new ApiResponse(true, companyUpdated ,ApiCode.EMPLOYEE_UPDATE_SUCCESS);
+                return new ApiResponse(true, companyUpdated ,ApiCode.getSuccessUpdateCode("company"));
             }
-            return new ApiResponse(false, this.companyService.update(payload),ApiCode.EMPLOYEE_UPDATE_NOT_FOUND);
+            return new ApiResponse(false, this.companyService.update(payload),ApiCode.getErrorUpdateNotFoundCode("company"));
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage() ,ApiCode.EMPLOYEE_UPDATE_ERROR);
+            return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorUpdateCode("company"));
         }
 
     }
     @DeleteMapping("delete/{id}")
     public ApiResponse delete(@PathVariable("id")UUID Company_id){
         if (this.companyService.delete(Company_id)){
-            return new ApiResponse(true, "" ,ApiCode.EMPLOYEE_DELETE_SUCCESS);
+            return new ApiResponse(true, "" ,ApiCode.getSuccessDeleteCode("company"));
         }
 
-        return new ApiResponse(false, "" ,ApiCode.EMPLOYEE_DELETE_ERROR);
+        return new ApiResponse(false, "" ,ApiCode.getErrorDeleteCode("company"));
     }
 
 }

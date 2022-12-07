@@ -43,8 +43,10 @@ public class Employee implements Serializable {
     private Boolean Deleted;
     @OneToMany()
     List<Timesheet> timesheetList;
+    @OneToMany()
+    List<Salary> salaryList;
 
-   @Override
+  /* @Override
     public String toString(){
         return  "Employee{"+
                 "Employee_id=" + Employee_id +
@@ -55,7 +57,7 @@ public class Employee implements Serializable {
                 ", Birthday='"+ Birthday + '\'' +
                 ", Ssin='"+ Ssin + '\'' +
                 '}';
-    }
+    }*/
 
     public Employee(String Lastname, String Firstname, String Address, String Gender,
                     String Birthday, String Ssin,EmployeeStatus status,Company company,

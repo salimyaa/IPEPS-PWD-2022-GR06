@@ -25,10 +25,10 @@ public class OrganizationController {
     public ApiResponse list(){
 
         try{
-            return new ApiResponse(true, this.organizationService.list() , ApiCode.EMPLOYEE_LIST_SUCCESS);
+            return new ApiResponse(true, this.organizationService.list() , ApiCode.getSuccessListCode("organization"));
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage() ,ApiCode.EMPLOYEE_LIST_ERROR);
+            return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorListCode("organization"));
         }
 
     }
@@ -38,13 +38,13 @@ public class OrganizationController {
         try{
             Organization detail = this.organizationService.detail(organization_id);
             if (detail != null){
-                return new ApiResponse(true, detail ,ApiCode.EMPLOYEE_DETAIL_SUCCESS);
+                return new ApiResponse(true, detail ,ApiCode.getSuccessDetailCode("organization"));
             }else {
-                return new ApiResponse(false, detail,ApiCode.EMPLOYEE_DETAIL_NOT_FOUND);
+                return new ApiResponse(false, detail,ApiCode.getErrorDetailNotFoundCode("organization"));
             }
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage() ,ApiCode.EMPLOYEE_DETAIL_ERROR);
+            return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorDetailCode("organization"));
         }
 
     }
@@ -52,10 +52,10 @@ public class OrganizationController {
     public ApiResponse create(@RequestBody() OrganizationCreatePayload payload){
 
         try{
-            return new ApiResponse(true, this.organizationService.create(payload),ApiCode.EMPLOYEE_CREATE_SUCCESS);
+            return new ApiResponse(true, this.organizationService.create(payload),ApiCode.getSuccessCreateCode("organization"));
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage(),ApiCode.EMPLOYEE_CREATE_ERROR);
+            return new ApiResponse(false, e.getMessage(),ApiCode.getErrorCreateCode("organization"));
         }
 
     }
@@ -64,22 +64,22 @@ public class OrganizationController {
         try{
             Organization organizationUpdated = this.organizationService.update(payload);
             if (organizationUpdated != null){
-                return new ApiResponse(true, organizationUpdated ,ApiCode.EMPLOYEE_UPDATE_SUCCESS);
+                return new ApiResponse(true, organizationUpdated ,ApiCode.getSuccessUpdateCode("organization"));
             }
-            return new ApiResponse(false, this.organizationService.update(payload),ApiCode.EMPLOYEE_UPDATE_NOT_FOUND);
+            return new ApiResponse(false, this.organizationService.update(payload),ApiCode.getErrorUpdateNotFoundCode("organization"));
         }
         catch (Exception e){
-            return new ApiResponse(false, e.getMessage() ,ApiCode.EMPLOYEE_UPDATE_ERROR);
+            return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorUpdateCode("organization"));
         }
 
     }
     @DeleteMapping("delete/{id}")
     public ApiResponse delete(@PathVariable("id")UUID organization_id){
         if (this.organizationService.delete(organization_id)){
-            return new ApiResponse(true, "" ,ApiCode.EMPLOYEE_DELETE_SUCCESS);
+            return new ApiResponse(true, "" ,ApiCode.getSuccessDeleteCode("organization"));
         }
 
-        return new ApiResponse(false, "" ,ApiCode.EMPLOYEE_DELETE_ERROR);
+        return new ApiResponse(false, "" ,ApiCode.getErrorDeleteCode("organization"));
     }
 
 }
