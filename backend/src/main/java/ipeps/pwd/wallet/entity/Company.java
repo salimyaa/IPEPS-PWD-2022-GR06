@@ -27,7 +27,7 @@ public class Company implements Serializable {
     private String Address;
     @NotNull
     private String Is_managed;
-    @OneToMany()
+    @OneToMany(mappedBy = "company")
     List<Employee> employeeList;
     @OneToMany()
     List<Organization> organizationList;

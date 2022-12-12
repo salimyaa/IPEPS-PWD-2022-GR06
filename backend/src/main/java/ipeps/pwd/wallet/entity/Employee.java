@@ -1,5 +1,6 @@
 package ipeps.pwd.wallet.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import ipeps.pwd.wallet.entity.enums.EmployeeStatus;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -39,6 +40,7 @@ public class Employee implements Serializable {
     private EmployeeStatus status;
     @ManyToOne
     @JoinColumn(name = "Employee_Company", referencedColumnName = "Company_id")
+    @JsonIgnoreProperties("employeeList")
     private Company company;
     private Boolean Deleted;
     @OneToMany()
