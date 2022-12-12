@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletApp/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/security.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/security.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletApp/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Employee.java" afterDir="false" />
-    </list>
+    <list default="true" id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="mise a jour wallet sur le dev de la branche main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,10 +35,34 @@
       <updated>1668851395615</updated>
       <workItem from="1668851402340" duration="141000" />
       <workItem from="1670777978372" duration="9055000" />
+      <workItem from="1670858084739" duration="384000" />
     </task>
+    <task id="LOCAL-00001" summary="mise a jour wallet sur le dev de la branche main">
+      <created>1670858394477</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670858394477</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="mise a jour wallet sur le dev de la branche main" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise a jour wallet sur le dev de la branche main" />
   </component>
 </project>
