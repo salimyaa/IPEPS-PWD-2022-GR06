@@ -37,4 +37,8 @@ public class Timesheet implements Serializable {
     @ManyToOne()
     @JoinColumn(name = "Employee_timesheet", referencedColumnName = "Employee_id")
     private Employee Employee;
+    @ManyToOne()
+    @JoinColumn(name="Contract_timesheet",referencedColumnName="contract_id")
+    private Contract Contract;
+
 }
