@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/ContractRepository.java" afterDir="false" />
+    <list default="true" id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="mise a jour wallet sur le dev de la branche main">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletApp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Timesheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Timesheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/angular.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,23 +12,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Contract.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Employee.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Timesheet.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/EmployeeBuilder.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WalletApp/src/app/app.component.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/index.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/CompanyBuilder.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/dashboard-routing.module.ts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/CompanyRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/ContractRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/EmployeeRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/OrganizationRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/SalaryRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/CompanyCreatePayload.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/CompanyController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard/dashboard.component.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,36 +34,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/yaala/Desktop/cours soir 2022-23/ProjetDevWeb/IPEPS-PWD-2022-GR06/backend",
-    "node.js.selected.package.tslint": "(autodetect)"
-  }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list />
-            </option>
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/backend" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="spring" />
+    <property name="ts.external.directory.path" value="D:\ecole\Annee 2022-2023\Angular\IPEPS-PWD-2022-GR06\WalletApp\node_modules\typescript\lib" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,7 +52,7 @@
       <updated>1668851395615</updated>
       <workItem from="1668851402340" duration="141000" />
       <workItem from="1670777978372" duration="9055000" />
-      <workItem from="1670858084739" duration="384000" />
+      <workItem from="1670858084739" duration="6152000" />
     </task>
     <task id="LOCAL-00001" summary="mise a jour wallet sur le dev de la branche main">
       <created>1670858394477</created>
@@ -94,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670858394477</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="mise a jour wallet sur le dev de la branche main">
+      <created>1670858558307</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670858558307</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,5 +88,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mise a jour wallet sur le dev de la branche main" />
     <option name="LAST_COMMIT_MESSAGE" value="mise a jour wallet sur le dev de la branche main" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
