@@ -8,7 +8,6 @@ import {SigninPayload} from '@security/model';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
-  message: string = 'vous êtes déconnecté';
 
   constructor(public auth: AuthService) {
   }
