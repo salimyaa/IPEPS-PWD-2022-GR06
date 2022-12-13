@@ -1,8 +1,10 @@
 package ipeps.pwd.wallet.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -36,9 +38,30 @@ public class Timesheet implements Serializable {
     private String timesheet_type;
     @ManyToOne()
     @JoinColumn(name = "Employee_timesheet", referencedColumnName = "Employee_id")
+    @JsonIgnoreProperties("timesheetList")
     private Employee Employee;
     @ManyToOne()
     @JoinColumn(name="Contract_timesheet",referencedColumnName="contract_id")
+    @JsonIgnoreProperties("timesheetList")
     private Contract Contract;
+
+
+
+    public Timesheet(String comment, Date start_date, Date start_hours, Date end_hours, ipeps.pwd.wallet.entity.Employee employee, ipeps.pwd.wallet.entity.Contract contract, String timesheet_type)
+    {
+        this.comment=comment;
+        this.start_date=start_date;
+        this.start_hours=start_hours;
+        this.end_hours=end_hours;
+        this.timesheet_type=timesheet_type;
+        this.Employee=employee;
+        this.Contract=contract;
+    }
+
+    @Override
+    public String toString()
+    {
+        return this.timesheet_id.toString()+' '+this.comment+" " + this.start_date.toString();
+    }
 
 }
