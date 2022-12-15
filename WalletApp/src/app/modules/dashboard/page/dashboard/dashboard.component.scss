@@ -5,13 +5,16 @@ span{
   padding-right: 1rem;
 }
 mat-sidenav-container{
-  height: 100%;
+  height: calc(205vh - 115vh);
 }
 mat-sidenav,mat-sidenav-content{
   padding: 16px;
 }
 mat-sidenav{
   background-color: lightcoral;
-  width: 30%;
-}
+  width: 200px;
 
+}
+mat-sidenav-content{
+  width: auto;
+}

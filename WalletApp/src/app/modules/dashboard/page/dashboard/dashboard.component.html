@@ -1,14 +1,28 @@
 <mat-toolbar color="primary" class="navbar">
   <div>Project</div>
+  <button mat-button (click)="opened=!opened"><mat-icon>menu</mat-icon> </button>
   <div>
-    <span class="example-spacer">Home</span>
+    <span class="example-spacer"><mat-icon>home</mat-icon>Home</span>
     <span class="example-spacer">Company</span>
     <span class="example-spacer">Employee</span>
   </div>
 </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav mode="side">Sidenav</mat-sidenav>
-  <mat-sidenav-content><h1>Gestion des Employee</h1></mat-sidenav-content>
+    <mat-sidenav  mode="side" [opened]="opened" >
+      <button (click)="logout()">logout</button>
+
+      <button (click)="me()">get my info</button>
+
+
+      <div *ngIf="credential">
+        {{ 'username : ' + credential.username}}
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+      End
+    </mat-sidenav-content>
 </mat-sidenav-container>
 
 
@@ -31,11 +45,4 @@
 <!--  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>-->
 <!--</mat-toolbar-row>-->
 
-<button (click)="logout()">logout</button>
 
-<button (click)="me()">get my info</button>
-
-
-<div *ngIf="credential">
-  {{ 'username : ' + credential.username}}
-</div>

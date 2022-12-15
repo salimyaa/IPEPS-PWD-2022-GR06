@@ -11,6 +11,7 @@ import {CredentialHelper} from '@security/helper';
 })
 export class DashboardComponent implements OnInit {
   credential?: Credential;
+  opened = false;
 
   constructor(public auth: AuthService) {
   }
@@ -27,5 +28,9 @@ export class DashboardComponent implements OnInit {
 
   logout(): void {
     this.auth.logout();
+  }
+
+  toggle() {
+
   }
 }
