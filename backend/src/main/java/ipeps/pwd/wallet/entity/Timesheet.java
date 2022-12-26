@@ -37,11 +37,11 @@ public class Timesheet implements Serializable {
     @NotNull
     private String timesheet_type;
     @ManyToOne()
-    @JoinColumn(name = "Employee_timesheet", referencedColumnName = "Employee_id")
+    @JoinColumn(name = "employee_timesheet", referencedColumnName = "Employee_id")
     @JsonIgnoreProperties("timesheetList")
     private Employee Employee;
     @ManyToOne()
-    @JoinColumn(name="Contract_timesheet",referencedColumnName="contract_id")
+    @JoinColumn(name="contract_timesheet", referencedColumnName="Contract_id")
     @JsonIgnoreProperties("timesheetList")
     private Contract Contract;
 

@@ -11,13 +11,13 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TimesheetCreatePayload {
-    Date start_date;
-    Date start_hours;
-    Date end_hours;
-    String comment;
-    String timesheet_type;
-    Employee employee;
-    Contract contract;
+    Date Start_date;
+    Date Start_hours;
+    Date End_hours;
+    String Comment;
+    String Timesheet_type;
+    Employee Employee;
+    Contract Contract;
 
 
 }
