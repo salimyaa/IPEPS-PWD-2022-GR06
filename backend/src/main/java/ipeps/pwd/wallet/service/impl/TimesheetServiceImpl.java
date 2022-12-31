@@ -40,11 +40,11 @@ public class TimesheetServiceImpl implements TimesheetService {
                     .setEmployee(payload.getEmployee())
                     .setContract(payload.getContract())
                     .Build();
-            System.out.println("----- check du payload-----");
-            System.out.println(payload.getComment()+' '+payload.getStart_date().toString());
-            System.out.println("----- Creation du Timesheet-----");
-            System.out.println(timesheet);
-            System.out.println("---------FIN------");
+//            System.out.println("----- check du payload-----");
+//            System.out.println(payload.getComment()+' '+payload.getStart_date().toString());
+//            System.out.println("----- Creation du Timesheet-----");
+//            System.out.println(timesheet);
+//            System.out.println("---------FIN------");
 
 
             return this.timesheetRepository.save(timesheet);

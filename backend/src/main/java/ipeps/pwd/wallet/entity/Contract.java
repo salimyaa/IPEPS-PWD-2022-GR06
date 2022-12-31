@@ -37,7 +37,8 @@ public class Contract implements Serializable {
     @ManyToOne
     @JoinColumn(name = "Contract_Employee", referencedColumnName = "Employee_id")
     private Employee employee;
-    @OneToMany
+
+    @OneToMany(   )
     List<Timesheet> timesheetList;
 
 
