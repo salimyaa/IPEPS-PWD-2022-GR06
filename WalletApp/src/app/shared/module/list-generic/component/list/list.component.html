@@ -1,0 +1,19 @@
+<ng-container *ngIf="valid;else invalid">
+  <table>
+    <td *ngIf="haveCallBack"><button >Create</button></td>
+    <tr>
+      <td>#</td>
+      <td *ngFor="let field of config.fields">{{field}}</td>
+      <td *ngIf="haveCallBack"></td>
+    </tr>
+    <tr *ngFor="let item of config.data;let index=index">
+      <td>{{index+1}}</td>
+      <td *ngFor="let field of config.fields">{{item[field]}}</td>
+      <td *ngIf="haveCallBack"><button (click)="callCallback(item)">Détail</button></td>
+      <td *ngIf="haveCallBack"><button (click)="callRemove(item)">Delete</button></td>
+    </tr>
+  </table>
+</ng-container>
+<ng-template #invalid>
+  config invalide
+</ng-template>

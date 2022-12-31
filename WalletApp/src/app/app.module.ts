@@ -7,21 +7,33 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpInterceptorService} from '@shared/service/http.interceptor';
 import {AuthService} from '@security/service/auth.service';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { MatSidenavModule } from '@angular/material/sidenav';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+
+
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true
   },
     AuthService],
+  exports: [
+
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

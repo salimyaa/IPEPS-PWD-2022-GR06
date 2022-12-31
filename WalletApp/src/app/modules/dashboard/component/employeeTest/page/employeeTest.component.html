@@ -1,0 +1,21 @@
+<ng-container>
+  <table>
+    <thead>
+    <tr>
+      <th>First name </th>
+      <th>Last name </th>
+      <th>Email id </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employee of employeeTest">
+
+      <td>{{employee.firstName}}</td>
+      <td>{{employee.lastName}}</td>
+      <td>{{employee.email_id}}</td>
+    </tr>
+    </tbody>
+
+
+  </table>
+</ng-container>
