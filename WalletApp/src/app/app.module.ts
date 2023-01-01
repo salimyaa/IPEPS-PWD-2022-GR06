@@ -7,7 +7,12 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {HttpInterceptorService} from '@shared/service/http.interceptor';
 import {AuthService} from '@security/service/auth.service';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { MatSidenavModule } from '@angular/material/sidenav';
+import {DashboardModule} from "@dashboard/dashboard.module";
+
+import {MatSidenavModule} from "@angular/material/sidenav";
+
+import {MatIconModule} from "@angular/material/icon";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 
 
@@ -22,7 +27,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    DashboardModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatToolbarModule,
 
 
   ],

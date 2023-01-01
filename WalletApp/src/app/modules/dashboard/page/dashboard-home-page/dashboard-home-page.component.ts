@@ -4,7 +4,12 @@ import {AuthService} from "@security/service/auth.service";
 import {ApiResponse} from "@shared/model";
 import {CredentialHelper} from "@security/helper";
 
-
+/*   sidenav   */
+interface SideNavToggle {
+  screenWidth:number;
+  collapsed: boolean;
+}
+/*  Fin sidenav   */
 @Component({
   selector: 'app-dashboard-home-page',
   templateUrl: './dashboard-home-page.component.html',
@@ -19,10 +24,22 @@ export class DashboardHomePageComponent  {
 
   ngOnInit(): void {
   }
+  /*   sidenav   */
+  isSideNavCollapsed = false;
+  screenWidth = 0 ;
+  onToggleSidenav(data: SideNavToggle): void{
+    this.screenWidth= data.screenWidth;
+    this.isSideNavCollapsed= data.collapsed;
+  }
+  /*  Fin sidenav   */
 
 
+ toggle() {
 
-
+  }
+  logout(): void {
+    this.auth.logout();
+  }
   me(): void {
     this.auth.me().subscribe((response: ApiResponse) => {
       this.credential = CredentialHelper.credentialFromDto(response.data as CredentialDto);

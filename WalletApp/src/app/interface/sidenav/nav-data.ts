@@ -8,25 +8,21 @@ export const navbarData = [
     routelink: 'employee',
     icon: 'fas fa-user-alt',
     label: 'employee'
-  },
-  {
+  },{
     routelink: 'company',
     icon: 'fas fa-building',
     label: 'company'
-  },
-  {
+  },{
     routelink: 'employeeTest',
     icon: 'fas fa-user-alt',
     label: 'employeeTest'
-  },
-  {
+  },{
     routelink: '',
-    icon: '',
-    label: ''
-  },
-  {
+    icon: 'fal fa-home',
+    label: 'dashboard'
+  },{
     routelink: '',
-    icon: '',
-    label: ''
+    icon: 'fal fa-home',
+    label: 'dashboard'
   }
 ];

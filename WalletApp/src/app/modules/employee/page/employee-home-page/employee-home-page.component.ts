@@ -1,11 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ListGenericConfig} from '@shared/module/list-generic/model/list-generic.config';
+import {ListGenericConfig} from '../../../../shared/module/list-generic/model/list-generic.config';
 import {Employee} from '../../model/business/employee';
 import {EmployeeService} from "../../service/employee.service";
 import {BehaviorSubject} from "rxjs";
 import {ApiResponse, ApiUriEnum} from "@shared/model";
 import {MatDialog} from "@angular/material/dialog";
-import {ListGenericComponent} from "../../../../../Interface/listGenericPerso/listGeneric/component/list-generic/list-generic.component";
+import {ListGenericComponent} from "../../../Interface/listGenericPerso/listGeneric/component/list-generic/list-generic.component";
 
 import {EmployeeCreatePayload} from "../../payload/EmployeeCreatePayload";
 import {EmployeeDto} from "../../model/dto/employee.dto";
@@ -17,8 +17,6 @@ import {EmployeeUpdatePayload} from "../../payload/EmployeeUpdatePayload";
   templateUrl: './employee-home-page.component.html',
   styleUrls: ['./employee-home-page.component.scss']
 })
-
-
 export class EmployeeHomePageComponent implements OnInit {
  /* config$ = new BehaviorSubject<ListGenericConfig>({
     fields: [],
@@ -103,6 +101,4 @@ constructor(private employeeService: EmployeeService) {
 
 
   }
-
-
 }

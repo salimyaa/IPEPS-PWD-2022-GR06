@@ -7,7 +7,7 @@ import {employeeTestComponent} from "./page/employeeTest.component";
 
 @NgModule({
   declarations: [
-
+    employeeTestComponent
   ],
   imports: [
     CommonModule,

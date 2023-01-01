@@ -4,15 +4,9 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@shared/*": [
-        "app/shared/*"
-      ],
-      "@security/*": [
-        "app/security/*"
-      ],
-      "@dashboard/*": [
-        "app/modules/dashboard/*"
-      ]
+      "@shared/*": ["app/shared/*"],
+      "@security/*": ["app/security/*"],
+      "@dashboard/*": ["app/modules/dashboard/*"]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -27,13 +21,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2015",
+    "target": "es2020",
     "module": "es2020",
     "lib": [
       "es2020",
       "dom"
-    ],
-    "useDefineForClassFields": false
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
