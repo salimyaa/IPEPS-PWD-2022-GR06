@@ -5,9 +5,11 @@ import { CompanyRoutingModule } from './company-routing.module';
 import { CompanyHomePageComponent } from './page/company-home-page/company-home-page.component';
 
 
+
 @NgModule({
   declarations: [
-    CompanyHomePageComponent
+    CompanyHomePageComponent,
+
   ],
   imports: [
     CommonModule,

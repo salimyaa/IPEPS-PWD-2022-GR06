@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
-import {AuthService} from "@security/service/auth.service";
+
 
 
 
@@ -12,7 +12,7 @@ import {AuthService} from "@security/service/auth.service";
 export class DashboardHeaderComponent {
   title: string = "Dashboard";
 
-  constructor(public auth: AuthService) {
+  constructor() {
 
   }
 

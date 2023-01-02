@@ -13,13 +13,17 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from "@angular/material/input";
-import {SidenavComponent} from "../../interface/sidenav/sidenav.component";
 
-import {BodyComponent} from "../../interface/body/body.component";
 
 import {EmployeeModule} from "../employee/employee.module";
 import {CompanyModule} from "../company/company.module";
 import {EmployeeTestModule} from "../employeeTest/employeeTest.module";
+
+
+import {MatListModule} from "@angular/material/list";
+import {SidebarComponent} from "../../interface/sidebar/sidebar.component";
+import {MatMenuModule} from "@angular/material/menu";
+
 
 
 
@@ -29,12 +33,10 @@ import {EmployeeTestModule} from "../employeeTest/employeeTest.module";
     DashboardRouterComponent,
     DashboardHomePageComponent,
     DashboardHeaderComponent,
-    SidenavComponent,
-    BodyComponent,
+    SidebarComponent
 
   ],
   exports: [
-    DashboardHomePageComponent
   ],
 
   imports: [
@@ -51,10 +53,9 @@ import {EmployeeTestModule} from "../employeeTest/employeeTest.module";
     FormsModule,
     EmployeeModule,
     CompanyModule,
-    EmployeeTestModule
-
-
-
+    EmployeeTestModule,
+    MatListModule,
+    MatMenuModule,
   ]
 })
 export class DashboardModule { }

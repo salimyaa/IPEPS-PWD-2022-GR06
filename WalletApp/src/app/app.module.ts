@@ -14,12 +14,22 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
 
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
+
 
   ],
   imports: [
@@ -31,6 +41,12 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     MatSidenavModule,
     MatIconModule,
     MatToolbarModule,
+    LayoutModule,
+    MatButtonModule,
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
 
 
   ],
@@ -39,6 +55,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
   },
     AuthService],
   exports: [
+
 
 
   ],
