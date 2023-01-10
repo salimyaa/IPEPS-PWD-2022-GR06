@@ -1,19 +1,53 @@
-<ng-container *ngIf="valid;else invalid">
-  <table>
-    <td *ngIf="haveCallBack"><button >Create</button></td>
+<ng-container  *ngIf="valid;else invalid">
+  <button class = "btn btn-info btnCreate" *ngIf="haveCallBack">Create New Employee</button>
+  <table class="table table-striped">
+
     <tr>
-      <td>#</td>
-      <td *ngFor="let field of config.fields">{{field}}</td>
-      <td *ngIf="haveCallBack"></td>
+      <th class="titleTable">#</th>
+      <th class="titleTable" *ngFor="let field of config.fields">{{field}}</th>
+      <th class="titleTable" *ngIf="haveCallBack">Action</th>
+
     </tr>
     <tr *ngFor="let item of config.data;let index=index">
       <td>{{index+1}}</td>
-      <td *ngFor="let field of config.fields">{{item[field]}}</td>
-      <td *ngIf="haveCallBack"><button (click)="callCallback(item)">Détail</button></td>
-      <td *ngIf="haveCallBack"><button (click)="callRemove(item)">Delete</button></td>
+      <td *ngFor="let field of config.fields">
+          <!--[class.success]="item.status == 'Employed'" [class.error]="item.status == 'NotEmployed'" --> {{item[field]}}</td>
+      <td *ngIf="haveCallBack">
+        <a class="btn btn-primary" [routerLink]="['/Employees/detail/', item.id]">Edit</a>
+        <button class = "btn btn-info" (click)="callCallback(item)">Détail</button>
+        <!--<button class = "btn btn-danger"(click)="callRemove(item)">Delete</button>-->
+      </td>
     </tr>
   </table>
+
 </ng-container>
 <ng-template #invalid>
   config invalide
 </ng-template>
+<!--<ng-container  *ngIf="valid;else invalid">
+  <button class = "btn btn-info btnCreate"*ngIf="haveCallBack">Create New Employee</button>
+  <table class="table table-striped">
+
+    <tr class="center">
+      <th class="titleTable">#</th>
+      <th class="titleTable"*ngFor="let field of config.fields">{{field}}</th>
+      <th class="titleTable"*ngIf="haveCallBack">Action</th>
+
+    </tr>
+    <tr *ngFor="let item of config.data;let index=index">
+      <td>{{index+1}}</td>
+      <td>{{item.firstname}}</td>
+      <td>{{item.lastname}}</td>
+      <td class="tdTailleCenter"><span [class.success]="item.status == 'Employed'" [class.error]="item.status == 'NotEmployed'" >{{item.status}}</span></td>
+      <td *ngIf="haveCallBack">
+        <button type="button" class="btn btn-primary" [routerLink]="['/Employees/detail/', item.id]">Détail</button>
+        &lt;!&ndash; <button class = "btn btn-info"(click)="callCallback(item)">Détail</button>&ndash;&gt;
+        <button class = "btn btn-danger"(click)="callRemove(item)">Delete</button>
+      </td>
+    </tr>
+  </table>
+
+</ng-container>
+<ng-template #invalid>
+  config invalide
+</ng-template>-->

@@ -16,6 +16,8 @@ import {AuthService} from "@security/service/auth.service";
 })
 export class SidebarComponent {
   credential?: Credential;
+
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -27,10 +29,12 @@ export class SidebarComponent {
   logout(): void {
     this.auth.logout();
   }
+
   me(): void {
     this.auth.me().subscribe((response: ApiResponse) => {
       this.credential = CredentialHelper.credentialFromDto(response.data as CredentialDto);
       console.log('this.credential', this.credential);
+
     })
   }
 }

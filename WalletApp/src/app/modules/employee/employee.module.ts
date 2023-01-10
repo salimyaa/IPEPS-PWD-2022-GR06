@@ -10,12 +10,20 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatInputModule} from '@angular/material/input';
 import {ListGenericModule} from "@shared/module/list-generic/list-generic.module";
+import { EmployeeUpdateComponent } from './page/employee-crud/employee-update/employee-update.component';
+import { EmployeeDetailsComponent } from './page/employee-crud/employee-details/employee-details.component';
+import { EmployeeDeleteComponent } from './page/employee-crud/employee-delete/employee-delete.component';
+import {EmployeeCreateComponent} from "./page/employee-crud/employee-create/employee-create.component";
 
 
 
 @NgModule({
     declarations: [
         EmployeeHomePageComponent,
+        EmployeeUpdateComponent,
+        EmployeeDetailsComponent,
+        EmployeeDeleteComponent,
+        EmployeeCreateComponent
     ],
     exports: [
         EmployeeHomePageComponent

@@ -6,15 +6,15 @@ import ipeps.pwd.wallet.entity.Company;
 
 public class CompanyBuilder implements Createbuilder<Company> {
     
-    String Name;
+    String Title;
     String Description;
     String Address;
     String is_managed;
     Boolean Active;
 
 
-    public CompanyBuilder setName(String name) {
-        this.Name = name;
+    public CompanyBuilder setTitle(String title) {
+        this.Title = title;
         return this;
     }
 
@@ -44,7 +44,7 @@ public class CompanyBuilder implements Createbuilder<Company> {
     
     @Override
     public Company Build(){
-        return new Company(this.Name,
+        return new Company(this.Title,
                            this.Description,
                            this.Address,
                            this.is_managed,

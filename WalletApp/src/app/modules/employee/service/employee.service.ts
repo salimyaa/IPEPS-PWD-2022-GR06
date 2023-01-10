@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Employee} from "../model/business/employee";
-import {ApiResponse, ApiUriEnum, DtoInterface} from "@shared/model";
+import {ApiResponse, ApiUriEnum} from "@shared/model";
 import {EmployeeDto} from "../model/dto/employee.dto";
 import {EmployeeHelper} from "../helper/employee.helper";
 import {ApiService} from "@shared/service";
 import {map} from "rxjs/operators";
 import {EmployeeCreatePayload} from "../payload/EmployeeCreatePayload";
 import {EmployeeUpdatePayload} from "../payload/EmployeeUpdatePayload";
-import {EmployeeTest} from "../../employeeTest/model/employeeTest";
+
 
 @Injectable({
   providedIn: 'root'
@@ -26,12 +25,13 @@ export class EmployeeService extends ApiService{
     return this.post(ApiUriEnum.PROFILE_CREATE, payload).pipe(
       map((response: ApiResponse) => (response.result) ? EmployeeHelper.fromDto(response.data! as EmployeeDto) : EmployeeHelper.getEmpty()))
   }
+
   update(payload: EmployeeUpdatePayload) {
     return this.put(ApiUriEnum.PROFILE_UPDATE, payload).pipe(
       map((response: ApiResponse) => (response.result) ? EmployeeHelper.fromDto(response.data! as EmployeeDto) : EmployeeHelper.getEmpty()))
   }
-  detail(payload: EmployeeUpdatePayload) {
-    return this.get(ApiUriEnum.PROFILE_DETAIL).pipe(
+  detail(id:string) {
+    return this.get(`${ApiUriEnum.PROFILE_DETAIL}/${id}`).pipe(
       map((response: ApiResponse) => (response.result) ? EmployeeHelper.fromDto(response.data! as EmployeeDto) : EmployeeHelper.getEmpty()))
   }
   //todo update, detail
@@ -44,6 +44,11 @@ export class EmployeeService extends ApiService{
       return response.data as EmployeeDto[];
     }));
   }
+
+  /*getEmployeeById(id: string): Observable<Employee>{
+    return this.get('Employees/detail/${id}').pipe(
+      map((response: ApiResponse) => (response.result) ? EmployeeHelper.fromDto(response.data! as EmployeeDto) : EmployeeHelper.getEmpty()))
+  }*/
 }
 
 

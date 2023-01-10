@@ -39,7 +39,7 @@ public class Employee implements Serializable {
     @NotNull
     private EmployeeStatus status;
     @ManyToOne
-    @JoinColumn(name = "Employee_Company", referencedColumnName = "Company_id")
+    @JoinColumn(name = "Employee_Company", referencedColumnName = "CompanyId")
     @JsonIgnoreProperties("employeeList")
     private Company company;
     private Boolean Deleted;

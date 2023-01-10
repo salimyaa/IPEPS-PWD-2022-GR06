@@ -31,10 +31,10 @@ public class CompanyController {
 
     }
     @GetMapping("detail/{id}")
-    public ApiResponse getDetail(@PathVariable("id") UUID Company_id){
+    public ApiResponse getDetail(@PathVariable("id") UUID CompanyId){
 
         try{
-            Company detail = this.companyService.detail(Company_id);
+            Company detail = this.companyService.detail(CompanyId);
             if (detail != null){
                 return new ApiResponse(true, detail ,ApiCode.getSuccessDetailCode("company"));
             }else {
@@ -72,8 +72,8 @@ public class CompanyController {
 
     }
     @DeleteMapping("delete/{id}")
-    public ApiResponse delete(@PathVariable("id")UUID Company_id){
-        if (this.companyService.delete(Company_id)){
+    public ApiResponse delete(@PathVariable("id")UUID CompanyId){
+        if (this.companyService.delete(CompanyId)){
             return new ApiResponse(true, "" ,ApiCode.getSuccessDeleteCode("company"));
         }
 

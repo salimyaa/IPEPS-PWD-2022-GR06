@@ -1,5 +1,6 @@
 package ipeps.pwd.wallet.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,9 +19,9 @@ public class Company implements Serializable {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name="UUID",strategy ="org.hibernate.id.UUIDGenerator")
-    UUID  Company_id;
+    UUID  CompanyId;
     @NotNull
-    private String Name;
+    private String Title;
     @NotNull
     private String Description;
     @NotNull
@@ -34,8 +35,8 @@ public class Company implements Serializable {
     private Boolean Active;
 
 
-    public Company(String Name, String Description, String Address, String Is_managed, Boolean Active) {
-        this.Name = Name;
+    public Company(String Title, String Description, String Address, String Is_managed, Boolean Active) {
+        this.Title = Title;
         this.Description = Description;
         this.Address = Address;
         this.Is_managed = Is_managed;

@@ -1,15 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ListGenericConfig} from '../../../../shared/module/list-generic/model/list-generic.config';
+import {Component, OnInit} from '@angular/core';
+import {ListGenericConfig} from '@shared/module/list-generic/model/list-generic.config';
 import {Employee} from '../../model/business/employee';
 import {EmployeeService} from "../../service/employee.service";
 import {BehaviorSubject} from "rxjs";
-import {ApiResponse, ApiUriEnum} from "@shared/model";
-import {MatDialog} from "@angular/material/dialog";
-import {ListGenericComponent} from "../../../Interface/listGenericPerso/listGeneric/component/list-generic/list-generic.component";
-
-import {EmployeeCreatePayload} from "../../payload/EmployeeCreatePayload";
 import {EmployeeDto} from "../../model/dto/employee.dto";
-import {EmployeeUpdatePayload} from "../../payload/EmployeeUpdatePayload";
 
 
 @Component({
@@ -18,12 +12,12 @@ import {EmployeeUpdatePayload} from "../../payload/EmployeeUpdatePayload";
   styleUrls: ['./employee-home-page.component.scss']
 })
 export class EmployeeHomePageComponent implements OnInit {
- /* config$ = new BehaviorSubject<ListGenericConfig>({
+config$ = new BehaviorSubject<ListGenericConfig>({
     fields: [],
     data: [],
     callback: this.callback
 
-  });*/
+  });
 
 
   employee!: EmployeeDto[];
@@ -36,14 +30,15 @@ constructor(private employeeService: EmployeeService) {
 
     // List employee
     this.getlistEmployee();
-    /*this.employeeService.list().subscribe((employees: Employee[]) => {
+    this.employeeService.list().subscribe((employees: Employee[]) => {
         this.config$.next({
           fields: ['firstname', 'lastname', 'status'],
           data: employees,
           callback: this.callback
         })
       }
-    )*/
+    )
+
     /*
         this.employeeService.list().subscribe({
           next: datatable => {
@@ -89,16 +84,15 @@ constructor(private employeeService: EmployeeService) {
   }
 
 
-  /*callback(employee: Employee): void {
+  callback(employee: Employee): void {
     console.log('mon employee', employee);
-  }*/
+
+  }
 
   private getlistEmployee() {
     this.employeeService.getEmployeeList().subscribe((data) => {
       this.employee = data;
       console.log('data', data)
     })
-
-
   }
 }

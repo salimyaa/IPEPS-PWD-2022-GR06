@@ -11,8 +11,8 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CompanyUpdatePayload {
-    UUID Company_id;
-    String Name;
+    UUID CompanyId;
+    String Title;
     String Description;
     String Address;
     String Is_managed;

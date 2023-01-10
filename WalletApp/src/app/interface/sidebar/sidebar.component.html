@@ -17,18 +17,12 @@
         <mat-icon mat-list-icon>person</mat-icon>
         <span  class="menu-item">Employee</span>
       </mat-list-item>
-      <mat-list-item class="listFocus" [routerLink]="'employeeTest'">
-        <mat-icon mat-list-icon>person</mat-icon>
-        <span  class="menu-item">EmployeeTest</span>
-      </mat-list-item>
+
       <mat-list-item class="listFocus" [routerLink]="['company']">
         <mat-icon mat-list-icon>home</mat-icon>
         <span  class="menu-item">Company</span>
       </mat-list-item>
-      <mat-list-item class="listFocus" [routerLink]="['table']">
-        <mat-icon mat-list-icon>home</mat-icon>
-        <span class="menu-item">table</span>
-      </mat-list-item>
+
 
     </mat-nav-list>
   </mat-sidenav>
@@ -44,7 +38,6 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>GESTION DES ENTREPRISES</span>
-
 
       <button mat-raised-button (click)="logout()">logout</button>
 

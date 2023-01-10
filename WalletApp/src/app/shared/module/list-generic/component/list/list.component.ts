@@ -23,11 +23,6 @@ export class ListComponent implements OnInit {
       this.config.callback(data);
     }
   }
-  callCallback2(data:any) {
-    if (!isNil(this.config.callback)) {
-      this.config.callback(data);
-    }
-  }
 
   callRemove(data: any) {
     if (!isNil(this.config.callback)) {

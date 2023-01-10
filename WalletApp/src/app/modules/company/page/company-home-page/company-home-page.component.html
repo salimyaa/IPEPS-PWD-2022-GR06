@@ -1,1 +1,5 @@
-<p>company-home-page works!</p>
+<div class="headerTitle"><h1>Gestion des Companies</h1></div>
+<div class="container">
+  <app-list *ngIf="config$ | async as config" [config]="config" > </app-list>
+</div>
+<button class="btn btn-danger" (click)="remove('id')">Remove</button>

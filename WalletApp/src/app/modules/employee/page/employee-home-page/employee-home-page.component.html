@@ -1,6 +1,10 @@
 <div class="headerTitle"><h1>Gestion des Employee</h1></div>
+<div class="container">
+<app-list *ngIf="config$ | async as config" [config]="config" > </app-list>
+</div>
 
-<!--<app-list *ngIf="config$ | async as config" [config]="config" > </app-list>-->
+
+
 
 <!--<div class="wrapper">
   <a [routerLink]="['Add']">
@@ -11,23 +15,4 @@
   </a>
 
 </div>-->
-<ng-container>
-  <table>
-    <thead>
-      <tr>
-        <th>First name </th>
-        <th>Last name </th>
-        <th>Status </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let employee of employee">
-        <td>{{employee.firstname}}</td>
-        <td>{{employee.lastname}}</td>
-        <td>{{employee.status}}</td>
-      </tr>
-    </tbody>
 
-
-  </table>
-</ng-container>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CompanyRoutingModule } from './company-routing.module';
 import { CompanyHomePageComponent } from './page/company-home-page/company-home-page.component';
+import {ListGenericModule} from "@shared/module/list-generic/list-generic.module";
 
 
 
@@ -13,7 +14,8 @@ import { CompanyHomePageComponent } from './page/company-home-page/company-home-
   ],
   imports: [
     CommonModule,
-    CompanyRoutingModule
+    CompanyRoutingModule,
+    ListGenericModule,
   ]
 })
 export class CompanyModule { }

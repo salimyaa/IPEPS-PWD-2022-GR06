@@ -31,7 +31,7 @@ public class Organization implements Serializable {
     }
 
     @ManyToOne()
-    @JoinColumn(name = "Organization_company", referencedColumnName = "Company_id")
+    @JoinColumn(name = "Organization_company", referencedColumnName = "CompanyId")
     private Company company;
     private String Description;
 

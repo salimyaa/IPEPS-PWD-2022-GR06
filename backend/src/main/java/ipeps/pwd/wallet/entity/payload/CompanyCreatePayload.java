@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CompanyCreatePayload {
-    String Name;
+    String Title;
     String Description;
     String Address;
     String Is_managed;

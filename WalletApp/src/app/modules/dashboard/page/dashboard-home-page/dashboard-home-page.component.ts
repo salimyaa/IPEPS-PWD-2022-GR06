@@ -8,11 +8,7 @@ import {Component} from '@angular/core';
 })
 export class DashboardHomePageComponent  {
 
-  opened = false;
-
   constructor() {
   }
-
-
 
 }

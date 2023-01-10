@@ -10,18 +10,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Wallet';
 
-
-
-
-
-
   constructor() {
   }
 
   ngOnInit(): void {
   }
-
-
-
 
 }

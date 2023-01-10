@@ -21,14 +21,14 @@ public class CompanyServiceImpl implements CompanyService {
         return companyRepository.findAll();
     }
     @Override
-    public Company detail(UUID Company_id){
-        return  companyRepository.findById(Company_id).orElse(null);
+    public Company detail(UUID CompanyId){
+        return  companyRepository.findById(CompanyId).orElse(null);
     }
     @Override
     public Company create(CompanyCreatePayload payload) {
         try{
             Company company =new CompanyBuilder()
-                    .setName(payload.getName())
+                    .setTitle(payload.getTitle())
                     .setDescription(payload.getDescription())
                     .setAddress(payload.getAddress())
                     .setIs_managed(payload.getIs_managed())
@@ -43,9 +43,9 @@ public class CompanyServiceImpl implements CompanyService {
     }
     @Override
     public Company update (CompanyUpdatePayload payload) {
-        Company detail = this.detail(payload.getCompany_id());
+        Company detail = this.detail(payload.getCompanyId());
         if (detail != null) {
-            detail.setName(payload.getName());
+            detail.setTitle(payload.getTitle());
             detail.setDescription(payload.getDescription());
             detail.setAddress(payload.getAddress());
             detail.setIs_managed(payload.getIs_managed());
@@ -57,9 +57,9 @@ public class CompanyServiceImpl implements CompanyService {
     }
 
     @Override
-    public boolean delete(UUID Company_id) {
+    public boolean delete(UUID CompanyId) {
         try{
-            Company detail = this.detail(Company_id);
+            Company detail = this.detail(CompanyId);
             if (detail != null) {
                 this.companyRepository.delete(detail);
             }
