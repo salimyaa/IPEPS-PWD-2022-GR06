@@ -1,0 +1,19 @@
+<button routerLink="createContract">Create new contract</button>
+<table>
+  <tr>
+    <td>#</td>
+    <td>Description</td>
+    <td>Date début</td>
+    <td>Dade fin</td>
+    <td>h/sem</td>
+    <td>Employé</td>
+  </tr>
+<tr *ngFor="let elem of contracts">
+  <td>{{elem.contract_id}}</td>
+  <td>{{elem.description}}</td>
+  <td>{{elem.start_date}}</td>
+  <td>{{elem.end_date}}</td>
+  <td>{{elem.nb_hours_by_week}}</td>
+  <td>{{elem.employee.firstname}} {{elem.employee.lastname.toLocaleUpperCase()}}</td>
+</tr>
+</table>
