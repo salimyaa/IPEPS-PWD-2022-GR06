@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Contract} from "../../model/business/contract";
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {EmployeeDto} from "../../../employee/model/dto/employee.dto";
 import {EmployeeService} from "../../../employee/service/employee.service";
 import {ContractServiceService} from "../../service/contract-service.service";

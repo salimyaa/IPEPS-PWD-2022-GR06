@@ -38,4 +38,9 @@ export class ContractServiceService {
      return this.apiService.get(`Contracts/detail/${id}`).pipe(
       map((response: ApiResponse) => response.data! as ContractDto ))
   }
+  update(payload: ContractPayload)
+  {
+    return this.apiService.put('Contracts/update', payload)
+      .pipe(map((response:ApiResponse)=>response.data as ContractDto))
+  }
 }
