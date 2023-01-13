@@ -6,6 +6,7 @@ import {BehaviorSubject} from "rxjs";
 import {EmployeeDto} from "../../model/dto/employee.dto";
 
 
+
 @Component({
   selector: 'app-employee-home-page',
   templateUrl: './employee-home-page.component.html',
@@ -21,6 +22,7 @@ config$ = new BehaviorSubject<ListGenericConfig>({
 
 
   employee!: EmployeeDto[];
+  private id!: string;
 
 constructor(private employeeService: EmployeeService) {
   }
@@ -32,63 +34,36 @@ constructor(private employeeService: EmployeeService) {
     this.getlistEmployee();
     this.employeeService.list().subscribe((employees: Employee[]) => {
         this.config$.next({
+          specificCSS: [{
+            field: 'status',
+            cssConfig: [{css: 'green-color', value: 'Employed'}, {css: 'red-color', value: 'NotEmployed'}
+            ]}
+            ],
           fields: ['firstname', 'lastname', 'status'],
           data: employees,
           callback: this.callback
-        })
-      }
-    )
-
-    /*
-        this.employeeService.list().subscribe({
-          next: datatable => {
-            this.datatable = datatable;
-          },
-          error: error => {
-            console.error('probleme de data', error);
-          }
-        })
-        // Create employee
-        const formsRef = this.dialog.open(ListGenericComponent, {
-          width: '20%',
-          data: 'Add'
-        });
-
-        formsRef.afterClosed().subscribe(result => {
-          if (result) {
-            const body = {
-              firstname: result.value.firstname,
-              lastname: result.value.lastname,
-              status: result.value.status
-            }
-
-            this.employeeService.create(this.payload).subscribe({
-              next: datatable => {
-                this.ngOnInit();
-              },
-              error: error => {
-                console.error('probleme de data', error);
-              }
-            })
-          }
+        } )
         })
 
-        // update employee
-        // Detail employee
 
-        // Remove employee
-        this.employeeService.remove('id').subscribe((value: ApiResponse) => {
-          console.log('mon id', this.id);
-        })*/
+
+
+    // Remove employee
+   this.employeeService.remove('id').subscribe();
+
+
+
+
 
   }
-
-
   callback(employee: Employee): void {
     console.log('mon employee', employee);
 
   }
-
+  callRemove(id: any) {
+    this.id = id;
+    console.log('mon employee2', this.id);
+  }
   private getlistEmployee() {
     this.employeeService.getEmployeeList().subscribe((data) => {
       this.employee = data;
@@ -96,3 +71,40 @@ constructor(private employeeService: EmployeeService) {
     })
   }
 }
+/*
+       this.employeeService.list().subscribe({
+         next: datatable => {
+           this.datatable = datatable;
+         },
+         error: error => {
+           console.error('probleme de data', error);
+         }
+       })
+       // Create employee
+       const formsRef = this.dialog.open(ListGenericComponent, {
+         width: '20%',
+         data: 'Add'
+       });
+
+       formsRef.afterClosed().subscribe(result => {
+         if (result) {
+           const body = {
+             firstname: result.value.firstname,
+             lastname: result.value.lastname,
+             status: result.value.status
+           }
+
+           this.employeeService.create(this.payload).subscribe({
+             next: datatable => {
+               this.ngOnInit();
+             },
+             error: error => {
+               console.error('probleme de data', error);
+             }
+           })
+         }
+       })
+
+       // update employee
+       // Detail employee
+ })*/

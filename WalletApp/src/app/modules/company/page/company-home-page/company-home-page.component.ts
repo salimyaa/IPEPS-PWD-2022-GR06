@@ -5,6 +5,8 @@ import {CompanyDto} from "../../model/dto/company.dto";
 import {CompanyService} from "../../service/company.service";
 import {Company} from "../../model/business/company";
 
+
+
 @Component({
   selector: 'app-company-home-page',
   templateUrl: './company-home-page.component.html',
@@ -28,7 +30,7 @@ export class CompanyHomePageComponent implements OnInit {
   ngOnInit(): void {
 
 
-    // List employee
+    // List company
 
     this.companyService.list().subscribe((company: Company[]) => {
       this.config$.next({
@@ -37,17 +39,12 @@ export class CompanyHomePageComponent implements OnInit {
         callback: this.callback
       })
     })
-    // Delete employee
+    // Delete company
 
 
 
   }
-  remove(id:string){
-    this.companyService.remove(id).subscribe( (CompanyDto) => {
 
-      this.companyService.list();
-    })
-  }
 
   callback(company: Company): void {
     console.log('ma company', company);
@@ -61,4 +58,8 @@ export class CompanyHomePageComponent implements OnInit {
 
 
   }
+
+
+
+
 }

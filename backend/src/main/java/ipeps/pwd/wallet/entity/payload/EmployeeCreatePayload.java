@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 
 
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,7 +23,9 @@ public class EmployeeCreatePayload {
      EmployeeStatus status;
      Company company;
      Boolean active;
-
+     String City;
+     String Phone;
+     String Email;
 
 
 }

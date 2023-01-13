@@ -30,6 +30,12 @@ public class Employee implements Serializable {
     @NotNull
     private String Address;
     @NotNull
+    private String City;
+    @NotNull
+    private String Phone;
+    @NotNull
+    private String Email;
+    @NotNull
     private String Gender;
     @NotNull
     private String Birthday;
@@ -63,7 +69,7 @@ public class Employee implements Serializable {
 
     public Employee(String Lastname, String Firstname, String Address, String Gender,
                     String Birthday, String Ssin,EmployeeStatus status,Company company,
-                    Boolean Active) {
+                    Boolean Active,String City,String Phone,String Email) {
         this.Lastname = Lastname;
         this.Firstname = Firstname;
         this.Address = Address;
@@ -72,7 +78,9 @@ public class Employee implements Serializable {
         this.Ssin = Ssin;
         this.status = status;
         this.company = company;
-
+        this.City= City;
+        this.Phone= Phone;
+        this.Email=Email;
         this.Active =Active;
     }
 

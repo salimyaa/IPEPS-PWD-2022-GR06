@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Employee} from "../../../model/business/employee";
+import {EmployeeHelper} from "../../../helper/employee.helper";
 
 @Component({
   selector: 'app-employee-create',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee-create.component.scss']
 })
 export class EmployeeCreateComponent implements OnInit {
-
+  employee: Employee = EmployeeHelper.getEmpty();
   constructor() { }
 
   ngOnInit(): void {

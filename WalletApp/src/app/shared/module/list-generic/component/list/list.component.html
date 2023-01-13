@@ -1,21 +1,37 @@
 <ng-container  *ngIf="valid;else invalid">
-  <button class = "btn btn-info btnCreate" *ngIf="haveCallBack">Create New Employee</button>
-  <table class="table table-striped">
+   <button type="button" class="btn btn-primary"  *ngIf="haveCallBack">Create New Employee <i class="fa fa-plus-circle"></i></button>
+  <table class="table table-striped {{config.tableCss}}">
 
-    <tr>
+    <tr class="center">
       <th class="titleTable">#</th>
       <th class="titleTable" *ngFor="let field of config.fields">{{field}}</th>
-      <th class="titleTable" *ngIf="haveCallBack">Action</th>
+      <th class="titleTable">Action</th>
 
     </tr>
     <tr *ngFor="let item of config.data;let index=index">
       <td>{{index+1}}</td>
-      <td *ngFor="let field of config.fields">
-          <!--[class.success]="item.status == 'Employed'" [class.error]="item.status == 'NotEmployed'" --> {{item[field]}}</td>
-      <td *ngIf="haveCallBack">
-        <a class="btn btn-primary" [routerLink]="['/Employees/detail/', item.id]">Edit</a>
-        <button class = "btn btn-info" (click)="callCallback(item)">Détail</button>
-        <!--<button class = "btn btn-danger"(click)="callRemove(item)">Delete</button>-->
+      <ng-container *ngFor="let field of config.fields">
+        <!-- Si pas de specificCss alors premier ngContainer sinon go to #specific -->
+        <ng-container *ngIf="!config.specificCSS || !isInclude(field);else specific">
+          <td class="tdTailleCenter">{{item[field]}}</td>
+        </ng-container>
+        <ng-template #specific>
+          <td class="tdTailleCenter">
+            <ng-container  *ngFor="let cssValue of currentCSS!.cssConfig ">
+              <span *ngIf="item[field]=== cssValue.value" class="{{cssValue.css}}">{{item[field]}}</span>
+            </ng-container>
+          </td>
+        </ng-template>
+      </ng-container>
+        <td *ngIf="haveCallBack">
+        <button class="btn btn-primary" [routerLink]="['/Employees/detail/', item.id]"
+                >View <i class="fa fa-eye" aria-hidden="true"></i></button>
+
+        <button class="btn btn-danger" (click)="callRemove(item.id)">
+                Delete <i class="fa fa-trash"></i></button>
+          <button class="btn btn-primary" (click)="callRemove(item.id)">
+                Update <i class="fa fa-refresh" aria-hidden="true"></i></button>
+
       </td>
     </tr>
   </table>
@@ -24,6 +40,8 @@
 <ng-template #invalid>
   config invalide
 </ng-template>
+<!--<button class = "btn btn-danger"(click)="callRemove(item)">Delete</button>-->
+<!--        <button class = "btn btn-info" (click)="callCallback(item)">Détail</button>-->
 <!--<ng-container  *ngIf="valid;else invalid">
   <button class = "btn btn-info btnCreate"*ngIf="haveCallBack">Create New Employee</button>
   <table class="table table-striped">

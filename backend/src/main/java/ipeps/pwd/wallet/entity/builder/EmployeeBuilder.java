@@ -22,6 +22,12 @@ public  class EmployeeBuilder implements Createbuilder<Employee> {
     EmployeeStatus status;
     Company company;
     Boolean active;
+    String City;
+    String Phone;
+    String Email;
+
+
+
 
 
     public EmployeeBuilder setLastname(String Lastname){
@@ -61,7 +67,20 @@ public  class EmployeeBuilder implements Createbuilder<Employee> {
         this.active = active;
         return this;
     }
+    public EmployeeBuilder setCity(String city) {
+        this.City = city;
+        return this;
+    }
 
+    public EmployeeBuilder setPhone(String phone) {
+        this.Phone = phone;
+        return this;
+    }
+
+    public EmployeeBuilder setEmail(String email) {
+        this.Email = email;
+        return this;
+    }
 
     @Override
     public Employee Build(){
@@ -73,7 +92,10 @@ public  class EmployeeBuilder implements Createbuilder<Employee> {
                             this.Ssin,
                             this.status,
                             this.company,
-                            this.active
+                            this.active,
+                            this.City,
+                            this.Phone,
+                            this.Email
                             );
     }
 

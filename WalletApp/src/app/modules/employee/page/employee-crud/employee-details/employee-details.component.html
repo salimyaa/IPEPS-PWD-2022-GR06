@@ -1,15 +1,126 @@
-<h1> Employee Details</h1>
-<div class="container">
-  <div class="tableDetail">
-    <div>
-    <label> <b> Id: </b></label> {{employee.id}}
+<div class="container-fluid g-0 p-2">
+
+  <div class="row g-0">
+
+    <div class="col-md-2 d-flex justify-content-center align-items-center">
+
+
+      <img class="photoEmployee" *ngIf="employee.gender == 'Female'"
+           src="assets/images/employee/lady.png" slot="start" alt="Profile Image" />
+      <img class="photoEmployee" *ngIf="employee.gender == 'Male'"
+           src="assets/images/employee/men.png" slot="start" alt="Profile Image"/>
     </div>
-     <div>
-    <label> <b> First Name: </b></label> {{employee.firstname}}
+
+    <div class="col ps-2">
+
+      <div class="row g-0">
+
+        <div class="col-md-10 text-center">
+          <span class="name">{{employee.firstname | titlecase}} {{employee.lastname | titlecase}}</span>
+        </div>
+
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-success"
+                    >Edit</button>
+            <button type="button" class="btn btn-outline-danger"
+                    >Delete</button>
+            <button type="button" class="btn btn-primary" [routerLink]="['/employee']"
+                    >Retour</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row g-0 mt-3">
+
+        <div class="col-md">
+
+          <table class="table table-hover mx-auto">
+            <thead class="text-center fs-5 fst-italic text-secondary">
+            <tr>
+              <td colspan="2">Personal Details</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td> <b> Id: </b></td>
+              <td>{{employee.id}}</td>
+            </tr>
+            <tr>
+              <td> <b> Status: </b></td>
+              <td>{{employee.status}}</td>
+            </tr>
+            <tr>
+              <td> <b> Address: </b></td>
+              <td>{{employee.address}}</td>
+            </tr>
+            <tr>
+              <td> <b> City: </b></td>
+              <td>{{employee.city}}</td>
+            </tr>
+            <tr>
+              <td> <b> Phone: </b></td>
+              <td>{{employee.phone}}</td>
+            </tr>
+            <tr>
+              <td> <b> Email: </b></td>
+              <td>{{employee.email}}</td>
+            </tr>
+            <tr>
+              <td>Birthdate</td>
+              <td>{{employee.birthday}}</td>
+            </tr>
+            <tr>
+              <td>Gender</td>
+              <td>{{employee.gender}}</td>
+            </tr>
+            <tr>
+              <td>Ssin</td>
+              <td>{{employee.ssin}}</td>
+            </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="col">
+
+          <table class="table table-hover mx-auto">
+            <thead class="text-center fs-5 fst-italic text-secondary">
+            <tr>
+              <td colspan="2">Job Details</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Company</td>
+              <td>{{employee.company.title}}</td>
+            </tr>
+            <tr>
+              <td>address : </td>
+              <td>{{employee.company.address}}</td>
+            <tr>
+            <tr>
+              <td>Description : </td>
+              <td>{{employee.company.description}}</td>
+            <tr>
+              <td>Experience</td>
+              <td> yrs</td>
+            </tr>
+            <tr>
+              <td>Salary</td>
+              <td> LPA</td>
+            </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+
     </div>
-    <div>
-    <label> <b> Last Name: </b></label> {{employee.lastname}}
-    </div>
+
   </div>
-  <button type="button" class="btn btn-primary" [routerLink]="['/employee']">Retour</button>
+
 </div>

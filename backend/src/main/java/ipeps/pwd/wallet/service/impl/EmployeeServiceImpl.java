@@ -36,6 +36,9 @@ public class EmployeeServiceImpl implements EmployeeService {
                     .setActive(payload.getActive())
                     .setStatus(payload.getStatus())
                     .setCompany(payload.getCompany())
+                    .setCity(payload.getCity())
+                    .setPhone(payload.getPhone())
+                    .setEmail(payload.getEmail())
                     .Build();
                       return this.employeeRepository.save(employee);
 
@@ -57,6 +60,9 @@ public class EmployeeServiceImpl implements EmployeeService {
                 detail.setActive(payload.getActive());
                 detail.setStatus(payload.getStatus());
                 detail.setCompany(payload.getCompany());
+                detail.setCity(payload.getCity());
+                detail.setPhone(payload.getPhone());
+                detail.setEmail(payload.getEmail());
                 return this.employeeRepository.save(detail);
             }
             return detail;

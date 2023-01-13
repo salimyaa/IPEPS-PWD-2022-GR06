@@ -5,6 +5,12 @@ export interface EmployeeDto {
   firstname: string,
   lastname: string
   status : string;
- company: CompanyDto;
-
+  company: CompanyDto;
+  address: string;
+  birthday : string;
+  gender : string;
+  ssin :string;
+  email:string;
+  phone:string;
+  city:string;
 }

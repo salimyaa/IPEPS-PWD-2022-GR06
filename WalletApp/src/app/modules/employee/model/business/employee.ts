@@ -6,4 +6,11 @@ export interface Employee {
   lastname: string
   status : string;
   company: Company;
+  address: string;
+  birthday : string;
+  gender : string;
+  ssin :string;
+  email:string;
+  phone:string;
+  city:string;
 }
