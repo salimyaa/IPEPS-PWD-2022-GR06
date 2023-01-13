@@ -49,7 +49,7 @@ constructor(private employeeService: EmployeeService) {
 
 
     // Remove employee
-   this.employeeService.remove('id').subscribe();
+  // this.employeeService.remove('id').subscribe();
 
 
 
