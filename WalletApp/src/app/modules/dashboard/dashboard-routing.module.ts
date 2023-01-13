@@ -26,6 +26,7 @@ const routes: Routes = [
       {path: 'Employees/detail/:id', component:EmployeeDetailsComponent},
       {path: 'employeeTest', component:employeeTestComponent},
       {path: 'company', component:CompanyHomePageComponent},
+      {path:'contracts',loadChildren: () =>import('../contract/contract.module').then(m=>m.ContractModule)}
 
     ]
   }

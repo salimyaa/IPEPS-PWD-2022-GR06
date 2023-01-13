@@ -1,1 +1,18 @@
-<p>create-contract-page works!</p>
+<h1>Crèer un nouveau contrat</h1>
+<form [formGroup]="contractForm">
+  <label for="title">Title:</label><input id="title" formControlName="title">
+  <label for="description">Description:</label><input id="description" formControlName="description">
+  <label for="start">Start date:</label><input type="date" id="start" formControlName="start_date">
+  <label for="end">End date:</label><input  type="date" id="end" formControlName="end_date">
+  <label for="hours">Hours per week:</label><input id="hours" formControlName="nb_hours_by_week">
+  <label for="employee"> Employee:
+    <select id="employee" formControlName="employee_id">
+      <ng-container *ngFor="let employ of this.employees">
+      <option value="{{employ.employee_id}}">{{employ.firstname}} {{employ.lastname}} </option>
+      </ng-container>
+    </select>
+  </label>
+  <button (click)="onSubmitForm()">Send</button>
+</form>
+<button mat-mini-fab routerLink="..">back</button>
+
