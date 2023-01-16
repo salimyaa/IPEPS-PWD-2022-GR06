@@ -8,9 +8,9 @@ import {ContractPayload} from "../../model/payload/contract.payload";
 import {Employee} from "../../../employee/model/business/employee";
 import {map, switchMap} from "rxjs/operators";
 import {EmployeeHelper} from "../../../employee/helper/employee.helper";
-import {Observable, of, tap} from "rxjs";
+import {tap} from "rxjs";
 import {ApiResponse} from "@shared/model";
-
+import {ContractHelper} from "../../helper/contract.helper";
 @Component({
   selector: 'app-create-contract-page',
   templateUrl: './create-contract-page.component.html',
@@ -21,12 +21,12 @@ export class CreateContractPageComponent {
   employees?:EmployeeDto[];
   contractForm!:FormGroup;
   tempEmployee?:Employee;
-  apiResponse?:ApiResponse;
-  constructor(private formBuilder:FormBuilder, private employeService:EmployeeService, private  contractService:ContractServiceService) {
+  constructor(private formBuilder:FormBuilder , private employeService:EmployeeService, private  contractService:ContractServiceService) {
   }
 
   ngOnInit()
   {
+    this.contract=ContractHelper.getEmpty();
     this.getEmployeesList();
     this.contractForm=this.formBuilder.group(
       {
@@ -37,29 +37,33 @@ export class CreateContractPageComponent {
   }
   onSubmitForm()
   { let values=this.contractForm.value;
+ //TODO: prendre en comtpe les modif dans le service
 
-      if(values.employee_id)
-      {
-        this.employeService.detail(values.employee_id).pipe(
-        switchMap((empl: Employee) => {
-          let payload: ContractPayload =
-              {
-                title: values.title,
-                description: values.description,
-                start_date: values.start_date,
-                nb_hours_by_week: values.nb_hours_by_week,
-                end_date: values.end_date,
-                employee: EmployeeHelper.toDto(empl)
-              };
+        if(values.employee_id) {
+          this.employeService.detail(values.employee_id).pipe(
+            switchMap((empl: Employee) => {
+              let payload: ContractPayload =
+                {
+                  title: values.title,
+                  description: values.description,
+                  start_date: values.start_date,
+                  nb_hours_by_week: values.nb_hours_by_week,
+                  end_date: values.end_date,
+                  employee: EmployeeHelper.toDto(empl)
+                };
 
-            return this.contractService.createContract(payload);
-        }),tap((res)=>{this.apiResponse=res})
-      );
-      }
-      else
-    {
-      this.apiResponse=({error_code:'Champ employé vide'} as ApiResponse)
-    }
+
+              return this.contractService.createContract(payload);
+            }), tap((res) => {
+              this.contract = res;
+            })
+          ).subscribe();
+        }
+        else {
+          this.contract.status_code="id.employee.invalid.error";
+        }
+
+
 
       }
 

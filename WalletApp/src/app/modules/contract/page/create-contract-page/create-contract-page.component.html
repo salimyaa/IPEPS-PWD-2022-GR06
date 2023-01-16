@@ -12,12 +12,14 @@
       </ng-container>
     </select>
   </label>
-  <button (click)="onSubmitForm()">Send</button>
+ <button (click)="onSubmitForm()">Send</button>
+  <ng-container *ngIf="this.contract.status_code=='api.contract.create.success';">
+    <label style="color:green; text-align: center">Le contrat a été créé avec succès!</label>
+  </ng-container>
+  <ng-container *ngIf="this.contract.status_code=='id.employee.invalid.error';">
+    <label style="color:red; text-align: center">Veuillez selectionner un employé valide.</label>
+  </ng-container>
 </form>
-<ng-container *ngIf="this.apiResponse as result">
-  <div>
-    {{result.error_code}}
-  </div>
-</ng-container>
+
 <button mat-mini-fab routerLink="..">back</button>
 

@@ -3,7 +3,7 @@ import {of, switchMap, tap} from "rxjs";
 import {ActivatedRoute, Params} from "@angular/router";
 import {isNil} from "lodash";
 import {ContractServiceService} from "../../service/contract-service.service";
-import {ContractHelper} from "../../contract.helper";
+import {ContractHelper} from "../../helper/contract.helper";
 import {Contract} from "../../model/business/contract";
 import {ContractDto} from "../../model/dto/contract.dto";
 

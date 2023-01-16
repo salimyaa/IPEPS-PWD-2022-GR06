@@ -22,7 +22,6 @@ export class ApiService {
   }
 
   post(partUrl: string, payload: any, showToaster = true): Observable<ApiResponse> {
-    console.log('url ', `${this.baseUrl}${partUrl}`);
     return this.http.post(`${this.baseUrl}${partUrl}`, payload).pipe(map((response: any) => response as ApiResponse));
   }
 
@@ -34,3 +33,4 @@ export class ApiService {
     return this.http.delete(`${this.baseUrl}${partUrl}`).pipe(map((response: any) => response as ApiResponse));
   }
 }
+//todo: Enlever les console.log

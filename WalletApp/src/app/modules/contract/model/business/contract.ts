@@ -8,4 +8,5 @@ export interface Contract {
   end_date:string,
   nb_hours_by_week:number;
   employee:Employee;
+  status_code:string;
 }

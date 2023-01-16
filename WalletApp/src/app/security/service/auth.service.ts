@@ -38,7 +38,7 @@ export class AuthService extends ApiService {
   }
 
   signup(): Observable<ApiResponse> {
-    return of({result: true, data: null, error_code: null})
+    return of({result: true, data: null, code: null})
   }
 
   refreshToken(refresh: RefreshPayload): Observable<ApiResponse> {
