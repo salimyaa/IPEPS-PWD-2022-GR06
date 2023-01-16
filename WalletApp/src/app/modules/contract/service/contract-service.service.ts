@@ -17,10 +17,10 @@ export class ContractServiceService {
 
   constructor(private apiService: ApiService) {
   }
-  contracts?:Observable<ContractDto[]>;
+  contracts!:ContractDto[];
   getAllContracts()
   {
-    return this.contracts = this.apiService.get('Contracts/list')
+    return this.apiService.get('Contracts/list')
       .pipe(
         map((response:ApiResponse) => response.data as ContractDto[])
       );

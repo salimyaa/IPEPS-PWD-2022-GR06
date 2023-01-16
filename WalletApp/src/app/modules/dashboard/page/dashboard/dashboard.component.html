@@ -1,0 +1,41 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>Project</div>
+  <div>
+    <span class="example-spacer">Home</span>
+    <span class="example-spacer">Company</span>
+    <span class="example-spacer">Employee</span>
+  </div>
+</mat-toolbar>
+<!--<mat-sidenav-container>-->
+<!--  <mat-sidenav mode="side">Sidenav</mat-sidenav>-->
+<!--  <mat-sidenav-content><h1>Gestion des Employee</h1></mat-sidenav-content>-->
+<!--</mat-sidenav-container>-->
+
+
+<!--<form class="example-form">-->
+<!--  <mat-form-field class="example-full-width">-->
+<!--    <mat-label>Name:</mat-label>-->
+<!--    <input matInput placeholder="Ex. Hardik" value="Hardik">-->
+<!--  </mat-form-field>-->
+<!--  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>-->
+<!--  <mat-form-field class="example-full-width">-->
+<!--    <mat-label>Address:</mat-label>-->
+<!--    <textarea matInput placeholder="Ex. 204, Sarvo, India"></textarea>-->
+<!--  </mat-form-field>-->
+
+<!--  <button mat-raised-button color="primary">Submit!</button>-->
+<!--</form>-->
+<!--<mat-toolbar-row>-->
+<!--  <span>Second Line</span>-->
+<!--  <span class="example-spacer"></span>-->
+<!--  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>-->
+<!--</mat-toolbar-row>-->
+
+<button (click)="logout()">logout</button>
+
+<button (click)="me()">get my info</button>
+
+
+<div *ngIf="credential">
+  {{ 'username : ' + credential.username}}
+</div>

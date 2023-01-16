@@ -8,8 +8,7 @@ import {ContractPayload} from "../../model/payload/contract.payload";
 import {Employee} from "../../../employee/model/business/employee";
 import {map, switchMap} from "rxjs/operators";
 import {EmployeeHelper} from "../../../employee/helper/employee.helper";
-import {Observable, of, tap} from "rxjs";
-import {ApiResponse} from "@shared/model";
+import {tap} from "rxjs";
 
 @Component({
   selector: 'app-create-contract-page',
@@ -21,7 +20,6 @@ export class CreateContractPageComponent {
   employees?:EmployeeDto[];
   contractForm!:FormGroup;
   tempEmployee?:Employee;
-  apiResponse?:ApiResponse;
   constructor(private formBuilder:FormBuilder, private employeService:EmployeeService, private  contractService:ContractServiceService) {
   }
 
@@ -37,35 +35,28 @@ export class CreateContractPageComponent {
   }
   onSubmitForm()
   { let values=this.contractForm.value;
-
-      if(values.employee_id)
+    let rest= this.employeService.detail(values.employee_id).pipe(
+      switchMap((empl)=>
       {
-        this.employeService.detail(values.employee_id).pipe(
-        switchMap((empl: Employee) => {
-          let payload: ContractPayload =
-              {
-                title: values.title,
-                description: values.description,
-                start_date: values.start_date,
-                nb_hours_by_week: values.nb_hours_by_week,
-                end_date: values.end_date,
-                employee: EmployeeHelper.toDto(empl)
-              };
+        let payload : ContractPayload =
+          {title:values.title,description:values.description,start_date:values.start_date,
+            nb_hours_by_week:values.nb_hours_by_week, end_date:values.end_date, employee:EmployeeHelper.toDto(empl)};
 
-            return this.contractService.createContract(payload);
-        }),tap((res)=>{this.apiResponse=res})
-      );
-      }
-      else
-    {
-      this.apiResponse=({error_code:'Champ employé vide'} as ApiResponse)
-    }
+        return this.contractService.createContract(payload);
+      })
+    ).subscribe();
 
-      }
+
+
+
+
+
+
+  }
 
   getEmployeesList()
   {
-    this.employeService.getEmployeeList().subscribe(data=> {this.employees=data;});
+    this.employeService.getEmployeeList().subscribe(data=> {this.employees=data;})
   }
 
 }

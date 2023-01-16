@@ -4,15 +4,310 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="suite du front contracts:&#10;update fonctionne &#10;à revoir car plein de choses à améliorer">
+    <list default="true" id="e437f304-3b1b-4500-8ca1-a1c3102aef0a" name="ajout-photo-employee" comment="ajout-photo-employee">
+      <change afterPath="$PROJECT_DIR$/WalletApp/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/body/body.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/body/body.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/body/body.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/sidenav/nav-data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/sidenav/sidenav.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/sidenav/sidenav.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/sidenav/sidenav.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/sidenav/sidenav.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/material/material-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/material/material.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu-nav/menu-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu-nav/menu.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu-nav/menu.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu-nav/menu.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu-nav/menu.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu-nav/menu.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard/dashboard.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard/dashboard.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard/dashboard.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard/dashboard.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-create/employee-create.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-create/employee-create.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-create/employee-create.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-create/employee-create.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/timesheet/page/timesheet-home-page/timesheet-home-page.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/timesheet/page/timesheet-home-page/timesheet-home-page.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/timesheet/page/timesheet-home-page/timesheet-home-page.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/timesheet/page/timesheet-home-page/timesheet-home-page.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/timesheet/timesheet-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/timesheet/timesheet.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/.vscode/extensions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/karma.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/interface/sidebar/sidebar.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/listGenericPerso/listGeneric/component/list-generic/list-generic.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/listGenericPerso/listGeneric/component/list-generic/list-generic.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/listGenericPerso/listGeneric/component/list-generic/list-generic.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/listGenericPerso/listGeneric/component/list-generic/list-generic.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/listGenericPerso/listGeneric/component/list-generic/list-generic.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/listGenericPerso/listGeneric/component/list-generic/list-generic.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/listGenericPerso/listGeneric/list-generic/list-generic.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/listGenericPerso/listGeneric/list-generic/list-generic.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/Interface/menu/menu.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/company-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/company-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/company.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/company.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/helper/company.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/helper/company.helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/model/business/company.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/model/business/company.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/model/dto/company.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/model/dto/company.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/page/company-home-page/company-home-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/page/company-home-page/company-home-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/page/company-home-page/company-home-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/page/company-home-page/company-home-page.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/page/company-home-page/company-home-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/page/company-home-page/company-home-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/payload/CompanyCreatePayload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/payload/CompanyCreatePayload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/payload/CompanyUpdatePayload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/payload/CompanyUpdatePayload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/service/company.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/service/company.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/company/service/company.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/company/service/company.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/contract-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/contract-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/contract.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/contract.helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/contract.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/contract.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/model/business/contract.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/model/business/contract.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/model/dto/contract.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/model/dto/contract.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/model/payload/contract.payload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/model/payload/contract.payload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/model/payload/contract.update.payload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/model/payload/contract.update.payload.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/contract-home-page/contract-home-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/contract-home-page/contract-home-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/contract-home-page/contract-home-page.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/contract-home-page/contract-home-page.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/contract-home-page/contract-home-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/contract-home-page/contract-home-page.component.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/contract-home-page/contract-home-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/contract-home-page/contract-home-page.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/create-contract-page/create-contract-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/create-contract-page/create-contract-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/create-contract-page/create-contract-page.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/create-contract-page/create-contract-page.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/create-contract-page/create-contract-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/create-contract-page/create-contract-page.component.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/create-contract-page/create-contract-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/create-contract-page/create-contract-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/detail-contract-page/detail-contract-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/detail-contract-page/detail-contract-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/detail-contract-page/detail-contract-page.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/detail-contract-page/detail-contract-page.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/detail-contract-page/detail-contract-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/detail-contract-page/detail-contract-page.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/detail-contract-page/detail-contract-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/detail-contract-page/detail-contract-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/edit-contract-page/edit-contract-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/edit-contract-page/edit-contract-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/edit-contract-page/edit-contract-page.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/edit-contract-page/edit-contract-page.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/edit-contract-page/edit-contract-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/edit-contract-page/edit-contract-page.component.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/edit-contract-page/edit-contract-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/page/edit-contract-page/edit-contract-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/service/contract-service.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/service/contract-service.service.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/service/contract-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/service/contract-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/component/dashboard-header/dashboard-header.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/component/dashboard-header/dashboard-header.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/component/dashboard-header/dashboard-header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/component/dashboard-header/dashboard-header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/dashboard-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/dashboard-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/dashboard.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/dashboard.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard-home-page/dashboard-home-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard-home-page/dashboard-home-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard-home-page/dashboard-home-page.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard-home-page/dashboard-home-page.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard-home-page/dashboard-home-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard-home-page/dashboard-home-page.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard-home-page/dashboard-home-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/dashboard-home-page/dashboard-home-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/router/dashboard-router/dashboard-router.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/router/dashboard-router/dashboard-router.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/router/dashboard-router/dashboard-router.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/router/dashboard-router/dashboard-router.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/router/dashboard-router/dashboard-router.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/router/dashboard-router/dashboard-router.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/employee-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/employee-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/employee.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/employee.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/helper/employee.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/helper/employee.helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/model/business/employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/model/business/employee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/model/dto/employee.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/model/dto/employee.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/model/enum/EmployeeStatus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/model/enum/EmployeeStatus.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-create/employee-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-create/employee-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-create/employee-create.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-create/employee-create.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-create/employee-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-create/employee-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-delete/employee-delete.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-delete/employee-delete.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-delete/employee-delete.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-delete/employee-delete.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-delete/employee-delete.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-delete/employee-delete.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-details/employee-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-details/employee-details.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-details/employee-details.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-details/employee-details.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-details/employee-details.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-details/employee-details.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-details/employee-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-details/employee-details.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-update/employee-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-update/employee-update.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-update/employee-update.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-update/employee-update.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-update/employee-update.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-update/employee-update.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-update/employee-update.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-crud/employee-update/employee-update.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-home-page/employee-home-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-home-page/employee-home-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-home-page/employee-home-page.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-home-page/employee-home-page.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-home-page/employee-home-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-home-page/employee-home-page.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-home-page/employee-home-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-home-page/employee-home-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/payload/EmployeeCreatePayload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/payload/EmployeeCreatePayload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/payload/EmployeeUpdatePayload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/payload/EmployeeUpdatePayload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/service/employee.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/service/employee.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/service/employee.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/service/employee.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/employeeTest-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/employeeTest-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/employeeTest.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/employeeTest.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/model/employeeTest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/model/employeeTest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/page/employeeTest.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/page/employeeTest.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/page/employeeTest.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/page/employeeTest.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/page/employeeTest.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/page/employeeTest.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/service/employee-test.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/service/employee-test.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/service/employee-test.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employeeTest/service/employee-test.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/guard/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/guard/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/guard/public.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/guard/public.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/guard/security.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/guard/security.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/helper/credential.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/helper/credential.helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/helper/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/helper/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/model/business/credential.business.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/model/business/credential.business.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/model/business/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/model/business/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/model/dto/credential.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/model/dto/credential.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/model/dto/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/model/dto/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/model/dto/token.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/model/dto/token.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/model/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/model/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/model/payload/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/model/payload/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/model/payload/refresh.payload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/model/payload/refresh.payload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/model/payload/signin.payload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/model/payload/signin.payload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/model/payload/signup.payload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/model/payload/signup.payload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/model/response/signin.response.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/model/response/signin.response.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/page/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/page/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/page/signup/signup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/page/signup/signup.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/page/signup/signup.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/page/signup/signup.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/page/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/page/signup/signup.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/security-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/security-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/security.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/security.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/service/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/service/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/service/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/security/service/token.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/security/service/token.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/model/api-response.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/model/api-response.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/model/constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/model/constant.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/model/crud-service.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/model/crud-service.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/model/dto.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/model/dto.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/model/enum/api-uri.enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/model/enum/api-uri.enum.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/model/enum/form-action.enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/model/enum/form-action.enum.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/model/enum/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/model/enum/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/model/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/model/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/model/is-empty.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/model/is-empty.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/model/payload.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/model/payload.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/component/list/list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/component/list/list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/component/list/list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/component/list/list.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/component/list/list.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/component/list/list.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/component/list/list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/component/list/list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/list-generic.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/list-generic.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/model/css-for-value.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/model/css-for-value.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/model/list-generic.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/model/list-generic.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/model/specific.config.image.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/model/specific.config.image.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/model/specific.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/module/list-generic/model/specific.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/service/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/service/api.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/service/http.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/service/http.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/service/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/service/http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/service/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/service/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/service/navigation.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/service/navigation.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/shared/shared.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WalletApp/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/http-request.http" beforeDir="false" afterPath="$PROJECT_DIR$/backend/http-request.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/ContractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/EmployeeTestControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/EmployeeTestControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/OrganizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/OrganizationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/SalaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/SalaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/TimesheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/TimesheetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/WalletApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/WalletApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/common/ApiCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/common/ApiCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/common/entity/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/common/entity/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/EmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/EmployeeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Salary.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Salary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Timesheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/Timesheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/CompanyBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/CompanyBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/ContractBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/ContractBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/Createbuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/Createbuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/EmployeeBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/EmployeeBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/OrganizationBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/OrganizationBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/SalaryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/SalaryBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/TimesheetBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/TimesheetBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/enums/ContractHours.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/enums/ContractHours.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/enums/EmployeeStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/enums/EmployeeStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/enums/OrganizationName.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/enums/OrganizationName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/enums/SalaryAmount.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/enums/SalaryAmount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/CompanyCreatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/CompanyCreatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/CompanyUpdatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/CompanyUpdatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/ContractCreatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/ContractCreatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/ContractUpdatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/ContractUpdatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/EmployeeCreatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/EmployeeCreatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/EmployeeUpdatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/EmployeeUpdatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/OrganizationCreatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/OrganizationCreatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/OrganizationUpdatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/OrganizationUpdatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/SalaryCreatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/SalaryCreatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/SalaryUpdatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/SalaryUpdatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/TimesheetCreatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/TimesheetCreatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/TimesheetUpdatePayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/TimesheetUpdatePayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/CompanyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/ContractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/ContractRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/CrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/CrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/EmployeeTestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/EmployeeTestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/OrganizationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/OrganizationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/SalaryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/SalaryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/TimesheetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/TimesheetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/config/AuthorizationServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/config/AuthorizationServerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/config/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/config/CustomUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/config/RessourceServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/config/RessourceServerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/entity/Credential.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/entity/Credential.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/entity/payload/RefreshTokenRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/entity/payload/RefreshTokenRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/entity/payload/SignupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/entity/payload/SignupRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/entity/response/TokenResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/entity/response/TokenResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/repository/CredentialRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/repository/CredentialRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/service/CredentialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/service/CredentialService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/service/CredentialServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/service/CredentialServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/service/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/service/TokenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/ContractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/EmployeeTestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/EmployeeTestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/OrganizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/OrganizationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/SalaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/SalaryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/TimesheetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/TimesheetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/CompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/CompanyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/ContractServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/ContractServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/EmployeeTestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/EmployeeTestServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/OrganizationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/OrganizationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/SalaryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/SalaryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/TimesheetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/TimesheetServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/create_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/create_database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/ipeps/pwd/wallet/WalletApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ipeps/pwd/wallet/WalletApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
+    <list id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="suite du front contracts:&#10;update fonctionne &#10;à revoir car plein de choses à améliorer" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,16 +328,24 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/WalletApp/src/app/app.component.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/dashboard-routing.module.ts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/index.ts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.ts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/pom.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/CompanyController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/CompanyBuilder.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/CompanyCreatePayload.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/dashboard-routing.module.ts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/CompanyRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/CompanyCreatePayload.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/CompanyController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,19 +358,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yaala/Desktop/cours soir 2022-23/ProjetDevWeb/IPEPS-PWD-2022-GR06&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\yaala\\Desktop\\cours soir 2022-23\\ProjetDevWeb\\IPEPS-PWD-2022-GR06\\WalletApp\\node_modules\\typescript\\lib&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WalletApp" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\yaala\Desktop\cours soir 2022-23\ProjetDevWeb\IPEPS-PWD-2022-GR06\WalletApp\src\app\modules\contract\model" />
@@ -75,7 +372,7 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task id="Default" summary="Default task">
       <changelist id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="" />
       <created>1668851395615</created>
       <option name="number" value="Default" />
@@ -123,7 +420,20 @@
       <option name="project" value="LOCAL" />
       <updated>1673563826713</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task active="true" id="LOCAL-00006" summary="ajout-photo-employee">
+      <branch name="dev" repository="D:\Ecole\annee 22-23\angular\git\IPEPS-PWD-2022-GR06" original="true" />
+      <branch name="ajout-photo" repository="D:\Ecole\annee 22-23\angular\git\IPEPS-PWD-2022-GR06" />
+      <changelist id="e437f304-3b1b-4500-8ca1-a1c3102aef0a" name="ajout-photo-employee" comment="" />
+      <created>1673895917742</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673895921821</updated>
+      <workItem from="1673895922123" duration="467000" />
+      <workItem from="1673897763435" duration="12000" />
+      <workItem from="1673897892026" duration="32000" />
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
