@@ -43,6 +43,8 @@ public class Employee implements Serializable {
     @Column ( length= 12)
     private String Ssin;
     @NotNull
+    private String Picture;
+    @NotNull
     private EmployeeStatus status;
     @ManyToOne
     @JoinColumn(name = "Employee_Company", referencedColumnName = "CompanyId")
@@ -69,7 +71,7 @@ public class Employee implements Serializable {
 
     public Employee(String Lastname, String Firstname, String Address, String Gender,
                     String Birthday, String Ssin,EmployeeStatus status,Company company,
-                    Boolean Active,String City,String Phone,String Email) {
+                    Boolean Active,String City,String Phone,String Email,String Picture) {
         this.Lastname = Lastname;
         this.Firstname = Firstname;
         this.Address = Address;
@@ -82,6 +84,7 @@ public class Employee implements Serializable {
         this.Phone= Phone;
         this.Email=Email;
         this.Active =Active;
+        this.Picture=Picture;
     }
 
 

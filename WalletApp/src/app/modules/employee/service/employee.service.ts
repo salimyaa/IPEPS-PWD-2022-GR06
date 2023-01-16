@@ -48,7 +48,26 @@ export class EmployeeService extends ApiService{
   /*getEmployeeById(id: string): Observable<Employee>{
     return this.get('Employees/detail/${id}').pipe(
       map((response: ApiResponse) => (response.result) ? EmployeeHelper.fromDto(response.data! as EmployeeDto) : EmployeeHelper.getEmpty()))
-  }*/
+  }
+  createEmployee(employee:EmployeeCreatePayload)
+  {
+    return this.apiService.post('Employees/create',employee);
+  }
+  deleteContract(Employee_id:string)
+  {
+    return this.apiService.delete('Employees/delete/'+Employee_id);
+  }
+
+  detail(id: string) {
+     return this.apiService.get(`Employees/detail/${id}`).pipe(
+      map((response: ApiResponse) => response.data! as EmployeeDto ))
+  }
+  update(payload: EmployeeUpdatePayload)
+  {
+    return this.apiService.put('Employees/update', payload)
+      .pipe(map((response:ApiResponse)=>response.data as EmployeeDto))
+  }
+  */
 }
 
 

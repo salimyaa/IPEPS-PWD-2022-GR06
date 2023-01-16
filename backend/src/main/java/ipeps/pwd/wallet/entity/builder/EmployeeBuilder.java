@@ -25,7 +25,7 @@ public  class EmployeeBuilder implements Createbuilder<Employee> {
     String City;
     String Phone;
     String Email;
-
+    String Picture;
 
 
 
@@ -81,6 +81,10 @@ public  class EmployeeBuilder implements Createbuilder<Employee> {
         this.Email = email;
         return this;
     }
+    public EmployeeBuilder setPicture(String picture) {
+        this.Picture = picture;
+        return this;
+    }
 
     @Override
     public Employee Build(){
@@ -95,7 +99,8 @@ public  class EmployeeBuilder implements Createbuilder<Employee> {
                             this.active,
                             this.City,
                             this.Phone,
-                            this.Email
+                            this.Email,
+                            this.Picture
                             );
     }
 

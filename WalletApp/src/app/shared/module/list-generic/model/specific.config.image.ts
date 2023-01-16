@@ -1,8 +1,7 @@
 import {CssForValue} from './css-for-value.config';
 
-export interface SpecificConfig {
+export interface SpecificConfigImage {
   field: string, // field cible
   cssConfig: CssForValue[];
 
 }
-

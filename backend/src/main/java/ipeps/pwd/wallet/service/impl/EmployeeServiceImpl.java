@@ -39,6 +39,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                     .setCity(payload.getCity())
                     .setPhone(payload.getPhone())
                     .setEmail(payload.getEmail())
+                    .setPicture(payload.getPicture())
                     .Build();
                       return this.employeeRepository.save(employee);
 
@@ -63,6 +64,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 detail.setCity(payload.getCity());
                 detail.setPhone(payload.getPhone());
                 detail.setEmail(payload.getEmail());
+                detail.setPicture(payload.getPicture());
                 return this.employeeRepository.save(detail);
             }
             return detail;

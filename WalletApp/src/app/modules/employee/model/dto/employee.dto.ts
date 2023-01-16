@@ -13,4 +13,5 @@ export interface EmployeeDto {
   email:string;
   phone:string;
   city:string;
+  picture: string;
 }

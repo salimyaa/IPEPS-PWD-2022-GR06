@@ -16,12 +16,12 @@ export class EmployeeHomePageComponent implements OnInit {
 config$ = new BehaviorSubject<ListGenericConfig>({
     fields: [],
     data: [],
-    callback: this.callback
-
+    callback: this.callback,
+    callRemove:this.callRemove
   });
 
 
-  employee!: EmployeeDto[];
+  employee?: EmployeeDto[];
   private id!: string;
 
 constructor(private employeeService: EmployeeService) {
@@ -39,31 +39,38 @@ constructor(private employeeService: EmployeeService) {
             cssConfig: [{css: 'green-color', value: 'Employed'}, {css: 'red-color', value: 'NotEmployed'}
             ]}
             ],
-          fields: ['firstname', 'lastname', 'status'],
+          specificIMG: [{
+            field: 'picture',
+            cssConfig: [{css: 'image-male', value: 'Male' }, {css: 'image-female', value: 'Female'}
+            ]}
+          ],
+          fields: ['picture','firstname', 'lastname', 'status'],
           data: employees,
           callback: this.callback
         } )
         })
+   /* this.employeeService.remove(id).subscribe(Response =>{
+      this.config$.next({
+        fields: ['id','firstname', 'lastname', 'status'],
+        data: Response,
+        callback: this.callRemove
+      } )
+    })*/
 
 
+  }
 
-
-    // Remove employee
+  // Remove employee
   // this.employeeService.remove('id').subscribe();
 
-
-
-
-
-  }
   callback(employee: Employee): void {
     console.log('mon employee', employee);
+    console.log('mon employee2', employee.id);
+  }
+  callRemove(id: string) {
+  }
 
-  }
-  callRemove(id: any) {
-    this.id = id;
-    console.log('mon employee2', this.id);
-  }
+
   private getlistEmployee() {
     this.employeeService.getEmployeeList().subscribe((data) => {
       this.employee = data;

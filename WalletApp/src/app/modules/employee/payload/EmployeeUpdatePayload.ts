@@ -11,5 +11,6 @@ export interface  EmployeeUpdatePayload{
   Ssin: string;
   status : EmployeeStatus;
   company: Company;
-  active : boolean
+  active : boolean;
+  picture: string;
 }

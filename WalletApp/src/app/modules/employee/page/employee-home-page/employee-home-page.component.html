@@ -1,9 +1,17 @@
-<div class="headerTitle"><h1>Gestion des Employee</h1></div>
-<div class="container">
-<app-list *ngIf="config$ | async as config" [config]="config" > </app-list>
+<div class="container-fluid g-0 p-2">
+
+    <div class="col ps-2">
+      <div class="row g-0">
+        <div class="col-md-10 text-center">
+        <span class="headerTitle">Gestion des employees</span>
+        </div>
+        <div class="container">
+        <app-list *ngIf="config$ | async as config" [config]="config" > </app-list>
+        </div>
+      </div>
+    </div>
+
 </div>
-
-
 
 
 <!--<div class="wrapper">

@@ -2,27 +2,34 @@
 
   <div class="row g-0">
 
-    <div class="col-md-2 d-flex justify-content-center align-items-center">
-
-
+    <div class="col-md-2 d-flex justify-content-center align-items-center"
+     *ngIf="employee.picture == 'empty'; else change ">
       <img class="photoEmployee" *ngIf="employee.gender == 'Female'"
            src="assets/images/employee/lady.png" slot="start" alt="Profile Image" />
       <img class="photoEmployee" *ngIf="employee.gender == 'Male'"
            src="assets/images/employee/men.png" slot="start" alt="Profile Image"/>
     </div>
-
-    <div class="col ps-2">
-
+      <ng-template #change >
+        <div class="col-md-2 d-flex justify-content-center align-items-center" *ngIf="employee.lastname == 'stallone'">
+        <img class="photoEmployee"
+             src="assets/images/employee/stallone.jpg" slot="start" alt="Profile Image" />
+        </div>
+        <div class="col-md-2 d-flex justify-content-center align-items-center" *ngIf="employee.lastname == 'Alba'">
+          <img class="photoEmployee"
+               src="assets/images/employee/Jessica-Alba.jpg" slot="start" alt="Profile Image" />
+        </div>
+      </ng-template>
+  <div class="col ps-2">
       <div class="row g-0">
-
         <div class="col-md-10 text-center">
-          <span class="name">{{employee.firstname | titlecase}} {{employee.lastname | titlecase}}</span>
+          <span class="headerTitle">Employee : {{employee.firstname | titlecase}} {{employee.lastname | titlecase}}</span>
         </div>
 
         <div class="col-md-2 d-flex justify-content-center align-items-center">
           <div class="btn-group" role="group">
-            <button type="button" class="btn btn-outline-success"
-                    >Edit</button>
+            <button class="btn btn-outline-success" [routerLink]="['/Employees/update/', employee.id]"
+            >Update <i class="fa fa-refresh" aria-hidden="true"></i></button>
+
             <button type="button" class="btn btn-outline-danger"
                     >Delete</button>
             <button type="button" class="btn btn-primary" [routerLink]="['/employee']"

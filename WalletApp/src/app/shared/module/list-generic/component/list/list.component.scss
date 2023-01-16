@@ -19,7 +19,8 @@ td,th {
 .btn-primary{
   background-color: #ffffff;
   color: #1515ef;
-  margin-left: 5px;
+
+  margin: 10px 0;
 }
 .btn-primary:hover{
   background-color: #1515ef;
@@ -36,8 +37,7 @@ td,th {
   background-color: #d20d28;
   color:#ffffff;
 }
-.greenClass { background-color: green }
-.redClass { background-color: red}
+
 .success{text-align: center;
   color:#fff;
   background: #263238;
@@ -49,13 +49,26 @@ td,th {
 .red-color{
   color:#fff;background: red;border-radius: 15px;
 }
-
-  .error{color:#fff;background: red;border-radius: 15px;}
+.error{
+  color:#fff;background: red;border-radius: 15px;
+}
 .tdTailleCenter{
   text-align: center;
-  max-width: 100px;
+  width: 100px !important;
+}
+
+.tailleIndex,{
+  width: 30px !important;
+}
+.tailleAction{
+  width: 300px !important;
 }
 .center{
   text-align: center;
 }
-
+.image-male{
+  background-image: url("../../../../../../assets/images/employee/men.png");
+}
+.image-female{
+  background-image: url("../../../../../../assets/images/employee/lady.png");
+}

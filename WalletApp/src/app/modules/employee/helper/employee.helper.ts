@@ -16,7 +16,8 @@ export class EmployeeHelper {
             ssin : dto.ssin,
             email:dto.email,
             phone:dto.phone,
-            city:dto.city}
+            city:dto.city,
+            picture: dto.picture}
   }
 
   public static toDto(dto: Employee): EmployeeDto {
@@ -25,7 +26,7 @@ export class EmployeeHelper {
       gender : dto.gender,
       ssin : dto.ssin,email:dto.email,
       phone:dto.phone,
-      city:dto.city}
+      city:dto.city,picture: dto.picture}
   }
 
   static getEmpty():Employee {
@@ -33,6 +34,6 @@ export class EmployeeHelper {
       gender : '',
       ssin : '' ,email:'',
       phone:'',
-      city:''};
+      city:'',picture:''};
   }
 }

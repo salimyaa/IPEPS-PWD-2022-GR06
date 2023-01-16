@@ -1,5 +1,8 @@
-<ng-container  *ngIf="valid;else invalid">
-   <button type="button" class="btn btn-primary"  *ngIf="haveCallBack">Create New Employee <i class="fa fa-plus-circle"></i></button>
+
+
+
+   <button type="button" class="btn btn-primary"  *ngIf="haveCallBack">Create New <i class="fa fa-plus-circle"></i></button>
+   <ng-container *ngIf="valid;else invalid">
   <table class="table table-striped {{config.tableCss}}">
 
     <tr class="center">
@@ -9,28 +12,38 @@
 
     </tr>
     <tr *ngFor="let item of config.data;let index=index">
-      <td>{{index+1}}</td>
+      <td class="tailleIndex">{{index+1}}</td>
       <ng-container *ngFor="let field of config.fields">
         <!-- Si pas de specificCss alors premier ngContainer sinon go to #specific -->
-        <ng-container *ngIf="!config.specificCSS || !isInclude(field);else specific">
-          <td class="tdTailleCenter">{{item[field]}}</td>
+        <ng-container *ngIf="!config.specificCSS && !config.specificIMG || !isInclude(field) && !isIncludeImg(field);else specific">
+          <td class="tdTailleCenter">
+
+            {{item[field]}}</td>
+
         </ng-container>
         <ng-template #specific>
           <td class="tdTailleCenter">
+
+           <!-- probleme affichage image  -->
+            <span *ngIf="item.picture == 'Female'">
+                <img class="photoEmployee" src="assets/images/employee/lady.png" slot="start" alt="Profile Image" /></span>
+            <span *ngIf="item.picture == 'Male'">
+              <img class="photoEmployee" src="assets/images/employee/men.png" slot="start" alt="Profile Image"/></span>
+            <!-- fin du probleme -->
             <ng-container  *ngFor="let cssValue of currentCSS!.cssConfig ">
+
               <span *ngIf="item[field]=== cssValue.value" class="{{cssValue.css}}">{{item[field]}}</span>
             </ng-container>
           </td>
         </ng-template>
       </ng-container>
-        <td *ngIf="haveCallBack">
+        <td class="tailleAction">
         <button class="btn btn-primary" [routerLink]="['/Employees/detail/', item.id]"
                 >View <i class="fa fa-eye" aria-hidden="true"></i></button>
 
         <button class="btn btn-danger" (click)="callRemove(item.id)">
                 Delete <i class="fa fa-trash"></i></button>
-          <button class="btn btn-primary" (click)="callRemove(item.id)">
-                Update <i class="fa fa-refresh" aria-hidden="true"></i></button>
+
 
       </td>
     </tr>
@@ -40,6 +53,9 @@
 <ng-template #invalid>
   config invalide
 </ng-template>
+
+
+
 <!--<button class = "btn btn-danger"(click)="callRemove(item)">Delete</button>-->
 <!--        <button class = "btn btn-info" (click)="callCallback(item)">Détail</button>-->
 <!--<ng-container  *ngIf="valid;else invalid">

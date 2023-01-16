@@ -30,4 +30,5 @@ public class EmployeeUpdatePayload {
     String City;
     String Phone;
     String Email;
+    String Picture;
 }

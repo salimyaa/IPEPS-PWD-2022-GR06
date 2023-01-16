@@ -14,6 +14,7 @@ import { EmployeeUpdateComponent } from './page/employee-crud/employee-update/em
 import { EmployeeDetailsComponent } from './page/employee-crud/employee-details/employee-details.component';
 import { EmployeeDeleteComponent } from './page/employee-crud/employee-delete/employee-delete.component';
 import {EmployeeCreateComponent} from "./page/employee-crud/employee-create/employee-create.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -36,7 +37,8 @@ import {EmployeeCreateComponent} from "./page/employee-crud/employee-create/empl
         MatSidenavModule,
         MatToolbarModule,
         MatButtonModule,
-        MatInputModule
+        MatInputModule,
+        ReactiveFormsModule
     ]
 })
 export class EmployeeModule { }

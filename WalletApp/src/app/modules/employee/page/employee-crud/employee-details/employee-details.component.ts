@@ -6,6 +6,7 @@ import { of, switchMap, tap} from "rxjs";
 import {isNil} from "lodash";
 import {EmployeeHelper} from "../../../helper/employee.helper";
 
+
 @Component({
   selector: 'app-employee-details',
   templateUrl: './employee-details.component.html',
@@ -15,7 +16,7 @@ export class EmployeeDetailsComponent implements OnInit{
 
   employee: Employee = EmployeeHelper.getEmpty();
 
-  constructor(private route: ActivatedRoute, private employeeService: EmployeeService) { }
+  constructor(private route: ActivatedRoute, private employeeService: EmployeeService) {   }
 
   ngOnInit(): void {
 

@@ -13,4 +13,5 @@ export interface Employee {
   email:string;
   phone:string;
   city:string;
+  picture: string;
 }
