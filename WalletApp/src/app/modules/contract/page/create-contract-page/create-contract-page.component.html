@@ -14,5 +14,10 @@
   </label>
   <button (click)="onSubmitForm()">Send</button>
 </form>
-<button mat-mini-fab routerLink="../..">back</button>
+<ng-container *ngIf="this.apiResponse as result">
+  <div>
+    {{result.error_code}}
+  </div>
+</ng-container>
+<button mat-mini-fab routerLink="..">back</button>
 

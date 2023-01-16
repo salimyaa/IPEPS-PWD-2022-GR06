@@ -17,7 +17,7 @@ import {map, switchMap} from "rxjs/operators";
 export class ContractHomePageComponent {
   constructor(private service: ContractServiceService, private employeService: EmployeeService) {
   }
-  contracts?:ContractDto[];
+  contracts?:Observable<ContractDto[]>;
 
 
 
@@ -25,7 +25,7 @@ export class ContractHomePageComponent {
   this.getContractsList();
   }
   getContractsList(){
-    this.service.getAllContracts().subscribe(data => { this.contracts= data})
+    this.contracts=this.service.getAllContracts();
   }
   delete(contract_id:string){
     this.service.deleteContract(contract_id).pipe(
