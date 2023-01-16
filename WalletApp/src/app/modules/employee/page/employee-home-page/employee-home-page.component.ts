@@ -40,7 +40,7 @@ constructor(private employeeService: EmployeeService) {
             ]}
             ],
           specificIMG: [{
-            field: 'picture',
+            src: 'picture',
             cssConfig: [{css: 'image-male', value: 'Male' }, {css: 'image-female', value: 'Female'}
             ]}
           ],

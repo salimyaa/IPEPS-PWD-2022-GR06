@@ -1,9 +1,18 @@
 import {EmployeeDto} from '../model/dto/employee.dto';
 import {Employee} from '../model/business/employee';
 import {CompanyHelper} from "../../company/helper/company.helper";
+import {SpecificConfigImage} from "@shared/module/list-generic/model/specific.config.image";
+import {CssForValue} from "@shared/module/list-generic/model/css-for-value.config";
+import {isNil} from "lodash";
 
 export class EmployeeHelper {
-
+  public static getImageConfig(employee:Employee):SpecificConfigImage{
+   const src = (isNil(employee.picture))? employee.picture : (employee.gender === 'male')? 'url de ta photo male': 'url de ta pjoto femme';
+    return {
+      src: src,
+      cssConfig: []
+    }
+  }
   public static fromDto(dto: EmployeeDto): Employee {
     return {firstname: dto.firstname,
             id: dto.employee_id,

@@ -4,6 +4,7 @@ import {isNil} from 'lodash';
 import {SpecificConfig} from "@shared/module/list-generic/model/specific.config";
 import {EmployeeService} from "../../../../../modules/employee/service/employee.service";
 import {ActivatedRoute} from "@angular/router";
+import {SpecificConfigImage} from "@shared/module/list-generic/model/specific.config.image";
 
 @Component({
   selector: 'app-list',
@@ -14,7 +15,7 @@ export class ListComponent implements OnInit {
   @Input() config!: ListGenericConfig;
   valid: boolean = false;
   haveCallBack: boolean = false;
-  currentCSS!: SpecificConfig | undefined;
+  currentCSS!: SpecificConfig | SpecificConfigImage| undefined;
   image!:string | undefined;
   private id!: string;
 
@@ -46,8 +47,8 @@ export class ListComponent implements OnInit {
     this.currentCSS = this.config.specificCSS?.find(item => item.field === field);
     return (this.currentCSS !== undefined);
   }
-  isIncludeImg(field :string):boolean{
-    this.currentCSS = this.config.specificIMG?.find(item => item.field === field);
+  isIncludeImg(src :string):boolean{
+   this.currentCSS = this.config.specificIMG?.find(item => item.src === src);
     return (this.currentCSS !== undefined);
   }
 

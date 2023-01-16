@@ -8,6 +8,7 @@ import {ContractPayload} from "../../model/payload/contract.payload";
 import {Employee} from "../../../employee/model/business/employee";
 import {map, switchMap} from "rxjs/operators";
 import {EmployeeHelper} from "../../../employee/helper/employee.helper";
+import {tap} from "rxjs";
 import {delay, tap} from "rxjs";
 
 import {ContractHelper} from "../../helper/contract.helper";
@@ -21,7 +22,8 @@ export class CreateContractPageComponent {
   contract!:Contract;
   employees?:EmployeeDto[];
   contractForm!:FormGroup;
-  constructor(private formBuilder:FormBuilder ,private router:Router, private employeService:EmployeeService, private  contractService:ContractServiceService) {
+
+  constructor(private formBuilder:FormBuilder, private employeService:EmployeeService, private  contractService:ContractServiceService) {
   }
 
   ngOnInit()

@@ -13,25 +13,20 @@
     </tr>
     <tr *ngFor="let item of config.data;let index=index">
       <td class="tailleIndex">{{index+1}}</td>
-      <ng-container *ngFor="let field of config.fields">
+      <ng-container *ngFor="let field of config.fields,let src of config.fields">
         <!-- Si pas de specificCss alors premier ngContainer sinon go to #specific -->
-        <ng-container *ngIf="!config.specificCSS && !config.specificIMG || !isInclude(field) && !isIncludeImg(field);else specific">
+        <ng-container *ngIf="!config.specificCSS && !config.specificIMG || !isInclude(field) || !isIncludeImg(src);else specific">
           <td class="tdTailleCenter">
-
-            {{item[field]}}</td>
+              <ng-container *ngIf="config.specificIMG;else normal">
+                <img [src]="config.specificIMG">;
+              </ng-container>
+            <ng-template #normal>{{item[field]}}</ng-template>
+            </td>
 
         </ng-container>
         <ng-template #specific>
           <td class="tdTailleCenter">
-
-           <!-- probleme affichage image  -->
-            <span *ngIf="item.picture == 'Female'">
-                <img class="photoEmployee" src="assets/images/employee/lady.png" slot="start" alt="Profile Image" /></span>
-            <span *ngIf="item.picture == 'Male'">
-              <img class="photoEmployee" src="assets/images/employee/men.png" slot="start" alt="Profile Image"/></span>
-            <!-- fin du probleme -->
             <ng-container  *ngFor="let cssValue of currentCSS!.cssConfig ">
-
               <span *ngIf="item[field]=== cssValue.value" class="{{cssValue.css}}">{{item[field]}}</span>
             </ng-container>
           </td>

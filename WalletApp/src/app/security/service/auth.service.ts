@@ -5,7 +5,7 @@ import {TokenService} from '@security/service/token.service';
 import {ApiService, HttpService, NavigationService} from '@shared/service';
 import {map} from 'rxjs/operators';
 import {RefreshPayload} from '@security/model/payload/refresh.payload';
-import {SigninPayload, TokenDto} from '@security/model';
+import {SigninPayload, SignupPayload, TokenDto} from '@security/model';
 import {SigninResponse} from '@security/model/response/signin.response';
 
 @Injectable({
@@ -37,8 +37,8 @@ export class AuthService extends ApiService {
     return this.http.get(`${this.baseUrl}${ApiUriEnum.ME}`);
   }
 
-  signup(): Observable<ApiResponse> {
-    return of({result: true, data: null, code: null})
+  signup(payload:SignupPayload): Observable<ApiResponse> {
+    return this.http.post(`${this.baseUrl}${ApiUriEnum.SIGNUP}`, payload)
   }
 
   refreshToken(refresh: RefreshPayload): Observable<ApiResponse> {
