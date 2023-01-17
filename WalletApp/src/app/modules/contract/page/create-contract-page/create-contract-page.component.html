@@ -1,10 +1,14 @@
 <h1>Crèer un nouveau contrat</h1>
 <form [formGroup]="contractForm">
-  <label for="title">Title:</label><input id="title" formControlName="title">
-  <label for="description">Description:</label><input id="description" formControlName="description">
-  <label for="start">Start date:</label><input type="date" id="start" formControlName="start_date">
-  <label for="end">End date:</label><input  type="date" id="end" formControlName="end_date">
-  <label for="hours">Hours per week:</label><input id="hours" formControlName="nb_hours_by_week">
+  <label for="title">Title:</label><input id="title" [ngClass]="title?.valid && title?.touched? 'validInput':''" formControlName="title">
+  <span *ngIf="title?.invalid && title?.touched" style="color:red; text-align: center">Le titre est requis</span>
+  <label for="description">Description:</label><input id="description"  formControlName="description">
+  <label for="start">Start date:</label><input type="date" id="start" [ngClass]="start_date?.valid && start_date?.touched? 'validInput':''" formControlName="start_date">
+  <span *ngIf="start_date?.invalid && start_date?.touched" style="color:red; text-align: center">La date de démarrage est requise</span>
+  <label for="end">End date:</label><input  type="date" id="end" [ngClass]="end_date?.valid && end_date?.touched? 'validInput':''" formControlName="end_date">
+  <span *ngIf="end_date?.invalid && end_date?.touched" style="color:red; text-align: center">La date de fin est requise</span>
+  <label for="hours">Hours per week:</label><input id="hours" [ngClass]="nb_hours?.valid && nb_hours?.touched? 'validInput':''" formControlName="nb_hours_by_week">
+  <span *ngIf="nb_hours?.invalid && nb_hours?.touched" style="color:red; text-align: center">Le nombre d'heures est invalide.</span>
   <label for="employee"> Employee:
     <select id="employee" formControlName="employee_id">
       <ng-container *ngFor="let employ of this.employees">
@@ -12,14 +16,15 @@
       </ng-container>
     </select>
   </label>
- <button (click)="onSubmitForm()">Send</button>
+ <button [disabled]="contractForm.invalid" (click)="onSubmitForm()">Send</button>
   <ng-container *ngIf="this.contract.status_code=='api.contract.create.success';">
     <label style="color:green; text-align: center">Le contrat a été créé avec succès!</label>
   </ng-container>
-  <ng-container *ngIf="this.contract.status_code=='id.employee.invalid.error';">
-    <label style="color:red; text-align: center">Veuillez selectionner un employé valide.</label>
+  <ng-container *ngIf="this.contract.status_code=='invalid';">
+    <label style="color:red; text-align: center">Formulaire invalide.</label>
   </ng-container>
 </form>
+
 
 <button mat-mini-fab routerLink="..">back</button>
 
