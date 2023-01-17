@@ -6,8 +6,6 @@ import {ApiResponse, ApiUriEnum} from "@shared/model";
 import {map} from "rxjs/operators";
 import {Observable} from "rxjs";
 import {ContractPayload} from "../model/payload/contract.payload";
-import {EmployeeDto} from "../../employee/model/dto/employee.dto";
-import {EmployeeHelper} from "../../employee/helper/employee.helper";
 import {ContractHelper} from "../helper/contract.helper";
 import {Contract} from "../model/business/contract";
 
