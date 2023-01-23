@@ -4,6 +4,7 @@ import {CompanyHelper} from "../../company/helper/company.helper";
 import {SpecificConfigImage} from "@shared/module/list-generic/model/specific.config.image";
 import {CssForValue} from "@shared/module/list-generic/model/css-for-value.config";
 import {isNil} from "lodash";
+import {FormControl, FormGroup} from "@angular/forms";
 
 export class EmployeeHelper {
   public static getImageConfig(employee:Employee):SpecificConfigImage{
@@ -44,5 +45,21 @@ export class EmployeeHelper {
       ssin : '' ,email:'',
       phone:'',
       city:'',picture:''};
+  }
+  static convertToUpdateForm(employee: Employee): FormGroup {
+    return new FormGroup({
+      firstname: new FormControl(employee.firstname),
+        lastname: new FormControl(employee.lastname),
+        status: new FormControl(employee.status),
+        city: new FormControl(employee.city),
+        address: new FormControl(employee.address),
+        phone: new FormControl(employee.phone),
+        email: new FormControl(employee.email),
+        birthday: new FormControl(employee.birthday),
+        gender: new FormControl(employee.gender),
+        ssin: new FormControl(employee.ssin),
+        //company: new FormControl(employee.company),
+      //  active: new FormControl(employee.active),
+    });
   }
 }
