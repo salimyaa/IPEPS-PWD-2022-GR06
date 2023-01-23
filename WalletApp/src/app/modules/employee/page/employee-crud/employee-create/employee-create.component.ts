@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {Employee} from "../../../model/business/employee";
 import {EmployeeHelper} from "../../../helper/employee.helper";
 import {EmployeeService} from "../../../service/employee.service";
+import {FormBuilder, FormGroup} from "@angular/forms";
+import {EmployeeCreatePayload} from "../../../model/payload/EmployeeCreatePayload.interface";
+import {EmployeeStatus} from "../../../model/enum/EmployeeStatus";
+import {ActivatedRoute, Params} from "@angular/router";
+import {of, switchMap, tap} from "rxjs";
+import {isNil} from "lodash";
 
 @Component({
   selector: 'app-employee-create',
@@ -9,11 +15,49 @@ import {EmployeeService} from "../../../service/employee.service";
   styleUrls: ['./employee-create.component.scss']
 })
 export class EmployeeCreateComponent implements OnInit {
+  public id!: string;
+
+  employeeForm: FormGroup=EmployeeHelper.convertToUpdateForm(EmployeeHelper.getEmpty());
   employee: Employee = EmployeeHelper.getEmpty();
-  constructor(private employeeService:EmployeeService) { }
+  private payload?: EmployeeCreatePayload ;
+// variable pour afficher enum dans le html
+  keys : any[] = [];
+  statusEnum = EmployeeStatus;
+
+
+
+  constructor(private employeeService: EmployeeService, private route: ActivatedRoute,private fb: FormBuilder
+  ) {   this.keys = Object.keys(this.statusEnum) }
 
   ngOnInit(): void {
+
+    this.route.params
+      .pipe(switchMap((param: Params) => {
+        if (!isNil(param['id'])) {
+          return this.employeeService.detail(param['id']);
+        }
+        return of(EmployeeHelper.getEmpty());
+      }), tap((employee: Employee) => {
+        this.employee = employee;
+        this.employeeForm = EmployeeHelper.convertToUpdateForm(employee);
+      }))
+      .subscribe( );
+
+
   }
+  create() {
+    if(this.employeeForm.valid){
+      this.payload = this.employeeForm.value;
+      this.employeeService.create(this.payload).subscribe((response:Employee) => {
+        console.log(response);
+      });
+    }
+  };
+
+}
+
+
+
   /*addEmployee() {
     let employee: Employee = {
       firstname: this.employee.firstname.value,
@@ -40,4 +84,4 @@ export class EmployeeCreateComponent implements OnInit {
       this.clearForm();
     });
   }*/
-}
+

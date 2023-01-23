@@ -2,12 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {EmployeeService} from "../../../service/employee.service";
 import {ActivatedRoute, Params} from "@angular/router";
 
-import {EmployeeUpdatePayload} from "../../../payload/EmployeeUpdatePayload";
+
 import {EmployeeHelper} from "../../../helper/employee.helper";
 import {Employee} from "../../../model/business/employee";
 import {of, switchMap, tap} from "rxjs";
-import {isNil} from "lodash";
+import {isNil,} from "lodash";
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {EmployeeUpdatePayload} from "../../../model/payload/EmployeeUpdatePayload.interface";
+import {EmployeeStatus} from "../../../model/enum/EmployeeStatus";
+import {CompanyHelper} from "../../../../company/helper/company.helper";
 
 @Component({
   selector: 'app-employee-update',
@@ -16,31 +19,20 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 })
 export class EmployeeUpdateComponent implements OnInit {
 
-  public Employee_id!: string;
-  public payload?: EmployeeUpdatePayload;
-  employeeForm: FormGroup;
+  public id!: string;
+
+  employeeForm: FormGroup=EmployeeHelper.convertToUpdateForm(EmployeeHelper.getEmpty());
   employee: Employee = EmployeeHelper.getEmpty();
+  CompanySelect? = CompanyHelper.toDto(this.employee.company);
+  private payload?: EmployeeUpdatePayload ;
+  StatusSelect!: [EmployeeStatus.Employed, EmployeeStatus.NotEmployed | null];
+//afficher enum dans le html
 
 
   constructor(private employeeService: EmployeeService, private route: ActivatedRoute,private fb: FormBuilder
-  ) {this.employeeForm = fb.group({})
-
-  }
+  ) {  }
 
   ngOnInit(): void {
-    this.employeeForm = this.fb.group({
-      firstname: this.fb.control(''),
-      lastname: this.fb.control(''),
-      status: this.fb.control(''),
-      city: this.fb.control(''),
-      address: this.fb.control(''),
-      phone: this.fb.control(''),
-      email: this.fb.control(''),
-      birthday: this.fb.control(''),
-      gender: this.fb.control(''),
-      ssin: this.fb.control(''),
-      company: this.fb.control(''),
-    });
 
     this.route.params
       .pipe(switchMap((param: Params) => {
@@ -50,28 +42,22 @@ export class EmployeeUpdateComponent implements OnInit {
         return of(EmployeeHelper.getEmpty());
       }), tap((employee: Employee) => {
         this.employee = employee;
+        this.employeeForm = EmployeeHelper.convertToUpdateForm(employee);
       }))
-      .subscribe();
-
-
-    /*this.activatedRouter.params
-      .pipe(
-
-      map((params:Params)=> params['Employee_id']),
-        switchMap((Employee_id:string)=>{
-        if(isNil(Employee_id)){
-          return EMPTY;
-        }else {
-          return this.employeeService.detail(Employee_id);
-        }
-
-  })
-
-      ).subscribe((response :ApiResponse) => {
-      this.payload= (isNil(response)|| response.result) ? response.data : undefined;
-    })*/
-
+      .subscribe( );
   }
+    update() {
+      if(this.employeeForm.valid){
+        this.payload = this.employeeForm.value;
+        this.payload!.employee_id = this.employee.id;
+        this.employeeService.update(this.payload).subscribe((response:Employee) => {
+          console.log(response);
+        });
+      }
+    };
+
+
+
 }
 
 

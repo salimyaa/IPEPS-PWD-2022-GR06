@@ -1,33 +1,187 @@
-<p>employee-create works!</p>
-<div *ngIf="employee" class="row">
-  <div class="col s12 m8 offset-m2">
-    <h2 class="header center">{{ employee.lastname }}</h2>
-    <div class="card horizontal hoverable">
-      <div class="card-image">
 
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <table class="bordered striped">
-            <tbody>
-            <tr>
-              <td>Nom</td>
-              <td><strong>{{ employee.lastname }}</strong></td>
-            </tr>
-            <tr>
-              <td>Description</td>
-              <td><strong>{{ employee.firstname }}</strong></td>
-            </tr>
+<div class="container-fluid g-0 p-2">
+  <!--  <form [formGroup]="form">-->
+  <div class="row g-0">
 
-
-            </tbody>
-          </table>
-        </div>
-        <div class="card-action">
-
-        </div>
-      </div>
+    <div class="col-md-2 d-flex justify-content-center align-items-center"
+         *ngIf="employee.picture == 'empty'; else change ">
+      <img class="photoEmployee" *ngIf="employee.gender == 'Female'"
+           src="assets/images/employee/lady.png" slot="start" alt="Profile Image" />
+      <img class="photoEmployee" *ngIf="employee.gender == 'Male'"
+           src="assets/images/employee/men.png" slot="start" alt="Profile Image"/>
     </div>
+    <ng-template #change >
+      <div class="col-md-2 d-flex justify-content-center align-items-center" *ngIf="employee.lastname == 'stallone'">
+        <img class="photoEmployee"
+             src="assets/images/employee/stallone.jpg" slot="start" alt="Profile Image" />
+      </div>
+      <div class="col-md-2 d-flex justify-content-center align-items-center" *ngIf="employee.lastname == 'Alba'">
+        <img class="photoEmployee"
+             src="assets/images/employee/Jessica-Alba.jpg" slot="start" alt="Profile Image" />
+      </div>
+    </ng-template>
+    <div class="col ps-2">
+      <div class="row g-0">
+        <div class="col-md-10 text-center">
+          <span class="name"> Enregistrez un nouvel employee </span>
+        </div>
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary" [routerLink]="['/Employees']"
+            >Retour</button>
+          </div>
+        </div>
+
+      </div>
+      <form [formGroup]="employeeForm">
+        <div class="row g-0 mt-3">
+
+          <div class="col-md">
+
+            <table class="table table-hover mx-auto">
+              <thead class="text-center fs-5 fst-italic text-secondary">
+              <tr>
+                <td colspan="2">Personal Details</td>
+              </tr>
+              </thead>
+              <tbody>
+              <div class="col">
+                <div class="col">
+                  <td>Firstname </td>
+                  <td><input type="text" class="form-control tailleInput" placeholder="First Name" formControlName="firstname"></td>
+                </div>
+                <div class="col">
+                  <td> <span>Lastname </span></td>
+                  <td><input type="text" class="form-control tailleInput" placeholder="Last Name" formControlName="lastname"></td>
+                </div>
+
+              <div class="col">
+                <td>Ssin </td>
+                <td><input type="text" class="form-control tailleInputSsin" placeholder="Entrez le numéro national"></td>
+              </div>
+              </div>
+              <tr>
+                <select class="form-control" formControlName="status">
+                  <option [ngValue]="''">Select one...</option>
+
+                  <option *ngFor="let key of keys" [value]="key" >{{key}}</option>
+                </select>
+
+
+               <!-- <label for="employee"> Employee:
+                  <select id="employee" formControlName="employee_id" >
+                    <ng-container *ngFor="let statusEnum of EmployeeStatus">
+                      <option value="{{employ.employee_id}}"
+                      >{{employ.firstname}} {{employ.lastname}}  </option>
+                    </ng-container>
+                  </select>
+                </label>-->
+                <!--<td> <b> Status: </b></td>
+                <td><input placeholder="choisissez le status" formControlName="status"></td>
+              </tr>-->
+
+              <div class="row mt-5">
+                <div class="col form-heading">
+                  <h6 class="text-secondary fst-italic">Personal Information</h6>
+                </div>
+              </div>
+              <tr>
+                <td> <b> Address: </b></td>
+                <td><input placeholder="Entrez l'addresse" formControlName="address"></td>
+              </tr>
+              <tr>
+                <td> <b> City: </b></td>
+                <td><input placeholder="Entrez la ville" formControlName="city"></td>
+              </tr>
+              <tr>
+                <td> <b> Phone: </b></td>
+                <td><input placeholder="Entrez le téléphone" formControlName="phone"></td>
+              </tr>
+              <tr>
+                <td> <b> Email: </b></td>
+                <td ><input class="email" placeholder="Entrez un émail" formControlName="email"></td>
+              </tr>
+              <div class="row">
+                <div class="col">
+                  <label for="datepicker" class="form-label">Birthdate</label>
+                  <input type="date" class="form-control" id="datepicker" formControlName="birthday">
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <h6 class="text-secondary">Gender</h6>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="Male"
+                               formControlName="gender">
+                        <label class="form-check-label" for="male">Male</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="Female"
+                               formControlName="gender">
+                        <label class="form-check-label" for="female">Female</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+         </tbody>
+   </table>
+
+   </div>
+
+
+        <!--  <div class="col">
+
+            <table class="table table-hover mx-auto">
+              <thead class="text-center fs-5 fst-italic text-secondary">
+              <tr>
+                <td colspan="2">Job Details</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Company</td>
+                <td>{{employee.company.title}}</td>
+              </tr>
+              <tr>
+                <td>address : </td>
+                <td>{{employee.company.address}}</td>
+              <tr>
+              <tr>
+                <td>Description : </td>
+                <td>{{employee.company.description}}</td>
+              <tr>
+                <td>Experience</td>
+                <td> yrs</td>
+              </tr>
+              <tr>
+                <td>Salary</td>
+                <td> LPA</td>
+              </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+        </div>-->
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-outline-success" (click)="create()"
+          >Enregistrer</button>
+        </div>
+        </div>
+      </form>
+    </div>
+
   </div>
+  <!--  </form>-->
 </div>
+
+
+
+
+
+
 
