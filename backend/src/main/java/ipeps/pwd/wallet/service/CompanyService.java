@@ -11,10 +11,10 @@ import java.util.UUID;
 public interface CompanyService {
     public List<Company> list();
 
-    public Company detail(UUID CompanyId);
+    public Company detail(UUID company_id);
 
     public Company create (CompanyCreatePayload payload);
     public Company update (CompanyUpdatePayload payload);
 
-    public boolean delete(UUID CompanyId);
+    public boolean delete(UUID company_id);
 }
