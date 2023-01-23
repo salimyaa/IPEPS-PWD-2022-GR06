@@ -21,8 +21,8 @@ public class CompanyServiceImpl implements CompanyService {
         return companyRepository.findAll();
     }
     @Override
-    public Company detail(UUID CompanyId){
-        return  companyRepository.findById(CompanyId).orElse(null);
+    public Company detail(UUID company_id){
+        return  companyRepository.findById(company_id).orElse(null);
     }
     @Override
     public Company create(CompanyCreatePayload payload) {
@@ -43,7 +43,7 @@ public class CompanyServiceImpl implements CompanyService {
     }
     @Override
     public Company update (CompanyUpdatePayload payload) {
-        Company detail = this.detail(payload.getCompanyId());
+        Company detail = this.detail(payload.getCompany_id());
         if (detail != null) {
             detail.setTitle(payload.getTitle());
             detail.setDescription(payload.getDescription());
@@ -57,9 +57,9 @@ public class CompanyServiceImpl implements CompanyService {
     }
 
     @Override
-    public boolean delete(UUID CompanyId) {
+    public boolean delete(UUID company_id) {
         try{
-            Company detail = this.detail(CompanyId);
+            Company detail = this.detail(company_id);
             if (detail != null) {
                 this.companyRepository.delete(detail);
             }
