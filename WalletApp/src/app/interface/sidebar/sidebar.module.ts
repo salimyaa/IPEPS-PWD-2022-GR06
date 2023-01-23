@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { SidebarRoutingModule } from './sidebar-routing.module';
+
 
 
 
@@ -11,7 +11,14 @@ import { SidebarRoutingModule } from './sidebar-routing.module';
   ],
   imports: [
     CommonModule,
-    SidebarRoutingModule
+    SidebarRoutingModule,
+
   ]
 })
-export class SidebarModule { }
+export class SidebarModule {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+
+  }

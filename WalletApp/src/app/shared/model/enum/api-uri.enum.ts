@@ -5,13 +5,13 @@ export enum ApiUriEnum {
     REFRESH_TOKEN = 'account/refresh',
     PROFILE_CREATE = 'Employees/create',
     PROFILE_DELETE = 'Employees/delete',
-    PROFILE_UPDATE = '',
+    PROFILE_UPDATE = 'Employees/update',
     PROFILE_DETAIL = 'Employees/detail',
     PROFILE_LIST = 'Employees/list',
     COMPANY_CREATE = 'Company/create',
     COMPANY_DELETE = 'Company/delete',
-    COMPANY_UPDATE = '',
-    COMPANY_DETAIL = '',
+    COMPANY_UPDATE = 'Company/update',
+    COMPANY_DETAIL = 'Company/detail',
     COMPANY_LIST = 'Company/list',
 
 }

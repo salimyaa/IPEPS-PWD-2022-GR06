@@ -1,7 +1,7 @@
 // exemple recopier les props du fichier Company.java
 
 export interface CompanyDto {
-  companyId: string;
+  company_id: string;
   title: string;
   description: string;
   address:string;
