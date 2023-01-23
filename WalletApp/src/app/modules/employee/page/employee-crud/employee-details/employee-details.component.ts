@@ -20,7 +20,7 @@ export class EmployeeDetailsComponent implements OnInit{
 
   ngOnInit(): void {
 
-
+    //detail
     this.route.params
       .pipe(switchMap((param: Params) => {
         if (!isNil(param['id'])) {
@@ -32,6 +32,12 @@ export class EmployeeDetailsComponent implements OnInit{
       }))
       .subscribe();
 
-  }
+   }
 
+  //Delete
+  remove() {
+    this.employeeService.remove(this.employee.id).pipe( tap(notused => {
+      this.employee = EmployeeHelper.getEmpty();
+    } )).subscribe();
+  }
 }

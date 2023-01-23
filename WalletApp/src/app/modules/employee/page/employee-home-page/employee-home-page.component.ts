@@ -1,9 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ListGenericConfig} from '@shared/module/list-generic/model/list-generic.config';
 import {Employee} from '../../model/business/employee';
 import {EmployeeService} from "../../service/employee.service";
 import {BehaviorSubject} from "rxjs";
 import {EmployeeDto} from "../../model/dto/employee.dto";
+import {EmployeeUpdatePayload} from "../../model/payload/EmployeeUpdatePayload.interface";
+import {EmployeeCreatePayload} from "../../model/payload/EmployeeCreatePayload.interface";
 
 
 
@@ -13,7 +15,10 @@ import {EmployeeDto} from "../../model/dto/employee.dto";
   styleUrls: ['./employee-home-page.component.scss']
 })
 export class EmployeeHomePageComponent implements OnInit {
+  @Input() payload!: EmployeeCreatePayload| EmployeeUpdatePayload ;
 config$ = new BehaviorSubject<ListGenericConfig>({
+    entityName:'',
+    entityUrl:'',
     fields: [],
     data: [],
     callback: this.callback,
@@ -22,7 +27,6 @@ config$ = new BehaviorSubject<ListGenericConfig>({
 
 
   employee?: EmployeeDto[];
-  private id!: string;
 
 constructor(private employeeService: EmployeeService) {
   }
@@ -41,33 +45,25 @@ constructor(private employeeService: EmployeeService) {
             ],
           specificIMG: [{
             src: 'picture',
-            cssConfig: [{css: 'image-male', value: 'Male' }, {css: 'image-female', value: 'Female'}
+            cssConfig: [{css: 'image-male', value: 'men' }, {css: 'image-female', value: 'lady'}
             ]}
           ],
+          entityName:'Employee',
+          entityUrl: 'detail',
+          entityUrlCreate: "create",
+          service : 'emplService',
           fields: ['picture','firstname', 'lastname', 'status'],
           data: employees,
           callback: this.callback
         } )
         })
-   /* this.employeeService.remove(id).subscribe(Response =>{
-      this.config$.next({
-        fields: ['id','firstname', 'lastname', 'status'],
-        data: Response,
-        callback: this.callRemove
-      } )
-    })*/
-
-
-  }
-
-  // Remove employee
-  // this.employeeService.remove('id').subscribe();
-
-  callback(employee: Employee): void {
+}
+callback(employee: Employee): void {
     console.log('mon employee', employee);
     console.log('mon employee2', employee.id);
   }
   callRemove(id: string) {
+  console.log('Votre employée avec l\' ', id,' a été supprimé');
   }
 
 
@@ -78,40 +74,3 @@ constructor(private employeeService: EmployeeService) {
     })
   }
 }
-/*
-       this.employeeService.list().subscribe({
-         next: datatable => {
-           this.datatable = datatable;
-         },
-         error: error => {
-           console.error('probleme de data', error);
-         }
-       })
-       // Create employee
-       const formsRef = this.dialog.open(ListGenericComponent, {
-         width: '20%',
-         data: 'Add'
-       });
-
-       formsRef.afterClosed().subscribe(result => {
-         if (result) {
-           const body = {
-             firstname: result.value.firstname,
-             lastname: result.value.lastname,
-             status: result.value.status
-           }
-
-           this.employeeService.create(this.payload).subscribe({
-             next: datatable => {
-               this.ngOnInit();
-             },
-             error: error => {
-               console.error('probleme de data', error);
-             }
-           })
-         }
-       })
-
-       // update employee
-       // Detail employee
- })*/

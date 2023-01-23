@@ -6,8 +6,6 @@ import ipeps.pwd.wallet.entity.enums.EmployeeStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 
@@ -15,7 +13,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class EmployeeUpdatePayload {
-    UUID Employee_id;
+    UUID employee_id;
     String Lastname;
     String Firstname;
     String Address;

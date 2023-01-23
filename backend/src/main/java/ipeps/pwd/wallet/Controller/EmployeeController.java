@@ -32,10 +32,10 @@ public class EmployeeController {
 
     }
     @GetMapping("detail/{id}")
-    public ApiResponse getDetail(@PathVariable("id")UUID Employee_id){
+    public ApiResponse getDetail(@PathVariable("id")UUID employee_id){
 
         try{
-            Employee detail = this.employeeService.detail(Employee_id);
+            Employee detail = this.employeeService.detail(employee_id);
             if (detail != null){
                 return new ApiResponse(true, detail ,ApiCode.getSuccessDetailCode("employee"));
             }else {
@@ -73,8 +73,8 @@ public class EmployeeController {
 
     }
     @DeleteMapping("delete/{id}")
-    public ApiResponse delete(@PathVariable("id")UUID Employee_id){
-    if (this.employeeService.delete(Employee_id)){
+    public ApiResponse delete(@PathVariable("id")UUID employee_id){
+    if (this.employeeService.delete(employee_id)){
             return new ApiResponse(true, "" ,ApiCode.getSuccessDeleteCode("employee"));
         }
 
