@@ -27,10 +27,10 @@ export class EmployeeCreateComponent implements OnInit {
 
 
   constructor(private employeeService: EmployeeService, private route: ActivatedRoute,private fb: FormBuilder
-  ) {   this.keys = Object.keys(this.statusEnum) }
+  ) {   }
 
   ngOnInit(): void {
-
+    this.keys = Object.keys(this.statusEnum);
     this.route.params
       .pipe(switchMap((param: Params) => {
         if (!isNil(param['id'])) {
@@ -48,6 +48,7 @@ export class EmployeeCreateComponent implements OnInit {
   create() {
     if(this.employeeForm.valid){
       this.payload = this.employeeForm.value;
+      this.payload!.company = {company_id:'212d94dc-5c00-489a-adb5-1c9552981a2c'}
       this.employeeService.create(this.payload).subscribe((response:Employee) => {
         console.log(response);
       });

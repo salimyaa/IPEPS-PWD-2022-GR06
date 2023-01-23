@@ -1,4 +1,6 @@
 {
+  "EMPLOYED": "Employé",
+  "NOT_EMPLOYED": "Non employé",
   "SIDEBAR":{
     "Title":"GESTION DES ENTREPRISES"
   }

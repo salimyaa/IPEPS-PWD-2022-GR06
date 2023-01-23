@@ -16,6 +16,7 @@ import { EmployeeDeleteComponent } from './page/employee-crud/employee-delete/em
 import {EmployeeCreateComponent} from "./page/employee-crud/employee-create/employee-create.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
+import {TranslateModule} from "@ngx-translate/core";
 
 
 
@@ -40,7 +41,8 @@ import {MatDialogModule} from "@angular/material/dialog";
         MatButtonModule,
         MatInputModule,
         ReactiveFormsModule,
-        MatDialogModule
+        MatDialogModule,
+        TranslateModule
     ]
 })
 export class EmployeeModule { }

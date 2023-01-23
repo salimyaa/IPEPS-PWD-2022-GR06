@@ -25,7 +25,7 @@ export class EmployeeUpdateComponent implements OnInit {
   employee: Employee = EmployeeHelper.getEmpty();
   CompanySelect? = CompanyHelper.toDto(this.employee.company);
   private payload?: EmployeeUpdatePayload ;
-  StatusSelect!: [EmployeeStatus.Employed, EmployeeStatus.NotEmployed | null];
+  StatusSelect!: [EmployeeStatus.EMPLOYED, EmployeeStatus.NOT_EMPLOYED | null];
 //afficher enum dans le html
 
 

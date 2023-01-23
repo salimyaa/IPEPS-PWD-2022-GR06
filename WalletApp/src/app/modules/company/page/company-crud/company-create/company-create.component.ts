@@ -17,7 +17,7 @@ import {CompanyCreatePayload} from "../../../model/payload/CompanyCreatePayload.
   styleUrls: ['./company-create.component.scss']
 })
 export class CompanyCreateComponent {
-  //form: FormGroup=CompanyHelper.convertToUpdateForm(CompanyHelper.getEmpty());
+  form: FormGroup=CompanyHelper.convertToUpdateForm(CompanyHelper.getEmpty());
   companyForm: FormGroup=CompanyHelper.convertToUpdateForm(CompanyHelper.getEmpty());
   company: Company = CompanyHelper.getEmpty();
   public id!: string;

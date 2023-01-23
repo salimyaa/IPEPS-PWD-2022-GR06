@@ -1,6 +1,6 @@
 import {EmployeeStatus} from "../enum/EmployeeStatus";
-import {Company} from "../../../company/model/business/company";
 import {PayloadInterface} from "@shared/model";
+import {CompanyDto} from "../../../company/model/dto/company.dto";
 
 export interface EmployeeCreatePayload extends PayloadInterface{
   Lastname : string;
@@ -10,7 +10,7 @@ export interface EmployeeCreatePayload extends PayloadInterface{
   Birthday: string;
   Ssin: string;
   status : EmployeeStatus;
-  //company : Company;
+  company : Partial<CompanyDto>;
   active : boolean;
   picture: string;
 }
