@@ -1,24 +1,73 @@
-mat-sidenav-container {
-  height: 100%;
+.light {
+  background-color: #fff;
+  color: #263238;
+  .btn-color{
+    mat-icon{
+      color: #263238;
+    }
+  }
+  mat-sidenav{
+    background-color: #fff;
+    mat-divider,mat-list-item{
+      color: #263238;
+    }
+    .mat-icon,.menu-item{
+      color: #263238;
+      padding-top: 5px;
+    }
+  }
+}
+.mat-icon-no-color {
+  color: rgba(0, 0, 0, 0.54);
+}
+.dark {
+  background-color: #263238;
+  color: #ed2794;
+
+  .btn-color {
+    mat-icon {
+      color: #ed2794;
+    }
+  }
 
   mat-sidenav {
     mat-nav-list {
       .menu-item {
-     margin-left: 8px;
-
+        margin-left: 8px;
+        color: #fff;
+      }
+    }
   }
+}
+
+.example-container {
+  height: calc(100vh - 64px);
+  .mat-sidenav {
+    padding: 8px;
+    min-width: 300px;
+  }
+  .mat-sidenav-content {
+    height: calc(100vh - 64px);
   }
 }
-.logo-nav{
-  width: 40%;
+mat-card{
+  width: 60%;
 }
-.sidenav {
-  width: 200px;
-
+.menu-button {
+  text-transform: capitalize;
 }
-
+.example-spacer {
+  flex: 1 1 auto;
 }
-
+mat-sidenav-container {
+  height: 100%;
+    .logo-nav{
+     width: 40%;
+    }
+  .sidenav {
+    width: 200px;
+  }
+}
 .sidenav .mat-toolbar {
 display: flex;
 flex-direction: column;
@@ -36,24 +85,20 @@ position: sticky;
 top: 0;
 z-index: 1;
 }
-.mat-toolbar,.mat-sidenav{
-background: #263238 ;
-color: #fff;
-}
-.mat-icon,.menu-item{
-color: #fff;
-padding-top: 5px;
-}
-.listFocus:focus {
 
+
+.listFocus:focus {
 background-color: #fff;
 border-radius: 15px;
 .mat-icon,.menu-item{
-color: #000;
 padding-top: 5px;
-
 }
 }
+.listFocus:hover {
+   .mat-icon, .menu-item {
+     color: #ed2794;
+   }
+ }
 .tailleList{
   width: 180px;
   margin: 0 6px;
@@ -61,11 +106,7 @@ padding-top: 5px;
   flex-direction: column;
   align-items: center;
 }
-.listFocus:hover {
-.mat-icon, .menu-item {
-color: #ed2794;
-}
-}
+
 mat-sidenav-content{
   mat-toolbar{
     display: flex;
@@ -74,3 +115,17 @@ mat-sidenav-content{
   }
 }
 
+.btn-color{
+  background: none  ;
+  border: none;
+  color:#263238;
+}
+.mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6 {
+  font: 500 20px/32px Roboto, sans-serif;
+  letter-spacing: .0125em;
+  margin: 0;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: 64px;
+}

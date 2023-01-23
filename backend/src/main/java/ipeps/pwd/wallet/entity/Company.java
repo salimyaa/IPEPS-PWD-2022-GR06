@@ -19,7 +19,7 @@ public class Company implements Serializable {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name="UUID",strategy ="org.hibernate.id.UUIDGenerator")
-    UUID  CompanyId;
+    UUID  company_id;
     @NotNull
     private String Title;
     @NotNull

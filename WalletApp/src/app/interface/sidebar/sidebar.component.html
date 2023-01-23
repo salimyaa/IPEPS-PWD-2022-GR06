@@ -1,6 +1,35 @@
-
+<!--<div [ngClass]="currentTheme">
+  <button (click)="toggleTheme()">Toggle Theme</button>
+  <p>
+    Mon texte avec un style de thème personnalisé
+  </p>
+</div>-->
+<!--<div container-fluid>
+  <div class="col ps-2">
+    <div class="row g-0">
+      <div class="col-md-10 text-center">
+  <h1>
+    Bienvenue
+  </h1>
+  <mat-card>
+    <button md-raised-button color="primary">Primary</button>
+    <button md-raised-button color="accent">Accent</button>
+    <button md-raised-button color="warn">Warn</button>
+  </mat-card>
+  <mat-card>
+  <mat-select placeholder="Animal">
+    <mat-option value="cat">cat</mat-option>
+    <mat-option value="dog">dog</mat-option>
+    <mat-option value="mouse">mouse</mat-option>
+  </mat-select>
+  </mat-card>
+</div>
+</div>
+</div>
+</div>-->
+<div [class.dark-theme]="isDark">
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+  <mat-sidenav [ngClass]="currentTheme" #drawer class="sidenav" fixedInViewport
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'push' : 'side'"
                [opened]="(isHandset$ | async) === false">
@@ -10,20 +39,20 @@
     <mat-divider></mat-divider>
 
       <mat-list-item class="listFocus" [routerLink]="''">
-        <mat-icon mat-list-icon>home</mat-icon>
+        <mat-icon>home</mat-icon>
         <span  class="menu-item">Dashboard</span>
       </mat-list-item>
-      <mat-list-item class="listFocus" [routerLink]="'employee'">
-        <mat-icon mat-list-icon>person</mat-icon>
+      <mat-list-item class="listFocus" [routerLink]="'Employees'">
+        <mat-icon>person</mat-icon>
         <span  class="menu-item">Employee</span>
       </mat-list-item>
 
-      <mat-list-item class="listFocus" [routerLink]="['company']">
-        <mat-icon mat-list-icon>home</mat-icon>
+      <mat-list-item class="listFocus" [routerLink]="['Company']">
+        <mat-icon>home</mat-icon>
         <span  class="menu-item">Company</span>
       </mat-list-item>
       <mat-list-item class="listFocus" [routerLink]="['contracts']">
-        <mat-icon mat-list-icon>assignment</mat-icon>
+        <mat-icon>assignment</mat-icon>
         <span class="menu-item">Contracts</span>
       </mat-list-item>
 
@@ -32,7 +61,7 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar>
+    <mat-toolbar [ngClass]="currentTheme">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -41,11 +70,132 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>GESTION DES ENTREPRISES</span>
 
-      <button mat-raised-button (click)="logout()">logout</button>
+        <span>{{'SIDEBAR.Title' | translate}}</span>
+        <span class="example-spacer"></span>
+      <button class="btn-color" (click)="toggleTheme()">
+          <mat-icon role="img" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color"
+                    aria-hidden="true" data-mat-icon-type="font">brightness_6</mat-icon>
+        </button>
+      <!--  <button mat-button [matMenuTriggerFor]="menu" class="menu-button" matTooltip="Select a theme color">
+          {{ themeColor }}
+        </button>
+        <ng-template #noRadio>
+          radio_button_unchecked
+        </ng-template>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="themeColor = 'primary'">
+            <mat-icon [color]="themeColor === 'primary' ? 'primary' : 'no-color'">
+              <ng-container *ngIf="themeColor === 'primary'; else noRadio">radio_button_checked</ng-container>
+            </mat-icon>
+            Primary
+          </button>
+          <button mat-menu-item (click)="themeColor = 'warn'">
+            <mat-icon [color]="themeColor === 'warn' ? 'warn' : 'no-color'">
+              <ng-container *ngIf="themeColor === 'warn'; else noRadio">radio_button_checked</ng-container>
+            </mat-icon>
+            Warn
+          </button>
+          <button mat-menu-item (click)="themeColor = 'accent'">
+            <mat-icon [color]="themeColor === 'accent' ? 'accent' : 'no-color'">
+              <ng-container *ngIf="themeColor === 'accent'; else noRadio">radio_button_checked</ng-container>
+            </mat-icon>
+            Accent
+          </button>
+        </mat-menu>-->
 
+      <span></span>
+      <div class="changeLanguage">
+        <div class="chnglngControl" >
+          <p-selectButton [options]="stateOptions"
+                          [(ngModel)]="value1"
+                          optionLabel="label"
+                          optionValue="value"
+                          (onChange)="onLanguageChange($event)">
+
+          </p-selectButton>
+        </div>
+      </div><button mat-raised-button (click)="logout()">logout</button>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
+</div>
+
+<!--<div [class.dark-theme]="isDark">
+  <mat-toolbar [color]="themeColor">
+    <span>Toolbar</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button (click)="toggleTheme()" matTooltip="Toggle dark theme">
+      <mat-icon>
+        brightness_6
+      </mat-icon>
+    </button>
+    <button mat-button [matMenuTriggerFor]="menu" class="menu-button" matTooltip="Select a theme color">
+      {{ themeColor }}
+    </button>
+    <ng-template #noRadio>
+      radio_button_unchecked
+    </ng-template>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="themeColor = 'primary'">
+        <mat-icon [color]="themeColor === 'primary' ? 'primary' : 'no-color'">
+          <ng-container *ngIf="themeColor === 'primary'; else noRadio">radio_button_checked</ng-container>
+        </mat-icon>
+        Primary
+      </button>
+      <button mat-menu-item (click)="themeColor = 'warn'">
+        <mat-icon [color]="themeColor === 'warn' ? 'warn' : 'no-color'">
+          <ng-container *ngIf="themeColor === 'warn'; else noRadio">radio_button_checked</ng-container>
+        </mat-icon>
+        Warn
+      </button>
+      <button mat-menu-item (click)="themeColor = 'accent'">
+        <mat-icon [color]="themeColor === 'accent' ? 'accent' : 'no-color'">
+          <ng-container *ngIf="themeColor === 'accent'; else noRadio">radio_button_checked</ng-container>
+        </mat-icon>
+        Accent
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+  <mat-sidenav-container class="example-container">
+
+      <mat-sidenav #drawer class="sidenav" fixedInViewport
+                   [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+                   [mode]="(isHandset$ | async) ? 'push' : 'side'"
+                   [opened]="(isHandset$ | async) === false"[attr.color]="themeColor">
+        <mat-nav-list class="tailleList">
+          <img class="logo-nav" src="assets/images/logo.png"  alt="logo"/>
+
+          <mat-divider></mat-divider>
+
+          <mat-list-item class="listFocus" [routerLink]="''">
+            <mat-icon mat-list-icon>home</mat-icon>
+            <span  class="menu-item">Dashboard</span>
+          </mat-list-item>
+          <mat-list-item class="listFocus" [routerLink]="'Employees'">
+            <mat-icon mat-list-icon>person</mat-icon>
+            <span  class="menu-item">Employee</span>
+          </mat-list-item>
+
+          <mat-list-item class="listFocus" [routerLink]="['Company']">
+            <mat-icon mat-list-icon>home</mat-icon>
+            <span  class="menu-item">Company</span>
+          </mat-list-item>
+          <mat-list-item class="listFocus" [routerLink]="['contracts']">
+            <mat-icon mat-list-icon>assignment</mat-icon>
+            <span class="menu-item">Contracts</span>
+          </mat-list-item>
+
+
+        </mat-nav-list>
+      </mat-sidenav>
+
+
+
+
+    <mat-sidenav-content>
+      <ng-content []></ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>&ndash;&gt;-->

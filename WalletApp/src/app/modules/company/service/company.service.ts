@@ -7,8 +7,10 @@ import {ApiService} from "@shared/service";
 import {map} from "rxjs/operators";
 
 import {Company} from "../model/business/company";
-import {CompanyCreatePayload} from "../payload/CompanyCreatePayload";
-import {CompanyUpdatePayload} from "../payload/CompanyUpdatePayload";
+import {CompanyCreatePayload} from "../model/payload/CompanyCreatePayload.interface";
+import {CompanyUpdatePayload} from "../model/payload/CompanyUpdatePayload.interface";
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -31,7 +33,7 @@ export class CompanyService extends ApiService {
       map((response: ApiResponse) => (response.result) ? CompanyHelper.fromDto(response.data! as CompanyDto) : CompanyHelper.getEmpty()))
   }
   detail(id:string) {
-    return this.get(ApiUriEnum.COMPANY_DETAIL).pipe(
+    return this.get(`${ApiUriEnum.COMPANY_DETAIL}/${id}`).pipe(
       map((response: ApiResponse) => (response.result) ? CompanyHelper.fromDto(response.data! as CompanyDto) : CompanyHelper.getEmpty()))
   }
   //Todo, update, detail

@@ -1,7 +1,9 @@
 
 
 
-   <button type="button" class="btn btn-primary"  *ngIf="haveCallBack">Create New <i class="fa fa-plus-circle"></i></button>
+   <button type="button" class="btn btn-primary"  *ngIf="haveCallBack"
+     [routerLink]="config.entityUrlCreate" >
+     Create New {{config.entityName}} <i class="fa fa-plus-circle"></i></button>
    <ng-container *ngIf="valid;else invalid">
   <table class="table table-striped {{config.tableCss}}">
 
@@ -15,12 +17,12 @@
       <td class="tailleIndex">{{index+1}}</td>
       <ng-container *ngFor="let field of config.fields,let src of config.fields">
         <!-- Si pas de specificCss alors premier ngContainer sinon go to #specific -->
-        <ng-container *ngIf="!config.specificCSS && !config.specificIMG || !isInclude(field) || !isIncludeImg(src);else specific">
+        <ng-container *ngIf="!config.specificCSS && !config.specificIMG || !isInclude(field) ;else specific">
           <td class="tdTailleCenter">
-              <ng-container *ngIf="config.specificIMG;else normal">
-                <img [src]="config.specificIMG">;
+              <!--<ng-container *ngIf="config.specificIMG;else normal">
+                <img [src]="item.src">;
               </ng-container>
-            <ng-template #normal>{{item[field]}}</ng-template>
+            <ng-template #normal>-->{{item[field]}}<!--</ng-template>-->
             </td>
 
         </ng-container>
@@ -33,7 +35,7 @@
         </ng-template>
       </ng-container>
         <td class="tailleAction">
-        <button class="btn btn-primary" [routerLink]="['/Employees/detail/', item.id]"
+        <button class="btn btn-primary" [routerLink]="[config.entityUrl, item.id]"
                 >View <i class="fa fa-eye" aria-hidden="true"></i></button>
 
         <button class="btn btn-danger" (click)="callRemove(item.id)">

@@ -5,6 +5,7 @@ import {SpecificConfig} from "@shared/module/list-generic/model/specific.config"
 import {EmployeeService} from "../../../../../modules/employee/service/employee.service";
 import {ActivatedRoute} from "@angular/router";
 import {SpecificConfigImage} from "@shared/module/list-generic/model/specific.config.image";
+import {CompanyService} from "../../../../../modules/company/service/company.service";
 
 @Component({
   selector: 'app-list',
@@ -17,9 +18,11 @@ export class ListComponent implements OnInit {
   haveCallBack: boolean = false;
   currentCSS!: SpecificConfig | SpecificConfigImage| undefined;
   image!:string | undefined;
-  private id!: string;
+  service: string | undefined;
 
-  constructor(private employeeService: EmployeeService,private route: ActivatedRoute) { }
+
+  constructor(private employeeService: EmployeeService,private companyService: CompanyService,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.valid = (!isNil(this.config));
@@ -33,13 +36,17 @@ export class ListComponent implements OnInit {
 
   callRemove(id: string) {
     if (!isNil(this.config.callback)) {
-
-      this.employeeService.remove(id).subscribe(Response =>{
-        console.log(Response);
-
-      })
+      if(this.config.service == 'emplService') {
+        this.employeeService.remove(id).subscribe(Response => {
+          console.log(Response);
+        })
+      }
+      if(this.config.service == 'company') {
+        this.companyService.remove(id).subscribe(Response => {
+          console.log(Response);
+        })
+      }
     }
-
   }
 
   isInclude(field: string):boolean {
@@ -47,9 +54,13 @@ export class ListComponent implements OnInit {
     this.currentCSS = this.config.specificCSS?.find(item => item.field === field);
     return (this.currentCSS !== undefined);
   }
-  isIncludeImg(src :string):boolean{
+ /* isIncludeImg(src :string):boolean{
    this.currentCSS = this.config.specificIMG?.find(item => item.src === src);
     return (this.currentCSS !== undefined);
-  }
+  }*/
+  /*urlPath(this.config.entityUrl:string) {
+    return `${this.config.entityUrl}/${this.id}`;
+  }*/
+
 
 }
