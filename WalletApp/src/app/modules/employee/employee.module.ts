@@ -15,6 +15,7 @@ import { EmployeeDetailsComponent } from './page/employee-crud/employee-details/
 import { EmployeeDeleteComponent } from './page/employee-crud/employee-delete/employee-delete.component';
 import {EmployeeCreateComponent} from "./page/employee-crud/employee-create/employee-create.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 
@@ -38,7 +39,8 @@ import {ReactiveFormsModule} from "@angular/forms";
         MatToolbarModule,
         MatButtonModule,
         MatInputModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatDialogModule
     ]
 })
 export class EmployeeModule { }

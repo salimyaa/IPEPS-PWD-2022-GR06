@@ -6,8 +6,9 @@ import {EmployeeDto} from "../model/dto/employee.dto";
 import {EmployeeHelper} from "../helper/employee.helper";
 import {ApiService} from "@shared/service";
 import {map} from "rxjs/operators";
-import {EmployeeCreatePayload} from "../payload/EmployeeCreatePayload";
-import {EmployeeUpdatePayload} from "../payload/EmployeeUpdatePayload";
+import {EmployeeCreatePayload} from "../model/payload/EmployeeCreatePayload.interface";
+import {EmployeeUpdatePayload} from "../model/payload/EmployeeUpdatePayload.interface";
+
 
 
 @Injectable({
@@ -26,7 +27,7 @@ export class EmployeeService extends ApiService{
       map((response: ApiResponse) => (response.result) ? EmployeeHelper.fromDto(response.data! as EmployeeDto) : EmployeeHelper.getEmpty()))
   }
 
-  update(payload: EmployeeUpdatePayload) {
+  update(payload: EmployeeUpdatePayload | undefined) {
     return this.put(ApiUriEnum.PROFILE_UPDATE, payload).pipe(
       map((response: ApiResponse) => (response.result) ? EmployeeHelper.fromDto(response.data! as EmployeeDto) : EmployeeHelper.getEmpty()))
   }
