@@ -14,11 +14,11 @@ public interface EmployeeService {
 
     public List<Employee> list();
 
-    public Employee detail(UUID Employee_id);
+    public Employee detail(UUID employee_id);
 
     public Employee create (EmployeeCreatePayload payload);
     public Employee update (EmployeeUpdatePayload payload);
 
-    public boolean delete(UUID Employee_Id);
+    public boolean delete(UUID employee_id);
 
 }
