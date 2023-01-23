@@ -20,7 +20,7 @@ public class Employee implements Serializable {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name="UUID",strategy ="org.hibernate.id.UUIDGenerator")
-    UUID Employee_id;
+    UUID employee_id;
     @NotNull
     private String Lastname;
     @NotNull
@@ -46,8 +46,8 @@ public class Employee implements Serializable {
     private String Picture;
     @NotNull
     private EmployeeStatus status;
-    @ManyToOne
-    @JoinColumn(name = "Employee_Company", referencedColumnName = "CompanyId")
+    @ManyToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "Employee_Company", referencedColumnName = "company_id")
     @JsonIgnoreProperties("employeeList")
     private Company company;
     private Boolean Deleted;
@@ -55,19 +55,6 @@ public class Employee implements Serializable {
     List<Timesheet> timesheetList;
     @OneToMany()
     List<Salary> salaryList;
-
-  /* @Override
-    public String toString(){
-        return  "Employee{"+
-                "Employee_id=" + Employee_id +
-                ", Lastname='"+ Lastname + '\'' +
-                ", Firstname='"+ Firstname + '\'' +
-                ", Address='"+ Address + '\'' +
-                ", Gender='"+ Gender + '\'' +
-                ", Birthday='"+ Birthday + '\'' +
-                ", Ssin='"+ Ssin + '\'' +
-                '}';
-    }*/
 
     public Employee(String Lastname, String Firstname, String Address, String Gender,
                     String Birthday, String Ssin,EmployeeStatus status,Company company,
