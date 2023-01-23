@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 import {ContractServiceService} from "../../service/contract-service.service";
-import {ApiResponse} from "@shared/model";
-import {Observable, tap} from "rxjs";
-import {Contract} from "../../model/business/contract"
+import {tap} from "rxjs";
 import {ContractDto} from "../../model/dto/contract.dto";
 import {EmployeeService} from "../../../employee/service/employee.service";
-import {Employee} from "../../../employee/model/business/employee";
-import {EmployeeDto} from "../../../employee/model/dto/employee.dto";
-import {map, switchMap} from "rxjs/operators";
+
 
 @Component({
   selector: 'app-contract-home-page',
@@ -15,7 +11,7 @@ import {map, switchMap} from "rxjs/operators";
   styleUrls: ['./contract-home-page.component.scss', '../../../../shared/module/list-generic/component/list/list.component.scss']
 })
 export class ContractHomePageComponent {
-  constructor(private service: ContractServiceService, private employeService: EmployeeService) {
+  constructor(private service: ContractServiceService) {
   }
   contracts?:ContractDto[];
 

@@ -23,6 +23,10 @@ import {EmployeeTestModule} from "../employeeTest/employeeTest.module";
 import {MatListModule} from "@angular/material/list";
 import {SidebarComponent} from "../../interface/sidebar/sidebar.component";
 import {MatMenuModule} from "@angular/material/menu";
+import {MatCardModule} from "@angular/material/card";
+import {MatSelectModule} from "@angular/material/select";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {SelectButtonModule} from "primeng/selectbutton";
 
 
 
@@ -56,6 +60,10 @@ import {MatMenuModule} from "@angular/material/menu";
     EmployeeTestModule,
     MatListModule,
     MatMenuModule,
+    MatCardModule,
+    MatSelectModule,
+    MatTooltipModule,
+    SelectButtonModule,
   ]
 })
 export class DashboardModule { }

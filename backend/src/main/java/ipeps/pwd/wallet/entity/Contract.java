@@ -35,7 +35,7 @@ public class Contract implements Serializable {
     @NotNull
     private int nb_hours_by_week;
     @ManyToOne
-    @JoinColumn(name = "Contract_Employee", referencedColumnName = "Employee_id")
+    @JoinColumn(name = "Contract_Employee", referencedColumnName = "employee_id")
     private Employee employee;
 
     @OneToMany(   )
