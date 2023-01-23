@@ -9,9 +9,11 @@ import ipeps.pwd.wallet.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.UUID;
 @Service
+@Transactional
 public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     EmployeeRepository employeeRepository;
@@ -20,8 +22,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeRepository.findAll();
     }
     @Override
-    public Employee detail(UUID Employee_id){
-        return  employeeRepository.findById(Employee_id).orElse(null);
+    public Employee detail(UUID employee_id){
+        return  employeeRepository.findById(employee_id).orElse(null);
     }
     @Override
     public Employee create(EmployeeCreatePayload payload) {
@@ -71,9 +73,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
 
     @Override
-    public boolean delete(UUID Employee_id) {
+    public boolean delete(UUID employee_id) {
         try{
-            Employee detail = this.detail(Employee_id);
+            Employee detail = this.detail(employee_id);
             if (detail != null) {
                 this.employeeRepository.delete(detail);
             }
