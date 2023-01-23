@@ -1,4 +1,4 @@
 export enum EmployeeStatus {
-    Employed ,
-  NotEmployed
+  EMPLOYED = 'EMPLOYED',
+  NOT_EMPLOYED = 'NOT_EMPLOYED'
 }

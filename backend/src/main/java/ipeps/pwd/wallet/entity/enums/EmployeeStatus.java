@@ -1,6 +1,11 @@
 package ipeps.pwd.wallet.entity.enums;
 
 public enum EmployeeStatus {
-    Employed,
-    NotEmployed
+    EMPLOYED("EMPLOYED"),
+    NOT_EMPLOYED("NOT_EMPLOYED");
+    public final String label;
+
+    private EmployeeStatus(String label) {
+        this.label = label;
+    }
 }

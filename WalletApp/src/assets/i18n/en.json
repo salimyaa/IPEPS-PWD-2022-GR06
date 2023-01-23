@@ -1,5 +1,7 @@
 {
-  "SIDEBAR":{
-  "Title":"BUSINESS MANAGEMENT"
+  "EMPLOYED": "Employed",
+  "NOT_EMPLOYED": "Unemployed",
+  "SIDEBAR": {
+    "Title": "BUSINESS MANAGEMENT"
   }
 }

@@ -64,7 +64,7 @@
                 <select class="form-control" formControlName="status">
                   <option [ngValue]="''">Select one...</option>
 
-                  <option *ngFor="let key of keys" [value]="key" >{{key}}</option>
+                  <option *ngFor="let key of keys" [value]="key" >{{key | translate}}</option>
                 </select>
 
 
