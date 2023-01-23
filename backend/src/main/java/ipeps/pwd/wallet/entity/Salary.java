@@ -32,7 +32,7 @@ public class Salary implements Serializable {
     @NotNull
     private SalaryAmount Amount;
     @ManyToOne
-    @JoinColumn(name = "Salary_Employee", referencedColumnName = "Employee_id")
+    @JoinColumn(name = "Salary_Employee", referencedColumnName = "employee_id")
     private Employee employee;
 
     public Salary(Date create_date, String title, String comment, SalaryAmount amount, Employee employee) {

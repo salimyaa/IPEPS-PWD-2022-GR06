@@ -8,6 +8,10 @@ import {SidebarComponent} from "../../interface/sidebar/sidebar.component";
 import {CompanyHomePageComponent} from "../company/page/company-home-page/company-home-page.component";
 import {EmployeeDetailsComponent} from "../employee/page/employee-crud/employee-details/employee-details.component";
 import {EmployeeUpdateComponent} from "../employee/page/employee-crud/employee-update/employee-update.component";
+import {EmployeeCreateComponent} from "../employee/page/employee-crud/employee-create/employee-create.component";
+import {CompanyDetailsComponent} from "../company/page/company-crud/company-details/company-details.component";
+import {CompanyUpdateComponent} from "../company/page/company-crud/company-update/company-update.component";
+import {CompanyCreateComponent} from "../company/page/company-crud/company-create/company-create.component";
 
 
 const routes: Routes = [
@@ -22,11 +26,15 @@ const routes: Routes = [
     component: SidebarComponent,
     children: [
       {path: '', component: DashboardHomePageComponent},
-      {path: 'employee', component:EmployeeHomePageComponent},
+      {path: 'Employees', component:EmployeeHomePageComponent},
       {path: 'Employees/detail/:id', component:EmployeeDetailsComponent},
       {path: 'Employees/update/:id', component:EmployeeUpdateComponent},
+      {path: 'Employees/create', component:EmployeeCreateComponent},
       {path: 'employeeTest', component:employeeTestComponent},
-      {path: 'company', component:CompanyHomePageComponent},
+      {path: 'Company', component:CompanyHomePageComponent},
+      {path: 'Company/detail/:id', component:CompanyDetailsComponent},
+      {path: 'Company/update/:id', component:CompanyUpdateComponent},
+      {path: 'Company/create', component:CompanyCreateComponent},
    {path:'contracts',loadChildren: () =>import('../contract/contract.module').then(m=>m.ContractModule)},
    //   {path: 'contracts/detail/:id', component:DetailContractPageComponent},
      // {path: 'contracts/edit/:id', component:EditContractPageComponent},
