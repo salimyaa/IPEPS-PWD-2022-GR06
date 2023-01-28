@@ -27,6 +27,7 @@ const routes: Routes = [
       {path: 'Employees/update/:id', component:EmployeeUpdateComponent},
       {path: 'employeeTest', component:employeeTestComponent},
       {path: 'company', component:CompanyHomePageComponent},
+      {path:'timesheets',loadChildren:()=>import('../timesheet/timesheet.module').then(m=>m.TimesheetModule)},
    {path:'contracts',loadChildren: () =>import('../contract/contract.module').then(m=>m.ContractModule)},
    //   {path: 'contracts/detail/:id', component:DetailContractPageComponent},
      // {path: 'contracts/edit/:id', component:EditContractPageComponent},

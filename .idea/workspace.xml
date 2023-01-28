@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="Validation du formulaire de créaction de contrat &#10;affichage de la réponse succes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/service/contract-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/contract/service/contract-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/security/exception/UserNotFoundException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +84,7 @@
       <workItem from="1673216648862" duration="41993000" />
       <workItem from="1673886729248" duration="21495000" />
       <workItem from="1673923508360" duration="110000" />
+      <workItem from="1674939906028" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="mise a jour wallet sur le dev de la branche main">
       <created>1670858394477</created>
