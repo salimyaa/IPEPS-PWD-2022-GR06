@@ -27,6 +27,8 @@ import {MatCardModule} from "@angular/material/card";
 import {MatSelectModule} from "@angular/material/select";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {SelectButtonModule} from "primeng/selectbutton";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 
 
@@ -64,6 +66,8 @@ import {SelectButtonModule} from "primeng/selectbutton";
     MatSelectModule,
     MatTooltipModule,
     SelectButtonModule,
+    MatDatepickerModule,
+    MatExpansionModule,
   ]
 })
 export class DashboardModule { }

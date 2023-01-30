@@ -1,10 +1,11 @@
-import {EmployeeCreatePayload} from "../payload/EmployeeCreatePayload.interface";
+import {CompanyHelper} from "../../../company/helper/company.helper";
+import {Company} from "../../../company/model/business/company";
 
 
 export class employeeUtils {
 
 
-  public static CreateEmployeeEmptyPayload():  EmployeeCreatePayload  {
+  public static CreateEmployeeEmptyPayload():  { Firstname: string; Ssin: string; Address: string; Lastname: string; active: boolean; Birthday: string; company: Company; Gender: string; picture: string; status: string }  {
 
   return {
     Lastname : '',
@@ -13,8 +14,8 @@ export class employeeUtils {
     Gender: '' ,
     Birthday : '',
     Ssin : '',
-    status : 0,
-    //company :CompanyHelper.getEmpty(),
+    status : '',
+    company :CompanyHelper.getEmpty(),
     active : false,
     picture : ''};
 

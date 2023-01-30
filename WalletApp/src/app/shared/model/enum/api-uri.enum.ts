@@ -13,6 +13,11 @@ export enum ApiUriEnum {
     COMPANY_UPDATE = 'Company/update',
     COMPANY_DETAIL = 'Company/detail',
     COMPANY_LIST = 'Company/list',
+    SALARY_CREATE = 'Salary/create',
+    SALARY_DELETE = 'Salary/delete',
+    SALARY_UPDATE = 'Salary/update',
+    SALARY_DETAIL = 'Salary/detail',
+    SALARY_LIST = 'Salary/list',
 
 }
 

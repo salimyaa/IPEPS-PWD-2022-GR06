@@ -1,13 +1,19 @@
 <div class="container-fluid g-0 p-2">
-<!--  <form [formGroup]="form">-->
+  <form [formGroup]="employeeForm">
   <div class="row g-0">
 
     <div class="col-md-2 d-flex justify-content-center align-items-center"
          *ngIf="employee.picture == 'empty'; else change ">
+             <div>
               <img class="photoEmployee" *ngIf="employee.gender == 'Female'"
                    src="assets/images/employee/lady.png" slot="start" alt="Profile Image" />
               <img class="photoEmployee" *ngIf="employee.gender == 'Male'"
                    src="assets/images/employee/men.png" slot="start" alt="Profile Image"/>
+              </div>
+              <div>
+              <label for="photo">Photo:</label>
+              <input type="file" id="photo" name="photo" formControlName="picture">
+              </div>
     </div>
     <ng-template #change >
       <div class="col-md-2 d-flex justify-content-center align-items-center" *ngIf="employee.lastname == 'stallone'">
@@ -32,9 +38,11 @@
                 </div>
               </div>
             </div>
-            <form [formGroup]="employeeForm">
-            <div class="row g-0 mt-3">
+
+           <div class="row g-0 mt-3">
+
               <div class="col-md">
+
                 <table class="table table-hover mx-auto">
                   <thead class="text-center fs-5 fst-italic text-secondary">
                     <tr>
@@ -44,7 +52,7 @@
                   <tbody>
                   <tr>
                     <td> <b> Id: </b></td>
-                    <td>{{employee.id}}</td>
+                    <td> {{employee.id}}</td>
                   </tr>
                   <tr>
                     <td> <b> Firstname: </b></td>
@@ -54,10 +62,10 @@
                     <td> <b> Lastname: </b></td>
                     <td><input placeholder="{{employee.lastname}}" formControlName="lastname"></td>
                   </tr>
-                  <tr>
-
-                    <td> <b> Status: </b></td>
-                    <td>{{employee.status}}</td>
+                  <tr><td> <b> Status: </b></td>
+                    <td> <select class="form-control" formControlName="status" (ngModelChange)="changeStatus()">
+                      <option *ngFor="let key of keys" [value]="key" >{{key | translate}}</option>
+                    </select></td>
                   </tr>
                   <tr>
                     <td> <b> Address: </b></td>
@@ -76,20 +84,17 @@
                     <td ><input class="email" placeholder="{{employee.email}}" formControlName="email"></td>
                   </tr>
                   <tr>
-                    <td>Birthdate</td>
-                    <td><input placeholder="{{employee.birthday}}" formControlName="birthday"></td>
+                    <td for="datepicker" class="form-label"><b>Birthdate</b></td>
+                    <td><input type="date" class="form-control" id="datepicker" placeholder="{{employee.birthday}}" formControlName="birthday"></td>
+
                   </tr>
                   <tr>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="gender" id="male" value="Male"
-                             formControlName="gender">
-                      <label class="form-check-label" for="male">Male</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="gender" id="female" value="Female"
-                             formControlName="gender">
-                      <label class="form-check-label" for="female">Female</label>
-                    </div>
+                    <td><b> Gender: </b></td>
+                    <td>
+                      <input type="radio"  name="gender" value="male" formControlName="gender"> Male
+                      <input type="radio"  name="gender" value="female" formControlName="gender"> Female
+                    </td>
+
                   </tr>
                   <tr>
                     <td>Ssin</td>
@@ -110,6 +115,12 @@
                   </thead>
                   <tbody>
 
+                  <tr>
+                    <select [disabled]="isDisabled" name="company" class="form-control" formControlName="company" >
+                        <option *ngFor="let company of companies" [value]="company.company_id">{{company.title | translate}}</option>
+                    </select>
+                  </tr>
+
                     <tr>
                       <td>Company</td>
                       <td>{{employee.company.title}}</td>
@@ -129,16 +140,87 @@
                       <td>Salary</td>
                       <td> LPA</td>
                     </tr>
+
                   </tbody>
                 </table>
 
               </div>
             </div>
-      </form>
-    </div>
 
+    </div>
   </div>
-<!--  </form>-->
+</form>
 </div>
+
+             <!-- version material
+
+              <mat-form-field>
+                <mat-label>Select file</mat-label>
+                <mat-file-input formControlName="file"></mat-file-input>
+              </mat-form-field>
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>Personal Details</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <mat-form-field>
+                    <mat-label>Id</mat-label>
+                    <input matInput formControlName="id">
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Firstname</mat-label>
+                    <input matInput formControlName="firstname" value="Joe">
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Lastname</mat-label>
+                    <input matInput formControlName="lastname" value="Dalton">
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Status</mat-label>
+                    <input matInput formControlName="status" value="Non employé">
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="address">
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>City</mat-label>
+                    <input matInput formControlName="city">
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Phone</mat-label>
+                    <input matInput formControlName="phone">
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Birthdate</mat-label>
+                    <input matInput formControlName="birthdate" [matDatepicker]="birthdatePicker" [max]="maxDate">
+                    <mat-datepicker-toggle matSuffix [for]="birthdatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #birthdatePicker></mat-datepicker>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Gender</mat-label>
+                    <mat-select formControlName="gender">
+                      <mat-option value="male">Male</mat-option>
+                      <mat-option value="female">Female</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>SSIN</mat-label>
+                    <input matInput formControlName="ssin" value="546321879985">
+                  </mat-form-field>
+                </mat-card-content>
+              </mat-card>
+
+            </form> -->
+
+
+
+
+
+
 
 

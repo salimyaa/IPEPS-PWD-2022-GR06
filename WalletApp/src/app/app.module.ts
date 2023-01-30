@@ -26,6 +26,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatSelectModule} from "@angular/material/select";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {MatNativeDateModule} from "@angular/material/core";
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import {TranslateHttpLoader} from "@ngx-translate/http-loader";
     MatSortModule,
     MatCardModule,
     MatSelectModule,
+    MatNativeDateModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

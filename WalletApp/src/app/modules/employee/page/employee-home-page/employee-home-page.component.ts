@@ -40,7 +40,7 @@ constructor(private employeeService: EmployeeService) {
         this.config$.next({
           specificCSS: [{
             field: 'status',
-            cssConfig: [{css: 'green-color', value: 'Employed'}, {css: 'red-color', value: 'NotEmployed'}
+            cssConfig: [{css: 'green-color', value: 'EMPLOYED'}, {css: 'red-color', value: 'NOT_EMPLOYED'}
             ]}
             ],
           specificIMG: [{

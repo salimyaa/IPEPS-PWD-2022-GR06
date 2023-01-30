@@ -59,6 +59,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         public Employee update (EmployeeUpdatePayload payload) {
             Employee detail = this.detail(payload.getEmployee_id());
             if (detail != null) {
+                Company company = this.companyService.detail(payload.getCompany().getCompany_id());
                 detail.setLastname(payload.getLastname());
                 detail.setFirstname(payload.getFirstname());
                 detail.setAddress(payload.getAddress());
@@ -67,7 +68,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 detail.setBirthday(payload.getBirthday());
                 detail.setActive(payload.getActive());
                 detail.setStatus(payload.getStatus());
-                detail.setCompany(payload.getCompany());
+                detail.setCompany(company);
                 detail.setCity(payload.getCity());
                 detail.setPhone(payload.getPhone());
                 detail.setEmail(payload.getEmail());
