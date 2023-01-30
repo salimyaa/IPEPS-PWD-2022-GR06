@@ -34,6 +34,7 @@
 
       </div>
       <form [formGroup]="employeeForm">
+        <!-- Section Employee-->
         <div class="row g-0 mt-3">
 
           <div class="col-md">
@@ -55,10 +56,10 @@
                   <td><input type="text" class="form-control tailleInput" placeholder="Last Name" formControlName="lastname"></td>
                 </div>
 
-              <div class="col">
+                <div class="col">
                 <td>Ssin </td>
-                <td><input type="text" class="form-control tailleInputSsin" placeholder="Entrez le numéro national"></td>
-              </div>
+                <td><input type="text" class="form-control tailleInputSsin" placeholder="Entrez le numéro national" formControlName="ssin"></td>
+                </div>
               </div>
               <tr>
                 <select class="form-control" formControlName="status">
@@ -66,19 +67,7 @@
 
                   <option *ngFor="let key of keys" [value]="key" >{{key | translate}}</option>
                 </select>
-
-
-               <!-- <label for="employee"> Employee:
-                  <select id="employee" formControlName="employee_id" >
-                    <ng-container *ngFor="let statusEnum of EmployeeStatus">
-                      <option value="{{employ.employee_id}}"
-                      >{{employ.firstname}} {{employ.lastname}}  </option>
-                    </ng-container>
-                  </select>
-                </label>-->
-                <!--<td> <b> Status: </b></td>
-                <td><input placeholder="choisissez le status" formControlName="status"></td>
-              </tr>-->
+              </tr>
 
               <div class="row mt-5">
                 <div class="col form-heading">
@@ -130,10 +119,10 @@
          </tbody>
    </table>
 
-   </div>
+          </div>
 
-
-        <!--  <div class="col">
+          <!-- Section company-->
+          <div class="col">
 
             <table class="table table-hover mx-auto">
               <thead class="text-center fs-5 fst-italic text-secondary">
@@ -143,16 +132,15 @@
               </thead>
               <tbody>
               <tr>
+                <select  name="company" formControlName="company">
+                  <option *ngFor="let company of companies" [value]="company.company_id">{{company.title}}</option>
+                </select>
+                </tr>
+             <!-- <tr>
                 <td>Company</td>
                 <td>{{employee.company.title}}</td>
-              </tr>
-              <tr>
-                <td>address : </td>
-                <td>{{employee.company.address}}</td>
-              <tr>
-              <tr>
-                <td>Description : </td>
-                <td>{{employee.company.description}}</td>
+              </tr>-->
+
               <tr>
                 <td>Experience</td>
                 <td> yrs</td>
@@ -166,18 +154,20 @@
 
           </div>
 
-        </div>-->
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-outline-success" (click)="create()"
-          >Enregistrer</button>
         </div>
-        </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-outline-success" (click)="create()"
+              >Enregistrer</button>
+            </div>
       </form>
     </div>
 
+    </div>
+
   </div>
-  <!--  </form>-->
-</div>
+
+
+
 
 
 

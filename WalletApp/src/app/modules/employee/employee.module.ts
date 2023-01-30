@@ -14,9 +14,12 @@ import { EmployeeUpdateComponent } from './page/employee-crud/employee-update/em
 import { EmployeeDetailsComponent } from './page/employee-crud/employee-details/employee-details.component';
 import { EmployeeDeleteComponent } from './page/employee-crud/employee-delete/employee-delete.component';
 import {EmployeeCreateComponent} from "./page/employee-crud/employee-create/employee-create.component";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
 import {TranslateModule} from "@ngx-translate/core";
+import {MatCardModule} from "@angular/material/card";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatSelectModule} from "@angular/material/select";
 
 
 
@@ -31,18 +34,22 @@ import {TranslateModule} from "@ngx-translate/core";
     exports: [
         EmployeeHomePageComponent
     ],
-    imports: [
-        CommonModule,
-        EmployeeRoutingModule,
-        ListGenericModule,
-        MatIconModule,
-        MatSidenavModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        MatDialogModule,
-        TranslateModule
-    ]
+  imports: [
+    CommonModule,
+    EmployeeRoutingModule,
+    ListGenericModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    TranslateModule,
+    FormsModule,
+    MatCardModule,
+    MatDatepickerModule,
+    MatSelectModule
+  ]
 })
 export class EmployeeModule { }

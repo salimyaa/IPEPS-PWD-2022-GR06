@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -14,12 +14,14 @@ import {TranslateService} from '@ngx-translate/core';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss'],
+  animations: []
 })
-export class SidebarComponent {
+export class SidebarComponent  {
   credential?: Credential;
   themeColor: 'primary' | 'accent' | 'warn' = 'primary';
   isDark = false;
+  showLanguages = false;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -58,6 +60,7 @@ export class SidebarComponent {
 
 
 
+
  toggleTheme(): void {
    this.currentTheme =
      this.currentTheme === 'light' ? 'dark' : 'light';
@@ -66,7 +69,6 @@ export class SidebarComponent {
 
   onLanguageChange(item:any) {
    this.translate.use(item.value);
+ }
 
-
-  }
 }
