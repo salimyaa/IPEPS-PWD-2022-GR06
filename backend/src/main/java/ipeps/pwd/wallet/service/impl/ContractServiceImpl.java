@@ -21,6 +21,12 @@ public class ContractServiceImpl implements ContractService {
     }
 
     @Override
+    public List<Contract> listByEmployeeID(UUID employee_id)
+    {
+        return contractRepository.listByEmployeeID(employee_id);
+    }
+
+    @Override
     public Contract detail(UUID contract_id) {
         return contractRepository.findById(contract_id).orElse(null);
     }

@@ -1,6 +1,7 @@
 import {EmployeeDto} from '../model/dto/employee.dto';
 import {Employee} from '../model/business/employee';
 import {CompanyHelper} from "../../company/helper/company.helper";
+import {EmployeeClass} from "../model/business/employeeClass";
 
 export class EmployeeHelper {
 
@@ -36,4 +37,17 @@ export class EmployeeHelper {
       phone:'',
       city:'',picture:''};
   }
+  static interfactoToClass(inter:Employee)
+  {
+    return new EmployeeClass(inter.address,inter.birthday,inter.city,inter.company,inter.email,
+      inter.firstname,inter.gender,inter.id,inter.lastname,inter.phone,inter.picture,inter.ssin,inter.status)
+  }
+  public static classToInterface(empl:EmployeeClass):Employee
+  { return {address:empl.address,birthday:empl.birthday,city:empl.city,company:empl.company,email:empl.email,firstname:empl.firstname,
+    lastname:empl.lastname,gender:empl.gender,id:empl.id,phone:empl.phone,picture:empl.picture,ssin:empl.ssin,status:empl.status}
+  }
+  static getEmptyClass():EmployeeClass
+{
+  return new EmployeeClass('','','',CompanyHelper.getEmpty(),'','','','','','','','','');
+}
 }

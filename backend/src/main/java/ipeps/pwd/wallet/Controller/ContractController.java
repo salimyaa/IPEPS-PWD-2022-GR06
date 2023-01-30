@@ -36,6 +36,18 @@ public class ContractController {
         return new ApiResponse(false,e.getMessage(),ApiCode.getErrorListCode("contract"));
     }
 }
+@GetMapping("listByEmployee/{id}")
+public ApiResponse listByEmployeeID(@PathVariable("id") UUID employee_id){
+    try {
+        return new ApiResponse(true,this.contractService.listByEmployeeID(employee_id),ApiCode.getSuccessListCode("contract"));
+
+    }
+    catch (Exception e)
+    {
+        return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorDetailCode("contract"));
+        //todo: custom error
+    }
+}
     @GetMapping("detail/{id}")
     public ApiResponse getDetail(@PathVariable("id") UUID Contract_id){
 

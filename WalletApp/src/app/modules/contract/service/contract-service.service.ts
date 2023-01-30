@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import {ApiService} from "@shared/service";
 import {HttpClient} from "@angular/common/http";
 import {ContractDto} from "../model/dto/contract.dto";
-import {ApiResponse, ApiUriEnum} from "@shared/model";
+import {ApiResponse, ApiUriEnum, DtoInterface} from "@shared/model";
 import {map} from "rxjs/operators";
 import {Observable} from "rxjs";
 import {ContractPayload} from "../model/payload/contract.payload";
 import {ContractHelper} from "../helper/contract.helper";
 import {Contract} from "../model/business/contract";
+import {map as mapl} from "lodash";
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,27 @@ export class ContractServiceService {
         map((response:ApiResponse) => response.data as ContractDto[])
       );
   }
+  getAllContractsByEmployeeID(employeeID:string)
+{
+  return this.apiService.get('Contracts/listByEmployee/'+employeeID).pipe(
+    map((response:ApiResponse)=>{
+      let retVal:Contract[]=[];
+      if(response.result && response.data)
+      {
+        let temp = response.data as ContractDto[];
+
+        for(let i=0;i<temp.length;i++)
+        {
+          retVal.push(ContractHelper.fromDto(temp[i]));
+        }
+        return retVal;
+      }
+      else {
+        return [ContractHelper.getEmpty()]
+      }
+    })
+  )
+}
 
   /**
    *
