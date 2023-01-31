@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Employee} from "../../../model/business/employee";
 import {EmployeeHelper} from "../../../helper/employee.helper";
 import {EmployeeService} from "../../../service/employee.service";
@@ -20,7 +20,7 @@ import {CompanyService} from "../../../../company/service/company.service";
 export class EmployeeCreateComponent implements OnInit {
   public id!: string;
 
-  employeeForm: FormGroup=EmployeeHelper.convertToUpdateForm(EmployeeHelper.getEmpty());
+  employeeForm: FormGroup=EmployeeHelper.convertToCreateForm(EmployeeHelper.getEmpty());
   employee: Employee = EmployeeHelper.getEmpty();
 
   private payload?: EmployeeCreatePayload ;
@@ -47,7 +47,7 @@ export class EmployeeCreateComponent implements OnInit {
         return of(EmployeeHelper.getEmpty());
       }), tap((employee: Employee) => {
         this.employee = employee;
-        this.employeeForm = EmployeeHelper.convertToUpdateForm(employee);
+        this.employeeForm = EmployeeHelper.convertToCreateForm(employee);
       }))
       .subscribe( );
 
@@ -61,11 +61,10 @@ export class EmployeeCreateComponent implements OnInit {
         this.payload = {...payload,company:null}
       }else{
         this.payload = {...payload,company:{company_id:payload.company}}
-
       }
       this.employeeService.create(this.payload).subscribe((response:Employee) => {
         console.log(response);
-        console.log(this.companies)
+        console.log(this.companies);
         console.log(this.employeeForm.value);
       });
 
