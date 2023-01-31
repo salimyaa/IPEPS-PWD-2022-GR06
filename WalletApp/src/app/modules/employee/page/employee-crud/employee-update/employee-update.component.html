@@ -116,7 +116,7 @@
                   <tbody>
 
                   <tr>
-                    <select [disabled]="isDisabled" name="company" class="form-control" formControlName="company" >
+                    <select  name="company" class="form-control" formControlName="company" >
                         <option *ngFor="let company of companies" [value]="company.company_id">{{company.title | translate}}</option>
                     </select>
                   </tr>

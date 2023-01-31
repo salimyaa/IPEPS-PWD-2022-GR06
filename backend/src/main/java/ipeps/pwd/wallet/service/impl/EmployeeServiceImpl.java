@@ -2,6 +2,7 @@ package ipeps.pwd.wallet.service.impl;
 
 import ipeps.pwd.wallet.entity.Company;
 import ipeps.pwd.wallet.entity.Employee;
+import ipeps.pwd.wallet.entity.enums.EmployeeStatus;
 import ipeps.pwd.wallet.service.CompanyService;
 import ipeps.pwd.wallet.service.EmployeeService;
 import ipeps.pwd.wallet.entity.builder.EmployeeBuilder;
@@ -32,7 +33,10 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee create(EmployeeCreatePayload payload) {
         try{
-            Company company = this.companyService.detail(payload.getCompany().getCompany_id());
+            Company company =null;
+            if (!payload.getStatus().equals(EmployeeStatus.NOT_EMPLOYED)) {
+                company = this.companyService.detail(payload.getCompany().getCompany_id());
+            }
             Employee employee =new EmployeeBuilder()
                     .setLastname(payload.getLastname())
                     .setFirstname(payload.getFirstname())
