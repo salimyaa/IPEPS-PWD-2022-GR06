@@ -7,6 +7,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
 import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
@@ -46,6 +47,7 @@ public class Employee implements Serializable {
     private String Picture;
     @NotNull
     private EmployeeStatus status;
+    @Null
     @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "Employee_Company", referencedColumnName = "company_id")
     @JsonIgnoreProperties("employeeList")

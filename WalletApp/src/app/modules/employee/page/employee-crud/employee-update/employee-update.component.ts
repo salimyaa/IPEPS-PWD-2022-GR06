@@ -25,7 +25,7 @@ export class EmployeeUpdateComponent implements OnInit {
   employeeForm: FormGroup=EmployeeHelper.convertToUpdateForm(EmployeeHelper.getEmpty());
   employee: Employee = EmployeeHelper.getEmpty();
   private payload?: EmployeeUpdatePayload ;
-  companies!: CompanyDto[];
+  companies!: CompanyDto[] ;
 
 //afficher enum dans le html
   keys : any[] = [];
