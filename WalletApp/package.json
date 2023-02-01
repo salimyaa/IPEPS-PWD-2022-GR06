@@ -29,13 +29,14 @@
     "jquery": "^3.6.3",
     "lodash": "^4.17.21",
     "ngx-pagination": "^6.0.3",
+    "primeng": "^15.2.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.0.4",
-    "@angular/cli": "~15.0.4",
+    "@angular-devkit/build-angular": "^15.1.3",
+    "@angular/cli": "~15.1.3",
     "@angular/compiler-cli": "^15.0.4",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.2.0",
