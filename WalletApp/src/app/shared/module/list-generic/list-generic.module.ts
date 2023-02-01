@@ -4,6 +4,8 @@ import { ListComponent } from './component/list/list.component';
 import {RouterModule} from "@angular/router";
 import { MatButtonModule } from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {TranslateModule} from "@ngx-translate/core";
 @NgModule({
   declarations: [
     ListComponent
@@ -11,12 +13,14 @@ import {MatTableModule} from '@angular/material/table';
   exports: [
     ListComponent
   ],
-    imports: [
-        CommonModule,
-        RouterModule,
-        MatButtonModule,
-        MatTableModule
-    ]
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule,
+    TranslateModule
+  ]
 })
 export class ListGenericModule {
 }

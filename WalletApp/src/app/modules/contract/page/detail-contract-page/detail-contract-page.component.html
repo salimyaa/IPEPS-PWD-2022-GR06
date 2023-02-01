@@ -2,22 +2,22 @@
 
 <section>
 
-<ng-container *ngIf="this.contract">
-  <form>
-  <label for="title">Title:</label><input id="title" value="{{this.contract.title}}" disabled>
-  <label for="description">Description:</label><input id="description" value="{{this.contract.description}}" disabled>
-  <label for="start">Start date:</label><input type="date" id="start"  value="{{this.contract.start_date}}" disabled>
-  <label for="end">End date:</label><input  type="date" id="end"  value="{{this.contract.end_date}}" disabled>
-  <label for="hours">Hours per week:</label><input id="hours"  value="{{this.contract.nb_hours_by_week}}" disabled>
-  <label for="employee"> Employee:
-    <select id="employee" disabled>
+  <ng-container *ngIf="this.contract">
+    <form>
+      <label for="title">Title:</label><input id="title" value="{{this.contract.title}}" disabled>
+      <label for="description">Description:</label><input id="description" value="{{this.contract.description}}" disabled>
+      <label for="start">Start date:</label><input type="date" id="start"  value="{{this.contract.start_date}}" disabled>
+      <label for="end">End date:</label><input  type="date" id="end"  value="{{this.contract.end_date}}" disabled>
+      <label for="hours">Hours per week:</label><input id="hours"  value="{{this.contract.nb_hours_by_week}}" disabled>
+      <label for="employee"> Employee:
+        <select id="employee" disabled>
 
-        <option >{{this.contract.employee.firstname}} {{this.contract.employee.lastname}} </option>
+          <option >{{this.contract.employee.firstname}} {{this.contract.employee.lastname}} </option>
 
-    </select>
-  </label>
-  </form>
+        </select>
+      </label>
+    </form>
 
-</ng-container>
+  </ng-container>
 </section>
 <button mat-mini-fab routerLink="../..">back</button>

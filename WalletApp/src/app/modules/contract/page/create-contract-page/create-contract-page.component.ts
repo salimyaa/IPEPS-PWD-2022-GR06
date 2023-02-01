@@ -8,7 +8,6 @@ import {ContractPayload} from "../../model/payload/contract.payload";
 import {Employee} from "../../../employee/model/business/employee";
 import {map, switchMap} from "rxjs/operators";
 import {EmployeeHelper} from "../../../employee/helper/employee.helper";
-import {tap} from "rxjs";
 import {delay, tap} from "rxjs";
 
 import {ContractHelper} from "../../helper/contract.helper";
@@ -22,13 +21,12 @@ export class CreateContractPageComponent {
   contract!:Contract;
   employees?:EmployeeDto[];
   contractForm!:FormGroup;
-
-  constructor(private formBuilder:FormBuilder, private employeService:EmployeeService, private  contractService:ContractServiceService) {
+  constructor(private formBuilder:FormBuilder ,private router:Router, private employeService:EmployeeService, private  contractService:ContractServiceService) {
   }
 
   ngOnInit()
   {
-   this.contract=ContractHelper.getEmpty();
+    this.contract=ContractHelper.getEmpty();
     this.getEmployeesList(); // obtention de la liste des employés pour les proposer dans le select
     this.contractForm=this.formBuilder.group(
       {
@@ -41,36 +39,36 @@ export class CreateContractPageComponent {
   onSubmitForm()
   {
     let values=this.contractForm.value;
- //TODO: prendre en comtpe les modif dans le service
+    //TODO: prendre en comtpe les modif dans le service
 
-        if(this.contractForm.valid) {
-          // récupération de l'employé sur base de son id
-          this.employeService.detail(values.employee_id).pipe(
-            switchMap((empl: Employee) => {
-              let payload: ContractPayload = // injection des donnnées du form et de l'employé dans un payload
-                {
-                  title: values.title,
-                  description: values.description,
-                  start_date: values.start_date,
-                  nb_hours_by_week: values.nb_hours_by_week,
-                  end_date: values.end_date,
-                  employee: EmployeeHelper.toDto(empl)
-                };// requete create
-              return this.contractService.createContract(payload);
-            })// la requete retourne un contrat avec le code erreur dans contrat.status_code
-            , tap((result) => {
-              this.contract = result;
-            }),delay(750), tap((r)=>{
-              //todo: Remplacer le delay par la navigation immédiate mais affichage du message dans un snackbar
-              this.router.navigateByUrl('/contracts');
-            })
-          ).subscribe();
-        }
-        else
-        {
-            this.contract.status_code="invalid";
-        }
-      }
+    if(this.contractForm.valid) {
+      // récupération de l'employé sur base de son id
+      this.employeService.detail(values.employee_id).pipe(
+        switchMap((empl: Employee) => {
+          let payload: ContractPayload = // injection des donnnées du form et de l'employé dans un payload
+            {
+              title: values.title,
+              description: values.description,
+              start_date: values.start_date,
+              nb_hours_by_week: values.nb_hours_by_week,
+              end_date: values.end_date,
+              employee: EmployeeHelper.toDto(empl)
+            };// requete create
+          return this.contractService.createContract(payload);
+        })// la requete retourne un contrat avec le code erreur dans contrat.status_code
+        , tap((result) => {
+          this.contract = result;
+        }),delay(750), tap((r)=>{
+          //todo: Remplacer le delay par la navigation immédiate mais affichage du message dans un snackbar
+          this.router.navigateByUrl('/contracts');
+        })
+      ).subscribe();
+    }
+    else
+    {
+      this.contract.status_code="invalid";
+    }
+  }
 
   getEmployeesList()
   {

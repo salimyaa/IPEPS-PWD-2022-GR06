@@ -21,6 +21,7 @@ export class CompanyHomePageComponent implements OnInit {
     entityUrl:'',
     fields: [],
     data: [],
+    specificIMG: [],
     callback: this.callback,
     callRemove:this.callRemove
   });
@@ -44,6 +45,7 @@ export class CompanyHomePageComponent implements OnInit {
         service : 'company',
         fields: ['title', 'description', 'address'],
         data: company,
+        specificIMG: [],
         callback: this.callback
       })
     })

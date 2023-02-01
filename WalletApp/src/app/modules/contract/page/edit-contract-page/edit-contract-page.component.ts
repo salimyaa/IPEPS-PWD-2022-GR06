@@ -42,10 +42,6 @@ export class EditContractPageComponent {
       .subscribe();
 
     this.getEmployeesList();
-    //config du form
-
-
-
   }
   getEmployeesList()
   {
@@ -62,10 +58,18 @@ export class EditContractPageComponent {
         let payload : ContractUpdatePayload =
           {contract_Id:id,title:values.title,description:values.description,start_date:values.start_date,
             nb_hours_by_week:values.nb_hours_by_week, end_date:values.end_date, employee:EmployeeHelper.toDto(empl)};
-  console.log(payload);
+        console.log(payload);
         return this.contractService.update(payload);
+      }),
+      tap(()=>{
+        //pour refresh la liste dans le service
+        this.contractService.getAllContracts();
+      }),
+      tap(()=>{
+        this.router.navigateByUrl('/contracts');
       })
     ).subscribe();
+
 
 
   }

@@ -1,5 +1,5 @@
 import {SpecificConfig} from './specific.config';
-import {SpecificConfigImage} from "@shared/module/list-generic/model/specific.config.image";
+import {SpecificConfigImage} from "./specific.config.image";
 
 
 export interface ListGenericConfig {
@@ -13,5 +13,5 @@ export interface ListGenericConfig {
   callback?: Function;
   specificCSS?: SpecificConfig[];
   callRemove?: Function;
-  specificIMG?: SpecificConfigImage[]
+  specificIMG: SpecificConfigImage[]
 }

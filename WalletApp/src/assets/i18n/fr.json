@@ -3,6 +3,27 @@
   "NOT_EMPLOYED": "Non employé",
   "SIDEBAR":{
     "Title":"GESTION DES ENTREPRISES"
+  },
+  "EMPLOYEE": {
+    "Title": "Gestion des employés",
+    "City": "Ville",
+    "Phone": "Téléphone",
+    "Birthdate": "Date de naissance",
+    "Gender": "Genre",
+    "Male": "Homme",
+    "Female": "Femme",
+    "Firstname": "Prénom",
+    "Lastname": "Nom"
+  },
+  "COMPANY": {
+    "Title": "Gestion des Companies",
+    "TitleDetail": "Société : "
+  },
+  "LISTGENERIC":{
+    "nocount": "il n'y a pas de donnée.",
+    "count": "il y a ",
+    "encode": "dans la base de données."
   }
+
 }
 

@@ -16,11 +16,12 @@ import {EmployeeCreatePayload} from "../../model/payload/EmployeeCreatePayload.i
 })
 export class EmployeeHomePageComponent implements OnInit {
   @Input() payload!: EmployeeCreatePayload| EmployeeUpdatePayload ;
-config$ = new BehaviorSubject<ListGenericConfig>({
+  config$ = new BehaviorSubject<ListGenericConfig>({
     entityName:'',
     entityUrl:'',
     fields: [],
     data: [],
+    specificIMG: [],
     callback: this.callback,
     callRemove:this.callRemove
   });
@@ -45,7 +46,7 @@ constructor(private employeeService: EmployeeService) {
             ],
           specificIMG: [{
             src: 'picture',
-            cssConfig: [{css: 'image-male', value: 'men' }, {css: 'image-female', value: 'lady'}
+            cssConfig: [{css: 'image-male', value: 'empty' }, {css: 'image-female', value: 'lady'}
             ]}
           ],
           entityName:'Employee',

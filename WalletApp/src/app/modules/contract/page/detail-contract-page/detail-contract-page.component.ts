@@ -22,7 +22,7 @@ export class DetailContractPageComponent {
     this.route.params
       .pipe(switchMap((param: Params) => {
 
-          return this.contractService.detail(param['id']);
+        return this.contractService.detail(param['id']);
 
 
       }), tap((contra: ContractDto) => {

@@ -3,5 +3,26 @@
   "NOT_EMPLOYED": "Unemployed",
   "SIDEBAR": {
     "Title": "BUSINESS MANAGEMENT"
+  },
+  "EMPLOYEE": {
+      "Title": "Employee Management",
+    "City": "City",
+    "Phone": "Phone",
+    "Birthdate": "Birth Date",
+    "Gender": "Gender",
+    "Male": "Male",
+    "Female": "Female",
+    "Firstname": "FirstName",
+    "Lastname": "LastName"
+  },
+  "COMPANY": {
+  "Title": "Company Management",
+    "TitleDetail": "Company : "
+  },
+  "LISTGENERIC":{
+    "nocount": "there are no data",
+    "count": "there are",
+    "encode": "in the database."
   }
+
 }

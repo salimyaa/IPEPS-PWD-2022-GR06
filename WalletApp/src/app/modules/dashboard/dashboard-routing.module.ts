@@ -12,6 +12,7 @@ import {EmployeeCreateComponent} from "../employee/page/employee-crud/employee-c
 import {CompanyDetailsComponent} from "../company/page/company-crud/company-details/company-details.component";
 import {CompanyUpdateComponent} from "../company/page/company-crud/company-update/company-update.component";
 import {CompanyCreateComponent} from "../company/page/company-crud/company-create/company-create.component";
+import {TimesheetHomePageComponent} from "../timesheet/page/timesheet-home-page/timesheet-home-page.component";
 
 
 const routes: Routes = [
@@ -35,7 +36,9 @@ const routes: Routes = [
       {path: 'Company/detail/:id', component:CompanyDetailsComponent},
       {path: 'Company/update/:id', component:CompanyUpdateComponent},
       {path: 'Company/create', component:CompanyCreateComponent},
-   {path:'contracts',loadChildren: () =>import('../contract/contract.module').then(m=>m.ContractModule)},
+
+      {path:'timesheets',loadChildren:()=>import('../timesheet/timesheet.module').then(m=>m.TimesheetModule)},
+      {path:'contracts',loadChildren: () =>import('../contract/contract.module').then(m=>m.ContractModule)},
    //   {path: 'contracts/detail/:id', component:DetailContractPageComponent},
      // {path: 'contracts/edit/:id', component:EditContractPageComponent},
 

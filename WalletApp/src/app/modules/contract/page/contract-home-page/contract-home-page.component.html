@@ -1,35 +1,35 @@
 
-  <h1>Gestion des contrats</h1>
+<h1>Gestion des contrats</h1>
 
 <div class="container">
 
-<button  class = "btn btn-info btnCreate" routerLink="createContract">Create new contract</button>
-<table class="table table-striped">
-  <tr>
-    <td class="titleTable">#</td>
-    <td class="titleTable">Titre</td>
-    <td class="titleTable">Description</td>
-    <td class="titleTable">Date début</td>
-    <td class="titleTable">Date fin</td>
-    <td class="titleTable">h/sem</td>
-    <td class="titleTable">Employé</td>
-    <td class="titleTable">Action</td>
-  </tr>
-<tr *ngFor="let elem of contracts, let index=index" >
+  <button  class = "btn btn-info btnCreate" routerLink="createContract">Create new contract</button>
+  <table class="table table-striped">
+    <tr>
+      <td class="titleTable">#</td>
+      <td class="titleTable">Titre</td>
+      <td class="titleTable">Description</td>
+      <td class="titleTable">Date début</td>
+      <td class="titleTable">Date fin</td>
+      <td class="titleTable">h/sem</td>
+      <td class="titleTable">Employé</td>
+      <td class="titleTable">Action</td>
+    </tr>
+    <tr *ngFor="let elem of this.contracts | async, let index=index" >
 
-  <td >{{index + 1}}</td>
-  <td>{{elem.title}}</td>
-  <td>{{elem.description}}</td>
-  <td>{{elem.start_date}}</td>
-  <td>{{elem.end_date}}</td>
-  <td>{{elem.nb_hours_by_week}}</td>
-  <td>{{elem.employee.firstname}} {{elem.employee.lastname.toLocaleUpperCase()}}</td>
+      <td >{{index + 1}}</td>
+      <td>{{elem.title}}</td>
+      <td>{{elem.description}}</td>
+      <td>{{elem.start_date}}</td>
+      <td>{{elem.end_date}}</td>
+      <td>{{elem.nb_hours_by_week}}</td>
+      <td>{{elem.employee.firstname}} {{elem.employee.lastname.toLocaleUpperCase()}}</td>
 
-  <td>
-    <button class="btn btn-danger" (click)="delete(elem.contract_id)"><mat-icon>delete</mat-icon></button>
-    <button routerLink="edit/{{elem.contract_id}}"><mat-icon>edit</mat-icon></button>
-    <button routerLink="detail/{{elem.contract_id}}">Detail</button>
-  </td>
-</tr>
-</table>
+      <td>
+        <button class="btn btn-danger" (click)="delete(elem.contract_id)"><mat-icon>delete</mat-icon></button>
+        <button routerLink="edit/{{elem.contract_id}}"><mat-icon>edit</mat-icon></button>
+        <button routerLink="detail/{{elem.contract_id}}">Detail</button>
+      </td>
+    </tr>
+  </table>
 </div>

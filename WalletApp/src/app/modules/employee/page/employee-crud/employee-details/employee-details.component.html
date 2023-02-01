@@ -3,7 +3,7 @@
   <div class="row g-0">
 
     <div class="col-md-2 d-flex justify-content-center align-items-center"
-     *ngIf="employee.picture == 'empty'; else change ">
+     *ngIf="employee.picture === 'empty'; else change ">
       <img class="photoEmployee" *ngIf="employee.gender == 'Female'"
            src="assets/images/employee/lady.png" slot="start" alt="Profile Image" />
       <img class="photoEmployee" *ngIf="employee.gender == 'Male'"
@@ -63,11 +63,11 @@
               <td>{{employee.address}}</td>
             </tr>
             <tr>
-              <td> <b> City: </b></td>
+              <td> <b> {{'EMPLOYEE.City'|translate}} </b></td>
               <td>{{employee.city}}</td>
             </tr>
             <tr>
-              <td> <b> Phone: </b></td>
+              <td> <b> {{'EMPLOYEE.Phone'|translate}} </b></td>
               <td>{{employee.phone}}</td>
             </tr>
             <tr>
@@ -75,15 +75,15 @@
               <td>{{employee.email}}</td>
             </tr>
             <tr>
-              <td>Birthdate</td>
+              <td><b>{{'EMPLOYEE.Birthdate'|translate}}</b></td>
               <td>{{employee.birthday}}</td>
             </tr>
             <tr>
-              <td>Gender</td>
+              <td><b>{{'EMPLOYEE.Gender'|translate}}</b></td>
               <td>{{employee.gender}}</td>
             </tr>
             <tr>
-              <td>Ssin</td>
+              <td><b>Ssin</b></td>
               <td>{{employee.ssin}}</td>
             </tr>
             </tbody>

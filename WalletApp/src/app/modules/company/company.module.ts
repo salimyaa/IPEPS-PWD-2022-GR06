@@ -8,6 +8,7 @@ import { CompanyUpdateComponent } from './page/company-crud/company-update/compa
 import { CompanyCreateComponent } from './page/company-crud/company-create/company-create.component';
 import { CompanyDetailsComponent } from './page/company-crud/company-details/company-details.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {TranslateModule} from "@ngx-translate/core";
 
 
 
@@ -19,13 +20,14 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     CompanyDetailsComponent,
 
   ],
-  imports: [
-    CommonModule,
-    CompanyRoutingModule,
-    ListGenericModule,
-    FormsModule,
-    ReactiveFormsModule,
+    imports: [
+        CommonModule,
+        CompanyRoutingModule,
+        ListGenericModule,
+        FormsModule,
+        ReactiveFormsModule,
+        TranslateModule,
 
-  ]
+    ]
 })
 export class CompanyModule { }

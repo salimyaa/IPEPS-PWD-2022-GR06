@@ -29,6 +29,8 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import {SelectButtonModule} from "primeng/selectbutton";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatExpansionModule} from "@angular/material/expansion";
+import {TimesheetHomePageComponent} from "../timesheet/page/timesheet-home-page/timesheet-home-page.component";
+
 
 
 
@@ -68,6 +70,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
     SelectButtonModule,
     MatDatepickerModule,
     MatExpansionModule,
+
   ]
 })
 export class DashboardModule { }

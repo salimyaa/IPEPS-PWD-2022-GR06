@@ -5,7 +5,8 @@ import {Company} from "../../../company/model/business/company";
 export class employeeUtils {
 
 
-  public static CreateEmployeeEmptyPayload():  { Firstname: string; Ssin: string; Address: string; Lastname: string; active: boolean; Birthday: string; company: Company; Gender: string; picture: string; status: string }  {
+  public static CreateEmployeeEmptyPayload():  { Firstname: string; Ssin: string; Address: string; Lastname: string; active: boolean; Birthday: string; company: Company; Gender: string; picture: string; status: string }
+  {
 
   return {
     Lastname : '',
@@ -17,7 +18,8 @@ export class employeeUtils {
     status : '',
     company :CompanyHelper.getEmpty(),
     active : false,
-    picture : ''};
+    picture : ''
+  };
 
 }
 }

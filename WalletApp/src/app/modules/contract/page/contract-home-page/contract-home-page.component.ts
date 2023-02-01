@@ -13,15 +13,15 @@ import {EmployeeService} from "../../../employee/service/employee.service";
 export class ContractHomePageComponent {
   constructor(private service: ContractServiceService, private employeService: EmployeeService) {
   }
-  contracts?:ContractDto[];
+  contracts?:Observable<ContractDto[]>;
 
 
 
   ngOnInit():void{
-  this.getContractsList();
+    this.getContractsList();
   }
   getContractsList(){
-    this.service.getAllContracts().subscribe(data => { this.contracts= data})
+    this.contracts=this.service.getAllContracts();
   }
   delete(contract_id:string){
     this.service.deleteContract(contract_id).pipe(

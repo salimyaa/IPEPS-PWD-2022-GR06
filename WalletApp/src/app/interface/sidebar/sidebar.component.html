@@ -1,7 +1,7 @@
 
 <div [class.dark-theme]="isDark">
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav [ngClass]="currentTheme" #sidenav #drawer class="sidenav" fixedInViewport
+  <mat-sidenav [ngClass]="currentTheme"  #drawer class="sidenav" fixedInViewport
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'push' : 'side'"
                [opened]="(isHandset$ | async) === false">
@@ -26,6 +26,11 @@
       <mat-list-item class="listFocus" [routerLink]="['contracts']">
         <mat-icon>assignment</mat-icon>
         <span class="menu-item">Contracts</span>
+      </mat-list-item>
+      <mat-list-item class="listFocus" [routerLink]="['timesheets']">
+        <mat-icon>access_time</mat-icon>
+
+        <span class="menu-item">Timesheets</span>
       </mat-list-item>
 
 

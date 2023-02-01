@@ -1,23 +1,31 @@
-
-
-
    <button type="button" class="btn btn-primary"  *ngIf="haveCallBack"
      [routerLink]="config.entityUrlCreate" >
      Create New {{config.entityName}} <i class="fa fa-plus-circle"></i></button>
+   <div *ngIf="config.data.length===0;else numberData" class="alert alert-danger" role="alert">
+     <span>{{'LISTGENERIC.nocount' | translate}}</span>
+   </div>
+   <ng-template #numberData>
+     <div class="alert alert-success" role="alert">
+       <span>{{'LISTGENERIC.count' | translate}} {{config.data.length}} {{config.entityName}} {{'LISTGENERIC.encode' | translate}}</span>
+
+     </div>
+     </ng-template>
    <ng-container *ngIf="valid;else invalid">
   <table class="table table-striped {{config.tableCss}}">
 
+
     <tr class="center">
       <th class="titleTable">#</th>
-      <th class="titleTable" *ngFor="let field of config.fields">{{field}}</th>
+      <th class="titleTable" *ngFor="let field of config.fields">{{field |translate}}</th>
       <th class="titleTable">Action</th>
 
     </tr>
+
     <tr *ngFor="let item of config.data;let index=index">
       <td class="tailleIndex">{{index+1}}</td>
       <ng-container *ngFor="let field of config.fields,let src of config.fields">
         <!-- Si pas de specificCss alors premier ngContainer sinon go to #specific -->
-        <ng-container *ngIf="!config.specificCSS && !config.specificIMG || !isInclude(field) ;else specific">
+        <ng-container *ngIf="!config.specificCSS  || !isInclude(field)|| !item[field] ;else specific">
           <td class="tdTailleCenter">
               <!--<ng-container *ngIf="config.specificIMG;else normal">
                 <img [src]="item.src">;
@@ -28,10 +36,14 @@
         </ng-container>
         <ng-template #specific>
           <td class="tdTailleCenter">
+            <ng-container *ngFor="let item of config.specificIMG">
+              <div *ngIf="item.src === 'specificImage' && item[field] === 'empty'" [ngStyle]="{'background-image': 'url(http://localhost:4200/assets/images/employee/men.png)'}">
+                {{item.src}}
+              </div>
+            </ng-container>
             <ng-container  *ngFor="let cssValue of currentCSS!.cssConfig ">
               <span *ngIf="item[field]=== cssValue.value" class="{{cssValue.css}}">{{item[field]}}</span>
             </ng-container>
-          </td>
         </ng-template>
       </ng-container>
         <td class="tailleAction">
@@ -44,7 +56,10 @@
 
       </td>
     </tr>
+
   </table>
+
+<!--     <mat-paginator [length]="config.data.length" [pageSize]="pageSizeValue" [pageSizeOptions]="[5, 10, 25, 50]"></mat-paginator>-->
 
 </ng-container>
 <ng-template #invalid>

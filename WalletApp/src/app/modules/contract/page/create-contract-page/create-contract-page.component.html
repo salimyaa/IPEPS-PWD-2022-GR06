@@ -12,11 +12,11 @@
   <label for="employee"> Employee:
     <select id="employee" formControlName="employee_id">
       <ng-container *ngFor="let employ of this.employees">
-      <option value="{{employ.employee_id}}">{{employ.firstname}} {{employ.lastname}} </option>
+        <option value="{{employ.employee_id}}">{{employ.firstname}} {{employ.lastname}} </option>
       </ng-container>
     </select>
   </label>
- <button [disabled]="contractForm.invalid" (click)="onSubmitForm()">Send</button>
+  <button [disabled]="contractForm.invalid" (click)="onSubmitForm()">Send</button>
   <ng-container *ngIf="this.contract.status_code=='api.contract.create.success';">
     <label style="color:green; text-align: center">Le contrat a été créé avec succès!</label>
   </ng-container>
@@ -27,4 +27,3 @@
 
 
 <button mat-mini-fab routerLink="..">back</button>
-

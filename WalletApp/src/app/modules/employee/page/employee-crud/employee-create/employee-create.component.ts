@@ -34,8 +34,9 @@ export class EmployeeCreateComponent implements OnInit {
   companies!: CompanyDto[];
 
 
-  constructor(private employeeService: EmployeeService, private route: ActivatedRoute,private companyService: CompanyService
-  ) {   }
+  constructor(private employeeService: EmployeeService, private route: ActivatedRoute,
+              private companyService: CompanyService)
+  { }
 
   ngOnInit(): void {
     this.keys = Object.keys(this.statusEnum);
@@ -71,6 +72,9 @@ export class EmployeeCreateComponent implements OnInit {
 
     }
   };
+  effacer() {
+    this.employeeForm.reset();
+  }
   onEmployeeSelected(employee: any) {
     this.selectedEmployee = employee;
   }

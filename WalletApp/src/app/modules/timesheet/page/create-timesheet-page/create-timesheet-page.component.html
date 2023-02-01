@@ -1,0 +1,54 @@
+<h1>Creer une timesheet</h1>
+<ng-container *ngIf="selectedEmployee as empl;else notSelected">
+  <form [formGroup]="timesheetForm">
+    <mat-form-field>
+      <mat-label>Employé</mat-label>
+      <input matInput  value="{{empl}}" disabled>
+    </mat-form-field>
+    <div matAutocompleteOrigin #origin="matAutocompleteOrigin">
+      <mat-form-field>
+        <mat-label>Contract</mat-label>
+        <input matInput
+               [matAutocomplete]="auto"
+               [matAutocompleteConnectedTo]="origin"
+               formControlName="contract" >
+      </mat-form-field>
+    </div>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let contract of this.contracts | async" [value]="contract.id">
+        {{contract.title}} {{contract.start_date}} - {{contract.end_date}}
+      </mat-option>
+    </mat-autocomplete>
+    <mat-form-field>
+
+      <mat-label>Start date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="start_date">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <div id="hours">
+      <mat-form-field>
+        <mat-label>Start hour</mat-label>
+        <input matInput  type="time" formControlName="start_hour">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>End hour</mat-label>
+        <input matInput  type="time" formControlName="end_hour">
+      </mat-form-field>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Type</mat-label>
+      <input matInput formControlName="type" >
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Commentaire</mat-label>
+      <input matInput formControlName="commentaire">
+    </mat-form-field>
+    <button mat-button color="primary" (click)="onCreateTimesheet()">Crèer timesheet</button>
+  </form>
+
+</ng-container>
+<ng-template #notSelected>
+  <p>Aucun employé n'est sélectionné</p>
+</ng-template>

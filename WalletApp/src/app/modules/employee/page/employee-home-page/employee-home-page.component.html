@@ -3,7 +3,7 @@
     <div class="col ps-2">
       <div class="row g-0">
         <div class="col-md-10 text-center">
-        <span class="headerTitle">Gestion des employees</span>
+        <span class="headerTitle">{{'EMPLOYEE.Title' | translate}}</span>
         </div>
         <div class="container">
         <app-list *ngIf="config$ | async as config" [config]="config" > </app-list>

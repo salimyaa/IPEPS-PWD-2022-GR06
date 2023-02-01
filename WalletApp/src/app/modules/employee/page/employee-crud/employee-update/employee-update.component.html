@@ -10,10 +10,10 @@
               <img class="photoEmployee" *ngIf="employee.gender == 'Male'"
                    src="assets/images/employee/men.png" slot="start" alt="Profile Image"/>
               </div>
-              <div>
+             <!-- <div>
               <label for="photo">Photo:</label>
               <input type="file" id="photo" name="photo" formControlName="picture">
-              </div>
+              </div>-->
     </div>
     <ng-template #change >
       <div class="col-md-2 d-flex justify-content-center align-items-center" *ngIf="employee.lastname == 'stallone'">
@@ -55,11 +55,11 @@
                     <td> {{employee.id}}</td>
                   </tr>
                   <tr>
-                    <td> <b> Firstname: </b></td>
+                    <td> <b>{{'EMPLOYEE.Firstname'|translate}}</b></td>
                     <td><input placeholder="{{employee.firstname}}" formControlName="firstname"></td>
                   </tr>
                   <tr>
-                    <td> <b> Lastname: </b></td>
+                    <td> <b> {{'EMPLOYEE.Lastname'|translate}} </b></td>
                     <td><input placeholder="{{employee.lastname}}" formControlName="lastname"></td>
                   </tr>
                   <tr><td> <b> Status: </b></td>
@@ -72,11 +72,11 @@
                     <td><input placeholder="{{employee.address}}" formControlName="address"></td>
                   </tr>
                   <tr>
-                    <td> <b> City: </b></td>
+                    <td> <b>{{'EMPLOYEE.City'|translate}}  </b></td>
                     <td><input placeholder="{{employee.city}}" formControlName="city"></td>
                   </tr>
                   <tr>
-                    <td> <b> Phone: </b></td>
+                    <td> <b>{{'EMPLOYEE.Phone'|translate}}</b></td>
                     <td><input placeholder="{{employee.phone}}" formControlName="phone"></td>
                   </tr>
                   <tr>
@@ -84,20 +84,20 @@
                     <td ><input class="email" placeholder="{{employee.email}}" formControlName="email"></td>
                   </tr>
                   <tr>
-                    <td for="datepicker" class="form-label"><b>Birthdate</b></td>
+                    <td for="datepicker" class="form-label"><b>{{'EMPLOYEE.Birthdate'|translate}}</b></td>
                     <td><input type="date" class="form-control" id="datepicker" placeholder="{{employee.birthday}}" formControlName="birthday"></td>
 
                   </tr>
                   <tr>
-                    <td><b> Gender: </b></td>
+                    <td><b>{{'EMPLOYEE.Gender'|translate}} </b></td>
                     <td>
-                      <input type="radio"  name="gender" value="male" formControlName="gender"> Male
-                      <input type="radio"  name="gender" value="female" formControlName="gender"> Female
+                      <input type="radio"  name="gender" value="Male" formControlName="gender"> {{'EMPLOYEE.Male'|translate}}
+                      <input type="radio"  name="gender" value="Female" formControlName="gender"> {{'EMPLOYEE.Female'|translate}}
                     </td>
 
                   </tr>
                   <tr>
-                    <td>Ssin</td>
+                    <td><b>Ssin</b></td>
                     <td><input placeholder="{{employee.ssin}}" formControlName="ssin" ></td>
                   </tr>
                   </tbody>
@@ -122,22 +122,22 @@
                   </tr>
 
                     <tr>
-                      <td>Company</td>
+                      <td><b>{{'COMPANY.TitleDetail'| translate}}</b></td>
                       <td>{{employee.company.title}}</td>
                     </tr>
                     <tr>
-                      <td>address : </td>
+                      <td><b>address : </b></td>
                       <td>{{employee.company.address}}</td>
                     <tr>
                     <tr>
-                      <td>Description : </td>
+                      <td><b>Description : </b> </td>
                       <td>{{employee.company.description}}</td>
                     <tr>
-                      <td>Experience</td>
+                      <td><b>Experience : </b></td>
                       <td> yrs</td>
                     </tr>
                     <tr>
-                      <td>Salary</td>
+                      <td><b>Salary : </b></td>
                       <td> LPA</td>
                     </tr>
 
