@@ -5,7 +5,8 @@ import {SpecificConfigImage} from "@shared/module/list-generic/model/specific.co
 import {CssForValue} from "@shared/module/list-generic/model/css-for-value.config";
 import {isNil} from "lodash";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-
+// code ajouter pour faire fonctionner les entités de salim
+import {EmployeeClass} from "../model/business/employeeClass";
 export class EmployeeHelper {
   public static getImageConfig(employee:Employee):SpecificConfigImage{
    const src = (isNil(employee.picture))? employee.picture : (employee.gender === 'male')? '../../../../assets/images/employee/men.png': 'url de ta pjoto femme';
@@ -80,5 +81,20 @@ export class EmployeeHelper {
       picture: new FormControl(employee.picture),
       //  active: new FormControl(employee.active),
     });
+  }
+
+  // code ajouter pour faire fonctionner les entités de salim
+  static interfactoToClass(inter:Employee)
+  {
+    return new EmployeeClass(inter.address,inter.birthday,inter.city,inter.company,inter.email,
+      inter.firstname,inter.gender,inter.id,inter.lastname,inter.phone,inter.picture,inter.ssin,inter.status)
+  }
+  public static classToInterface(empl:EmployeeClass):Employee
+  { return {address:empl.address,birthday:empl.birthday,city:empl.city,company:empl.company,email:empl.email,firstname:empl.firstname,
+    lastname:empl.lastname,gender:empl.gender,id:empl.id,phone:empl.phone,picture:empl.picture,ssin:empl.ssin,status:empl.status}
+  }
+  static getEmptyClass():EmployeeClass
+  {
+    return new EmployeeClass('','','',CompanyHelper.getEmpty(),'','','','','','','','','');
   }
 }
