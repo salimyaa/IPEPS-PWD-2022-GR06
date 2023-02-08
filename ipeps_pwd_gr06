@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "afb16cfe-d2a9-4cad-b455-a1aa5f2505ed",
+		"name": "Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23182640"
+	},
+	"item": [
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"username\":\"captain\",\r\n\r\n    \"password\":\"P@ssword\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2022/api/account/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2022",
+							"path": [
+								"api",
+								"account",
+								"signup"
+							]
+						},
+						"description": "Cette requete permet de s'inscrire et de recevoir un token"
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "810dbea2-9689-4509-8fb6-2fba9e1d91d8"
+						},
+						"url": {
+							"raw": "http://localhost:2022/api/account/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2022",
+							"path": [
+								"api",
+								"account",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "me",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "P@ssword",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "capitain",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"username\":\"captain\",\r\n\r\n    \"password\":\"P@ssword\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:2022/api/account/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2022",
+							"path": [
+								"api",
+								"account",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authenticated",
+			"item": [
+				{
+					"name": "Contract",
+					"item": [
+						{
+							"name": "get list",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "create contract",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "update contract",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "delete contract",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "get list by Employee",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Timesheets",
+					"item": [
+						{
+							"name": "get list",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "create timesheet",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "get list by employee",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Employee",
+					"item": [
+						{
+							"name": "get list",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "get detail",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "817357b1-70aa-46c0-8024-3e7e51593efa",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
