@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="Validation du formulaire de créaction de contrat &#10;affichage de la réponse succes">
-      <change afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/model/business/employeeClass.ts" afterDir="false" />
+    <list default="true" id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="- Mise à jour du back: requete custom Afficher contrat d'un employé&#10;- Formulaire create timesheet, autocomplete des contrats d'un employé &#10;- Construction d'un payload pour l'envoi à la DB&#10;- Problème en cours de résolution envoi de la requeete à la DB: Api response succes mais pas réel, pas d'insertion dans la DB">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/helper/employee.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/helper/employee.helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/model/business/employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/model/business/employee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-home-page/employee-home-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WalletApp/src/app/modules/employee/page/employee-home-page/employee-home-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/ContractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/ContractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/ContractRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/ContractService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/ContractServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/service/impl/ContractServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/TimesheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/TimesheetController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +54,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/yaala/Desktop/cours soir 2022-23/ProjetDevWeb/IPEPS-PWD-2022-GR06/backend",
+    "last_opened_file_path": "C:/Users/yaala/Desktop/cours soir 2022-23/ProjetDevWeb/IPEPS-PWD-2022-GR06",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -94,6 +87,7 @@
       <workItem from="1673923508360" duration="110000" />
       <workItem from="1674939906028" duration="59000" />
       <workItem from="1675075828282" duration="2579000" />
+      <workItem from="1675103714685" duration="1355000" />
     </task>
     <task id="LOCAL-00001" summary="mise a jour wallet sur le dev de la branche main">
       <created>1670858394477</created>
@@ -144,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673910778837</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- Mise à jour du back: requete custom Afficher contrat d'un employé&#10;- Formulaire create timesheet, autocomplete des contrats d'un employé &#10;- Construction d'un payload pour l'envoi à la DB&#10;- Problème en cours de résolution envoi de la requeete à la DB: Api response succes mais pas réel, pas d'insertion dans la DB">
+      <created>1675103896553</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675103896553</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +170,8 @@
     <MESSAGE value="suite du front contracts:&#10;update fonctionne &#10;à revoir car plein de choses à améliorer" />
     <MESSAGE value="Début de nettoyage" />
     <MESSAGE value="Nettoyage l'us &quot;crèer un contrat&quot;&#10;Utilisation d'interface business, dto et helper &#10;exploitation du code d'erreur de l'api &#10;Modification de la propriété &quot;result_code&quot; de :ApiResponse en &quot;code&quot; pour matcher avec le back" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nettoyage l'us &quot;crèer un contrat&quot;&#10;Utilisation d'interface business, dto et helper &#10;exploitation du code d'erreur de l'api &#10;Modification de la propriété &quot;result_code&quot; de :ApiResponse en &quot;code&quot; pour matcher avec le back" />
+    <MESSAGE value="- Mise à jour du back: requete custom Afficher contrat d'un employé&#10;- Formulaire create timesheet, autocomplete des contrats d'un employé &#10;- Construction d'un payload pour l'envoi à la DB&#10;- Problème en cours de résolution envoi de la requeete à la DB: Api response succes mais pas réel, pas d'insertion dans la DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Mise à jour du back: requete custom Afficher contrat d'un employé&#10;- Formulaire create timesheet, autocomplete des contrats d'un employé &#10;- Construction d'un payload pour l'envoi à la DB&#10;- Problème en cours de résolution envoi de la requeete à la DB: Api response succes mais pas réel, pas d'insertion dans la DB" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

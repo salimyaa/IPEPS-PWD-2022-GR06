@@ -1,26 +1,27 @@
+h1 {
+  text-align: center
+}
+button {
+  position: absolute;
+  top: -3em;
+  right: 0px;
+}
+
 .employeContainer{
+  margin-top: 2em;
   h2{
     text-align: center;
     padding: 1em;
   }
-  background-color: rgb(163, 214, 240);
   max-width: 25%;
   height: 100%;
   min-height: 63vh;
 }
 .timesheetsContainer{
-  background-color: #F0BBC0;
+  margin-top: 2em;
+
   min-width: 75%;
   position: relative;
-  button{
-    width: 2em;height: 2em;
-    position:absolute;
-    right:0em;
-    border:none;
-    :hover{
-      transform: scale(1.5);
-    }
-  }
 }
 .timesheet{
   display: flex;

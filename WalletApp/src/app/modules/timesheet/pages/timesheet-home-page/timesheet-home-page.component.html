@@ -1,4 +1,5 @@
-<h1>Timesheets</h1>
+<h1>Fiches de pointages</h1>
+
 <div class="timesheet">
 <div class="employeContainer">
   <div  matAutocompleteOrigin #origin="matAutocompleteOrigin">
@@ -17,9 +18,9 @@
       {{option.firstname}} {{option.lastname}}
     </mat-option>
   </mat-autocomplete>
-  <h2>Employé sélectionné</h2>
-  <ng-container *ngIf="selectedEmployee as empl; else notSelected">
 
+  <ng-container *ngIf="selectedEmployee as empl; else notSelected">
+    <h2>Sélection:</h2>
 
   <ul>
     <li>{{empl.firstname}} {{empl.lastname}}</li>
@@ -31,49 +32,15 @@
   </ul>
   </ng-container>
   <ng-template #notSelected>
-    <ul>
-      <li>Pas d'employé selectionné</li>
-    </ul>
+    <p>Veuillez sélectionner un employé</p>
   </ng-template>
 </div>
 <div class="timesheetsContainer">
+  <button mat-raised-button *ngIf="selectedEmployee" (click)="onNewTimesheet()">New Timesheet<mat-icon>add</mat-icon></button>
 
-  <button *ngIf="selectedEmployee" (click)="onNewTimesheet()"><mat-icon>add</mat-icon></button>
 
-  <table>
-    <thead>
-    <tr>
-      <th>start_date</th>
-      <th>start_hours</th>
-      <th>end_hours</th>
-      <th>comment</th>
-      <th>timesheet_type</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>Date 1</td>
-      <td>Heure de début 1</td>
-      <td>Heure de fin 1</td>
-      <td>Commentaire 1</td>
-      <td>Type de feuille de temps 1</td>
-    </tr>
-    <tr>
-      <td>Date 2</td>
-      <td>Heure de début 2</td>
-      <td>Heure de fin 2</td>
-      <td>Commentaire 2</td>
-      <td>Type de feuille de temps 2</td>
-    </tr>
-    <tr>
-      <td>Date 3</td>
-      <td>Heure de début 3</td>
-      <td>Heure de fin 3</td>
-      <td>Commentaire 3</td>
-      <td>Type de feuille de temps 3</td>
-    </tr>
-    </tbody>
-  </table>
-
+<ng-container *ngIf="selectedEmployee">
+ <app-timesheets-list [selectedEmployee]="selectedEmployee"></app-timesheets-list>
+</ng-container>
 </div>
 </div>

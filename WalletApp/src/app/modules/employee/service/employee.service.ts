@@ -34,7 +34,6 @@ export class EmployeeService extends ApiService{
     return this.get(`${ApiUriEnum.PROFILE_DETAIL}/${id}`).pipe(
       map((response: ApiResponse) => (response.result) ? EmployeeHelper.fromDto(response.data! as EmployeeDto) : EmployeeHelper.getEmpty()))
   }
-  //todo update, detail
 
   remove(id: string): Observable<ApiResponse> {
     return this.delete(`${ApiUriEnum.PROFILE_DELETE}/${id}`);

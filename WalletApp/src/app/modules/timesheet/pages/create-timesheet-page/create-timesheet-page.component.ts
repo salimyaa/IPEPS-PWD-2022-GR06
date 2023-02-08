@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {EmployeeClass} from "../../../employee/model/business/employeeClass";
 import {EmployeeService} from "../../../employee/service/employee.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import {map} from "rxjs/operators";
 import {EmployeeHelper} from "../../../employee/helper/employee.helper";
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -25,7 +25,8 @@ timesheetForm!:FormGroup;
 contracts?:Observable<Contract[]>;
 
   constructor(private emplService:EmployeeService, private activated:ActivatedRoute,private formBuilder:FormBuilder,
-              private contractService:ContractServiceService, private timesheetService:TimesheetService) {
+              private contractService:ContractServiceService, private timesheetService:TimesheetService,
+              private router:Router) {
 
   }
   ngOnInit()
@@ -53,7 +54,7 @@ contracts?:Observable<Contract[]>;
   {
     this.timesheetForm= this.formBuilder.group({
        contract:[''],start_date:[''],
-      start_hour:[null],end_hour:[null],type:[''],commentaire:['']
+      start_hour:[null],end_hour:[null],type:[''],comment:['']
     })
   }
 
@@ -66,22 +67,22 @@ contracts?:Observable<Contract[]>;
     let payload:TimesheetCreatePayload={} as TimesheetCreatePayload;
     let selectedContract:Contract=ContractHelper.getEmpty();
     this.contractService.detail(values.contract).pipe(map( result =>{
-      payload.contract=ContractHelper.fromDto(result);
+      payload.contract=result;
       if(this.selectedEmployee)
       {
-        payload.employee= EmployeeHelper.classToInterface(this.selectedEmployee);
+        payload.employee= EmployeeHelper.toDto(EmployeeHelper.classToInterface(this.selectedEmployee));
       }
       payload.start_date=values.start_date;
-      payload.start_hour=values.start_hour;
-      payload.end_hour=values.end_hour;
-      payload.comment=values.commment;
+      payload.start_hours="2000-01-01T"+values.start_hour+":01";
+      payload.end_hours="2000-01-01T"+values.end_hour+":01";
+      payload.comment=values.comment;
       payload.timesheet_type=values.type;
       return payload;
 
     }) ,map( data=>{
-      console.log(data)
       this.timesheetService.create(data).subscribe();
       })
+      ,tap(()=>{this.router.navigateByUrl("/timesheets")})
 
 
     ).subscribe();

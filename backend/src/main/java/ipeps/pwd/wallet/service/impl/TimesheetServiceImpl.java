@@ -91,4 +91,9 @@ public class TimesheetServiceImpl implements TimesheetService {
         }
 
     }
+
+    @Override
+    public List<Timesheet> listByEmployeeID(UUID employee_id) {
+        return timesheetRepository.listByEmployeeID(employee_id);
+    }
 }

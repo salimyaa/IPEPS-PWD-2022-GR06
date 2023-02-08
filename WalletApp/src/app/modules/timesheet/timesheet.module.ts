@@ -12,12 +12,15 @@ import { CreateTimesheetPageComponent } from './pages/create-timesheet-page/crea
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatButtonModule} from "@angular/material/button";
+import { TimesheetsListComponent } from './components/timesheets-list/timesheets-list.component';
+import {MatTableModule} from "@angular/material/table";
 
 
 @NgModule({
   declarations: [
     TimesheetHomePageComponent,
-    CreateTimesheetPageComponent
+    CreateTimesheetPageComponent,
+    TimesheetsListComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +30,7 @@ import {MatButtonModule} from "@angular/material/button";
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDatepickerModule, MatNativeDateModule, MatButtonModule
+    MatDatepickerModule, MatNativeDateModule, MatButtonModule, MatTableModule
   ],
   providers:[
     MatDatepickerModule

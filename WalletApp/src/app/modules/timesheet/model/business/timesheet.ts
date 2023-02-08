@@ -6,8 +6,8 @@ export interface Timesheet{
   employee:Employee;
   contract:Contract;
   start_date:string;
-  start_hour:string;
-  end_hour:string;
+  start_hours:string;
+  end_hours:string;
   comment:string;
   timesheet_type:string;
   error_code:string;

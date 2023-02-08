@@ -29,6 +29,18 @@ public class TimesheetController {
             return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorListCode("timesheet"));
         }
     }
+    @GetMapping("listByEmployee/{id}")
+    public ApiResponse listByEmployeeID(@PathVariable("id") UUID employee_id){
+        try {
+            return new ApiResponse(true,this.timesheetService.listByEmployeeID(employee_id),ApiCode.getSuccessListCode("timesheet"));
+
+        }
+        catch (Exception e)
+        {
+            return new ApiResponse(false, e.getMessage() ,ApiCode.getErrorDetailCode("timesheet"));
+
+        }
+    }
 
     @GetMapping("detail/{id}")
     public ApiResponse getDetail(@PathVariable("id") UUID timesheet_id){
@@ -49,7 +61,6 @@ public class TimesheetController {
 
     @PostMapping("create")
     public ApiResponse create(@RequestBody() TimesheetCreatePayload payload){
-
         try{
             return new ApiResponse(true, this.timesheetService.create(payload),ApiCode.getSuccessCreateCode("timesheet"));
         }

@@ -17,5 +17,7 @@ public interface TimesheetService {
     public Timesheet update (TimesheetUpdatePayload payload);
 
     public boolean delete(UUID timesheet_id);
+
+    List<Timesheet> listByEmployeeID(UUID employee_id);
 }
 

@@ -31,5 +31,28 @@ export class TimesheetService extends ApiService{
 
     );
   }
+  getAllTimesheetsBYEmployeeID(employeeID:String)
+  {
+    return this.get("timesheets/listByEmployee/"+employeeID)
+      .pipe(
+        map((response:ApiResponse)=>
+        {
+          let retVal:Timesheet[]=[];
+          if(response.result && response.data)
+          {
+            let temp = response.data as TimesheetDto[];
+            for(let i=0;i<temp.length;i++)
+            {
+              retVal.push(TimesheetHelper.fromDto(temp[i]));
+            }
+            return retVal;
+          }
+          else {
+            return [TimesheetHelper.getEmpty()]
+          }
+
+        }
+      ));
+  }
 
 }
