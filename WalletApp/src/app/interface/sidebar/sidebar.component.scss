@@ -1,0 +1,76 @@
+mat-sidenav-container {
+  height: 100%;
+
+  mat-sidenav {
+    mat-nav-list {
+      .menu-item {
+     margin-left: 8px;
+
+  }
+  }
+}
+.logo-nav{
+  width: 40%;
+}
+.sidenav {
+  width: 200px;
+
+}
+
+}
+
+.sidenav .mat-toolbar {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+mat-divider {
+margin-top: 16px;
+margin-bottom: 16px;
+background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+.mat-toolbar.mat-primary {
+position: sticky;
+top: 0;
+z-index: 1;
+}
+.mat-toolbar,.mat-sidenav{
+background: #263238 ;
+color: #fff;
+}
+.mat-icon,.menu-item{
+color: #fff;
+padding-top: 5px;
+}
+.listFocus:focus {
+
+background-color: #fff;
+border-radius: 15px;
+.mat-icon,.menu-item{
+color: #000;
+padding-top: 5px;
+
+}
+}
+.tailleList{
+  width: 180px;
+  margin: 0 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.listFocus:hover {
+.mat-icon, .menu-item {
+color: #ed2794;
+}
+}
+mat-sidenav-content{
+  mat-toolbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+

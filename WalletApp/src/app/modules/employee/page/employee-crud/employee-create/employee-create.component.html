@@ -1,0 +1,33 @@
+<p>employee-create works!</p>
+<div *ngIf="employee" class="row">
+  <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{ employee.lastname }}</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-image">
+
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+            <tr>
+              <td>Nom</td>
+              <td><strong>{{ employee.lastname }}</strong></td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td><strong>{{ employee.firstname }}</strong></td>
+            </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+        <div class="card-action">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

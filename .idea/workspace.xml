@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="- Mise à jour du back: requete custom Afficher contrat d'un employé&#10;- Formulaire create timesheet, autocomplete des contrats d'un employé &#10;- Construction d'un payload pour l'envoi à la DB&#10;- Problème en cours de résolution envoi de la requeete à la DB: Api response succes mais pas réel, pas d'insertion dans la DB">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/TimesheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/TimesheetController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Nettoyage-formulaire-crèer-contrat" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/WalletApp/src/app/app.component.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/dashboard-routing.module.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WalletApp/src/app/modules/dashboard/page/index.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WalletApp/src/app/security/page/signin/signin.component.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/Controller/CompanyController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/builder/CompanyBuilder.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/entity/payload/CompanyCreatePayload.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/ipeps/pwd/wallet/repository/CompanyRepository.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HlEhcTr647apNqHV3tEZm79ZMo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/yaala/Desktop/cours soir 2022-23/ProjetDevWeb/IPEPS-PWD-2022-GR06",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\yaala\\Desktop\\cours soir 2022-23\\ProjetDevWeb\\IPEPS-PWD-2022-GR06\\WalletApp\\node_modules\\typescript\\lib",
+    "ts.rename.search.for.dynamic.occurrences": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yaala\Desktop\cours soir 2022-23\ProjetDevWeb\IPEPS-PWD-2022-GR06\WalletApp\src\app\modules\contract\helper" />
+      <recent name="C:\Users\yaala\Desktop\cours soir 2022-23\ProjetDevWeb\IPEPS-PWD-2022-GR06\WalletApp\src\app\modules\contract\model" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e0cdf82a-9a44-4e11-bdc3-d6c81144567a" name="Changes" comment="" />
+      <created>1668851395615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668851395615</updated>
+      <workItem from="1668851402340" duration="141000" />
+      <workItem from="1670777978372" duration="9055000" />
+      <workItem from="1670858084739" duration="6152000" />
+      <workItem from="1673095424784" duration="1023000" />
+      <workItem from="1673216648862" duration="41993000" />
+      <workItem from="1673886729248" duration="21495000" />
+      <workItem from="1673923508360" duration="110000" />
+      <workItem from="1674939906028" duration="59000" />
+      <workItem from="1675075828282" duration="2579000" />
+      <workItem from="1675103714685" duration="1355000" />
+    </task>
+    <task id="LOCAL-00001" summary="mise a jour wallet sur le dev de la branche main">
+      <created>1670858394477</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670858394477</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mise a jour wallet sur le dev de la branche main">
+      <created>1670858558307</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670858558307</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Début front contract: &#10;- Début d'affichage de liste de contract &#10;(très basique juste pour tester)">
+      <created>1673294898982</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673294898982</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Suite front contract: &#10;- mise à jour listing contract avec bouton delete, edit et détail&#10;- création de contract fonctionelle &#10;- suppression de contract fonctionelle&#10;- affichage d'un contrat &#10;&#10;Attention j'ai codé avec mes pieds merci de ne pas être choqué. Je ferais du nettoyge plus tard (inchallah xD )">
+      <created>1673396546334</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673396546334</updated>
+    </task>
+    <task id="LOCAL-00005" summary="suite du front contracts:&#10;update fonctionne &#10;à revoir car plein de choses à améliorer">
+      <created>1673563826713</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673563826713</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Début de nettoyage">
+      <created>1673889304336</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673889304336</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Nettoyage l'us &quot;crèer un contrat&quot;&#10;Utilisation d'interface business, dto et helper &#10;exploitation du code d'erreur de l'api &#10;Modification de la propriété &quot;result_code&quot; de :ApiResponse en &quot;code&quot; pour matcher avec le back">
+      <created>1673910778837</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673910778837</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- Mise à jour du back: requete custom Afficher contrat d'un employé&#10;- Formulaire create timesheet, autocomplete des contrats d'un employé &#10;- Construction d'un payload pour l'envoi à la DB&#10;- Problème en cours de résolution envoi de la requeete à la DB: Api response succes mais pas réel, pas d'insertion dans la DB">
+      <created>1675103896553</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675103896553</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="mise a jour wallet sur le dev de la branche main" />
+    <MESSAGE value="Début front contract: &#10;- Début d'affichage de liste de contract &#10;(très basique juste pour tester)" />
+    <MESSAGE value="Suite front contract: &#10;- mise à jour listing contract avec bouton delete, edit et détail&#10;- création de contract fonctionelle &#10;- suppression de contract fonctionelle&#10;- affichage d'un contrat &#10;&#10;Attention j'ai codé avec mes pieds merci de ne pas être choqué. Je ferais du nettoyge plus tard (inchallah xD )" />
+    <MESSAGE value="suite du front contracts:&#10;update fonctionne &#10;à revoir car plein de choses à améliorer" />
+    <MESSAGE value="Début de nettoyage" />
+    <MESSAGE value="Nettoyage l'us &quot;crèer un contrat&quot;&#10;Utilisation d'interface business, dto et helper &#10;exploitation du code d'erreur de l'api &#10;Modification de la propriété &quot;result_code&quot; de :ApiResponse en &quot;code&quot; pour matcher avec le back" />
+    <MESSAGE value="- Mise à jour du back: requete custom Afficher contrat d'un employé&#10;- Formulaire create timesheet, autocomplete des contrats d'un employé &#10;- Construction d'un payload pour l'envoi à la DB&#10;- Problème en cours de résolution envoi de la requeete à la DB: Api response succes mais pas réel, pas d'insertion dans la DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Mise à jour du back: requete custom Afficher contrat d'un employé&#10;- Formulaire create timesheet, autocomplete des contrats d'un employé &#10;- Construction d'un payload pour l'envoi à la DB&#10;- Problème en cours de résolution envoi de la requeete à la DB: Api response succes mais pas réel, pas d'insertion dans la DB" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -1,0 +1,18 @@
+h1 {
+  text-align: center}
+form{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 20em;
+  button{
+    margin-top: 2em;
+  }
+}
+.validInput{
+  border: green solid 3px;
+  border-radius: 2px;
+}
+.invalidInput{
+  border-color: red;
+}

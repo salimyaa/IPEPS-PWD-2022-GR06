@@ -1,0 +1,148 @@
+{
+"employee": [
+	{
+		"address" : "rue du paradis",
+		"birthday" : "15 Mars 1977",
+		"first_name" : "Frédéric",
+		"gender" : "Male",
+		"lastname" : "Grilli",
+		"status": "1",
+    		"active": "true",
+    		"ssin": "123456789",
+    		"company" : {
+        	"companyId": "a3bda7e8-609e-4271-a089-fa3ac99c3597"}
+	},
+	{
+  		"address": "rue du foot",
+    		"birthday": "20 octobre 1987",
+   		"firstname": "Salim",
+    		"gender": "Male",
+    		"lastname": "Yaaloui",
+    		"status": "1",
+    		"active": "true",
+    		"ssin": "123456789",
+    		"company" : {
+        	"companyId": "a3bda7e8-609e-4271-a089-fa3ac99c3597"}
+	},
+	{
+		"address" : "rue de l enfer",
+		"birthday" : "20 Mars 1977",
+		"firstname" : "Jessica",
+		"gender" : "Female",
+		"lastname" : "Alba",
+    		"status": "0",
+    		"active": "true",
+    		"ssin": "245366789",
+    		"company" : {
+        	"companyId": "d673259a-9d32-47e7-beef-8b241f471e26"}
+		
+	},
+	{
+		"address" : "rue de ring",
+		"birthday" : "1 Juillet 1962",
+		"first_name" : "Sylvester",
+		"gender" : "Male",
+		"lastname" : "stallone",
+		"status": "0",
+    		"active": "true",
+    		"ssin": "234567891234",
+    		"company" : {
+        	"companyId": "d673259a-9d32-47e7-beef-8b241f471e26"}
+	},
+	{
+            "status": "NotEmployed",
+            "company": null,
+            "timesheetList": [],
+            "salaryList": [],
+            "address": "rue de l'action",
+            "active": true,
+            "lastname": "Cruise",
+            "firstname": "Tom",
+            "gender": "Male",
+            "ssin": "245366789",
+            "birthday": "15 Juillet 1972",
+            "employee_id": "55d55404-da84-4d6e-9883-9015c341c2f5",
+            "deleted_by": null,
+            "deleted": null
+        },
+]}
+ {
+            "status": null,
+            "company": null,
+            "timesheetList": [],
+            "address": "rue du paradis",
+            "active": true,
+            "firstname": "Fred",
+            "birthday": "15 Mars 1977",
+            "gender": "extraterestre",
+            "employee_id": "5032fe2e-a561-46e2-8fea-89ffe45d6bb8",
+            "lastname": "Grilli",
+            "ssin": "12345",
+            "deleted": null,
+            "deleted_by": null
+        }
+Address; 
+Active;
+Firstname;
+Birthday;
+Gender;
+Employee_id;
+Lastname;
+Ssin; 
+Deleted_by;
+Deleted; 
+ 
+ 
+ 
+ EmployeeStatus status;
+
+    @JoinColumn(name = "Employee_Company", referencedColumnName = "Company_id")
+ Company company;
+
+
+ {
+            "status": "Employed",
+            "company": {
+                "employeeList": [],
+                "organizationList": [],
+                "name": "Unitec",
+                "address": "rue du commerce",
+                "description": "softWare Creator",
+                "active": true,
+                "is_managed": null,
+                "company_id": "293a4cd7-6e27-4d6b-a7f4-3079f0e6b994"
+            },
+            "timesheetList": [],
+            "address": "rue du paradis",
+            "active": true,
+            "firstname": "Fred",
+            "birthday": "15 Mars 1977",
+            "gender": "Female",
+            "employee_id": "80215b45-becb-48f1-86d7-4ba29d0abe46",
+            "lastname": "Grilli",
+            "ssin": "12345",
+            "deleted": true,
+            "deleted_by": true
+        },
+
+
+
+la j ai le mot de passe crypté donc je le copie aussi  ainsi il est crypté
+puis je copie le token recu
+je vais sur employee list
+en get avec l url http://localhost:2022/api/Employees/list
+et la je copie  dans authorization le token
+et je peux faire un send
+mon list m affiche deux personne car deux id
+la je te montre une maniere plus simple  qui evite de recopier le 
+token a chaque fois 
+donc je copie le token comme  je fais habituellement
+et je le colle dans le dossier racine
+et pour les dossier en dessous je mets dans authorization
+inherit auth
+ainsi  je copie juste une fois le token et il est valide pour tout les autres
+oublier de sauver donc il validait pas
+donc  jamais oublié de sauver  le token quand tu fais un inherit
+
+
+

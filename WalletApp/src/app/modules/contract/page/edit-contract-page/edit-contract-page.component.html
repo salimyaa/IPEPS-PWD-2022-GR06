@@ -1,0 +1,25 @@
+<h1>Modifier contract</h1>
+
+<section>
+
+  <ng-container *ngIf="this.contract">
+    <form [formGroup]="editForm">
+      <label for="title">Title:</label><input id="title"  formControlName="title" >
+      <label for="description">Description:</label><input id="description" value="{{this.contract.description}}" formControlName="description" >
+      <label for="start">Start date:</label><input type="date" id="start"  value="{{this.contract.start_date}}" formControlName="start_date" >
+      <label for="end">End date:</label><input  type="date" id="end"  value="{{this.contract.end_date}}" formControlName="end_date" >
+      <label for="hours">Hours per week:</label><input id="hours"  value="{{this.contract.nb_hours_by_week}}" formControlName="nb_hours_by_week" >
+      <label for="employee"> Employee:
+        <select id="employee" formControlName="employee_id" >
+          <ng-container *ngFor="let employ of this.employees">
+            <option value="{{employ.employee_id}}"
+           >{{employ.firstname}} {{employ.lastname}}  </option>
+          </ng-container>
+        </select>
+      </label>
+      <button (click)="onUpdate()">Valider modification</button>
+    </form>
+
+  </ng-container>
+</section>
+<button mat-mini-fab routerLink="../..">back</button>

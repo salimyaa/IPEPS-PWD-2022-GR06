@@ -1,0 +1,148 @@
+<div class="container-fluid g-0 p-2">
+<!--  <form [formGroup]="form">-->
+  <div class="row g-0">
+
+    <div class="col-md-2 d-flex justify-content-center align-items-center"
+         *ngIf="employee.picture == 'empty'; else change ">
+              <img class="photoEmployee" *ngIf="employee.gender == 'Female'"
+                   src="assets/images/employee/lady.png" slot="start" alt="Profile Image" />
+              <img class="photoEmployee" *ngIf="employee.gender == 'Male'"
+                   src="assets/images/employee/men.png" slot="start" alt="Profile Image"/>
+    </div>
+    <ng-template #change >
+      <div class="col-md-2 d-flex justify-content-center align-items-center" *ngIf="employee.lastname == 'stallone'">
+        <img class="photoEmployee"
+             src="assets/images/employee/stallone.jpg" slot="start" alt="Profile Image" />
+      </div>
+      <div class="col-md-2 d-flex justify-content-center align-items-center" *ngIf="employee.lastname == 'Alba'">
+        <img class="photoEmployee"
+             src="assets/images/employee/Jessica-Alba.jpg" slot="start" alt="Profile Image" />
+      </div>
+    </ng-template>
+    <div class="col ps-2">
+      <div class="row g-0">
+        <div class="col-md-10 text-center">
+          <span class="name">Employee : {{employee.firstname | titlecase}} {{employee.lastname | titlecase}}</span>
+        </div>
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-success"
+            >Update</button>
+            <button type="button" class="btn btn-outline-danger"
+            >Delete</button>
+            <button type="button" class="btn btn-primary" [routerLink]="['/employee']"
+            >Retour</button>
+          </div>
+        </div>
+
+      </div>
+      <form [formGroup]="employeeForm">
+      <div class="row g-0 mt-3">
+
+        <div class="col-md">
+
+          <table class="table table-hover mx-auto">
+            <thead class="text-center fs-5 fst-italic text-secondary">
+              <tr>
+                <td colspan="2">Personal Details</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td> <b> Id: </b></td>
+                <td>{{employee.id}}</td>
+              </tr>
+              <tr>
+                <td> <b> Firstname: </b></td>
+                <td><input placeholder="{{employee.firstname}}"></td>
+              </tr>
+              <tr>
+                <td> <b> Lastname: </b></td>
+                <td><input placeholder="{{employee.lastname}}"></td>
+              </tr>
+              <tr>
+                <!--<select id="propertyType" [formControl]="type">
+                  <option [ngValue]="null">Select one...</option>
+                  <option *ngFor="let type of eEmployeeStatus | keyvalue" [ngValue]="type.value">{{type.value}}</option>
+                </select>-->
+                <td> <b> Status: </b></td>
+                <td>{{employee.status}}</td>
+              </tr>
+              <tr>
+                <td> <b> Address: </b></td>
+                <td><input placeholder="{{employee.address}}"></td>
+              </tr>
+              <tr>
+                <td> <b> City: </b></td>
+                <td><input placeholder="{{employee.city}}"></td>
+              </tr>
+              <tr>
+                <td> <b> Phone: </b></td>
+                <td><input placeholder="{{employee.phone}}"></td>
+              </tr>
+              <tr>
+                <td> <b> Email: </b></td>
+                <td ><input class="email" placeholder="{{employee.email}}"></td>
+              </tr>
+              <tr>
+                <td>Birthdate</td>
+                <td><input placeholder="{{employee.birthday}}"></td>
+              </tr>
+              <tr>
+                <td>Gender</td>
+
+                <td><input type="radio" value="male"  name="gender"> Male
+                <input type="radio" value="female"  name="gender"> Female </td>
+
+              </tr>
+              <tr>
+                <td>Ssin</td>
+                <td><input placeholder="{{employee.ssin}}"></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="col">
+
+          <table class="table table-hover mx-auto">
+            <thead class="text-center fs-5 fst-italic text-secondary">
+              <tr>
+                <td colspan="2">Job Details</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Company</td>
+                <td>{{employee.company.title}}</td>
+              </tr>
+              <tr>
+                <td>address : </td>
+                <td>{{employee.company.address}}</td>
+              <tr>
+              <tr>
+                <td>Description : </td>
+                <td>{{employee.company.description}}</td>
+              <tr>
+                <td>Experience</td>
+                <td> yrs</td>
+              </tr>
+              <tr>
+                <td>Salary</td>
+                <td> LPA</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+      </form>
+    </div>
+
+  </div>
+<!--  </form>-->
+</div>
+
+

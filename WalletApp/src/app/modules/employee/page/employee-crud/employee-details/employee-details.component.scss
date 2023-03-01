@@ -1,0 +1,28 @@
+.tableDetail{
+  border: 1px solid #263238;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.photoEmployee{
+  width: 150px;
+  height: 150px;
+}
+.black-border {
+  border: 1px solid black;
+}
+
+img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+table {
+  width: 90%;
+}
+
+.btn-primary:hover{
+  color: #ed2794;
+}
+

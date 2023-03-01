@@ -1,0 +1,74 @@
+
+td,th {
+  border: 1px solid #263238;
+  padding: 5px 10px;
+}
+.table{
+  tr:hover{
+    background-color: rgba(150, 149, 149, 0.73);
+  }
+}
+.btnCreate{
+  margin-bottom: 10px;
+}
+.titleTable{
+  color: #fff;
+  background-color: #263238;
+  border: 1px solid #ffffff;
+}
+.btn-primary{
+  background-color: #ffffff;
+  color: #1515ef;
+
+  margin: 10px 0;
+}
+.btn-primary:hover{
+  background-color: #1515ef;
+  color: white;
+
+}
+.btn-danger{
+  color: #d20d28;
+  background-color: #ffffff;
+  margin-left: 5px;
+
+}
+.btn-danger:hover{
+  background-color: #d20d28;
+  color:#ffffff;
+}
+
+.success{text-align: center;
+  color:#fff;
+  background: #263238;
+  border-radius: 15px;
+}
+.green-color{
+ color:#fff;background: green;border-radius: 15px;
+}
+.red-color{
+  color:#fff;background: red;border-radius: 15px;
+}
+.error{
+  color:#fff;background: red;border-radius: 15px;
+}
+.tdTailleCenter{
+  text-align: center;
+  width: 100px !important;
+}
+
+.tailleIndex,{
+  width: 30px !important;
+}
+.tailleAction{
+  width: 300px !important;
+}
+.center{
+  text-align: center;
+}
+.image-male{
+  background-image: url("../../../../../../assets/images/employee/men.png");
+}
+.image-female{
+  background-image: url("../../../../../../assets/images/employee/lady.png");
+}

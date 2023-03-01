@@ -1,0 +1,27 @@
+.extra{
+  flex: 1 1 auto;
+}
+.titreToolbar{
+  margin-left: 20px;
+}
+.sidenav-wrapper {
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+mat-sidenav-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+mat-sidenav{
+  width: 200px;
+  padding: 20px;
+}
+button span{
+  margin: 10px;
+}

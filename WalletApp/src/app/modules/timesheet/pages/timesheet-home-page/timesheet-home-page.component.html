@@ -1,0 +1,46 @@
+<h1>Fiches de pointages</h1>
+
+<div class="timesheet">
+<div class="employeContainer">
+  <div  matAutocompleteOrigin #origin="matAutocompleteOrigin">
+    <mat-form-field>
+
+    <input
+      matInput
+      placeholder="Employé"
+      [formControl]="employeeControl"
+      [matAutocomplete]="auto"
+      [matAutocompleteConnectedTo]="origin">
+    </mat-form-field>
+  </div>
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let option of this.employees" [value]="option">
+      {{option.firstname}} {{option.lastname}}
+    </mat-option>
+  </mat-autocomplete>
+
+  <ng-container *ngIf="selectedEmployee as empl; else notSelected">
+    <h2>Sélection:</h2>
+
+  <ul>
+    <li>{{empl.firstname}} {{empl.lastname}}</li>
+    <li>{{empl.status}}</li>
+    <li>{{empl.gender}}</li>
+    <li>{{empl.birthday}}</li>
+    <li>{{empl.address}}</li>
+
+  </ul>
+  </ng-container>
+  <ng-template #notSelected>
+    <p>Veuillez sélectionner un employé</p>
+  </ng-template>
+</div>
+<div class="timesheetsContainer">
+  <button mat-raised-button *ngIf="selectedEmployee" (click)="onNewTimesheet()">New Timesheet<mat-icon>add</mat-icon></button>
+
+
+<ng-container *ngIf="selectedEmployee">
+ <app-timesheets-list [selectedEmployee]="selectedEmployee"></app-timesheets-list>
+</ng-container>
+</div>
+</div>
